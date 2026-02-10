@@ -187,7 +187,14 @@ export default function Home() {
                   <span className="ml-2 text-neutral-500">— Student</span>
                 </div>
               </div>
-              <div className="mx-auto aspect-[9/16] w-full max-w-[320px] overflow-hidden rounded-lg bg-neutral-100">
+              <div className="mx-auto aspect-[9/16] w-full max-w-[320px] overflow-hidden rounded-lg bg-neutral-100 relative group">
+                {/* Score Banner */}
+                <div className="absolute top-4 left-0 right-0 z-10 mx-auto w-max rounded-full bg-white/95 px-4 py-2 text-sm font-bold shadow-lg backdrop-blur supports-[backdrop-filter]:bg-white/80">
+                  <span className="text-neutral-500 line-through">1080</span>
+                  <ArrowRight className="mx-2 inline h-3.5 w-3.5 text-neutral-400" />
+                  <span className="text-green-600">1300 SAT</span>
+                </div>
+
                 <iframe
                   className="h-full w-full"
                   src="https://www.youtube.com/embed/pLioZIuZHZc"
@@ -220,7 +227,14 @@ export default function Home() {
                   <span className="ml-2 text-neutral-500">— Student</span>
                 </div>
               </div>
-              <div className="mx-auto aspect-[9/16] w-full max-w-[320px] overflow-hidden rounded-lg bg-neutral-100">
+              <div className="mx-auto aspect-[9/16] w-full max-w-[320px] overflow-hidden rounded-lg bg-neutral-100 relative group">
+                {/* Score Banner */}
+                <div className="absolute top-4 left-0 right-0 z-10 mx-auto w-max rounded-full bg-white/95 px-4 py-2 text-sm font-bold shadow-lg backdrop-blur supports-[backdrop-filter]:bg-white/80">
+                  <span className="text-neutral-500 line-through">27</span>
+                  <ArrowRight className="mx-2 inline h-3.5 w-3.5 text-neutral-400" />
+                  <span className="text-green-600">34 ACT</span>
+                </div>
+
                 <iframe
                   className="h-full w-full"
                   src="https://www.youtube.com/embed/CZpe_eG51So"
