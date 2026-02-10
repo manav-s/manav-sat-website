@@ -118,16 +118,17 @@ export default function Home() {
                 </div>
 
                 {/* Secondary Image - SAT Score */}
-                <FadeIn delay={0.6} direction="up" className="absolute -bottom-12 -left-4 z-20 w-2/3 overflow-hidden rounded-2xl border-4 border-white bg-white shadow-2xl md:-bottom-16 md:-left-8">
+                <div className="absolute -bottom-12 -left-4 z-20 w-2/3 overflow-hidden rounded-2xl border-4 border-white bg-white shadow-2xl ring-1 ring-neutral-200 md:-bottom-16 md:-left-8 motion-safe:animate-fade-in-up">
                   <div className="relative aspect-[4/3]">
                     <Image
                       src="/1600.png"
                       alt="Perfect 1600 SAT Score"
                       fill
                       className="object-contain"
+                      priority
                     />
                   </div>
-                </FadeIn>
+                </div>
               </div>
             </FadeIn>
           </div>
