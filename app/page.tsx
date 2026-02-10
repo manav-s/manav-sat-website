@@ -221,10 +221,13 @@ export default function Home() {
                 </div>
               </div>
               <div className="mx-auto aspect-[9/16] w-full max-w-[320px] overflow-hidden rounded-lg bg-neutral-100">
-                {/* Video placeholder */}
-                <div className="flex h-full w-full items-center justify-center text-sm text-neutral-400">
-                  Add Video Asset
-                </div>
+                <iframe
+                  className="h-full w-full"
+                  src="https://www.youtube.com/embed/CZpe_eG51So"
+                  title="Nina testimonial"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                />
               </div>
             </div>
           </div>
