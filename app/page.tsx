@@ -132,24 +132,71 @@ export default function Home() {
       </section>
 
       {/* ── Stats Section ── */}
-      <section className="bg-neutral-50 py-16">
-        <div className="mx-auto max-w-6xl px-6">
-          <div className="grid grid-cols-2 gap-8 md:grid-cols-4 md:divide-x md:divide-neutral-300/50">
+      <section className="bg-neutral-900 py-20">
+        <div className="mx-auto max-w-5xl px-6">
+          <div className="grid grid-cols-1 gap-12 sm:grid-cols-3 sm:divide-x sm:divide-neutral-800">
             {[
-              { label: "SAT Score", value: "1600" },
-              { label: "Students", value: "200+" },
+              { label: "Avg. Point Increase", value: "200" },
+              { label: "Students", value: "250+" },
               { label: "Student Results", value: "Top 1%" },
-              { label: "Guarantee", value: "100%" },
             ].map((stat) => (
-              <div key={stat.label} className="text-center md:px-8">
-                <div className="font-serif text-4xl font-bold text-neutral-900 md:text-5xl">
+              <div key={stat.label} className="text-center sm:px-8">
+                <div className="font-serif text-4xl font-bold text-white md:text-5xl">
                   {stat.value}
                 </div>
-                <div className="mt-2 text-sm font-medium uppercase tracking-wider text-neutral-500">
+                <div className="mt-2 text-sm font-medium uppercase tracking-wider text-neutral-400">
                   {stat.label}
                 </div>
               </div>
             ))}
+          </div>
+
+          <div className="mt-20 border-t border-neutral-800 pt-12">
+            <p className="mb-8 text-center text-sm font-medium uppercase tracking-widest text-neutral-500">
+              Students Accepted Into Top Universities
+            </p>
+            <div className="grid grid-cols-2 items-center gap-6 sm:grid-cols-3 lg:grid-cols-7">
+              {[
+                {
+                  name: "Harvard",
+                  logo: "/schools/harvard.png",
+                },
+                {
+                  name: "Yale",
+                  logo: "/schools/yale.png",
+                },
+                {
+                  name: "MIT",
+                  logo: "/schools/mit.png",
+                },
+                {
+                  name: "Princeton",
+                  logo: "/schools/princeton.png",
+                },
+                {
+                  name: "Cornell",
+                  logo: "/schools/cornell.png",
+                },
+                {
+                  name: "UPenn",
+                  logo: "/schools/upenn.png",
+                },
+                {
+                  name: "Stanford",
+                  logo: "/schools/stanford.png",
+                },
+              ].map((school) => (
+                <div key={school.name} className="flex items-center justify-center">
+                  <Image
+                    src={school.logo}
+                    alt={`${school.name} logo`}
+                    width={240}
+                    height={140}
+                    className="h-16 w-auto object-contain"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

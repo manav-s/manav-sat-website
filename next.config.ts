@@ -3,7 +3,12 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   /* config options here */
   images: {
-    domains: ["img.youtube.com", "images.unsplash.com", "randomuser.me"],
+    remotePatterns: [
+      { protocol: "https", hostname: "img.youtube.com" },
+      { protocol: "https", hostname: "images.unsplash.com" },
+      { protocol: "https", hostname: "randomuser.me" },
+      { protocol: "https", hostname: "images.squarespace-cdn.com" },
+    ],
   },
 };
 
