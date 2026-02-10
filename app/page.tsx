@@ -14,6 +14,7 @@ import {
   PlayCircle,
   Target,
   TrendingUp,
+  Terminal,
 } from "lucide-react";
 import { FadeIn, FadeInStagger } from "@/components/animations";
 
@@ -415,27 +416,67 @@ export default function Home() {
       </section>
 
       {/* ── About / Limited Availability ── */}
-      <section className="py-24 md:py-32">
-        <div className="mx-auto max-w-3xl px-6 text-center">
-          <FadeIn>
-            <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-neutral-50 px-4 py-1.5 text-sm font-medium text-neutral-600">
-              <Clock className="h-4 w-4" />
-              Limited Availability
-            </div>
-            <h2 className="mb-8 font-serif text-4xl font-bold md:text-5xl">
-              A boutique approach.
-            </h2>
-            <p className="mb-8 text-lg leading-relaxed text-neutral-600 md:text-xl">
-              As a full-time Software Engineer at Microsoft, I maintain a small,
-              select group of students to ensure everyone gets the highest quality
-              instruction. I&apos;m not a big agency — I&apos;m a dedicated
-              mentor.
-            </p>
-            <p className="text-lg leading-relaxed text-neutral-600 md:text-xl">
-              My methods didn&apos;t just help me score a perfect 1600; they have
-              helped over 200 students transform their academic paths.
-            </p>
-          </FadeIn>
+      <section className="py-24 md:py-32 overflow-hidden">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="grid items-center gap-16 md:grid-cols-2">
+            <FadeIn direction="right" className="order-2 md:order-1">
+              <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-neutral-50 px-4 py-1.5 text-sm font-medium text-neutral-600">
+                <Clock className="h-4 w-4" />
+                Limited Availability
+              </div>
+              <h2 className="mb-6 font-serif text-4xl font-bold md:text-5xl">
+                My approach.
+              </h2>
+              <div className="space-y-6 text-lg text-neutral-600 md:text-xl leading-relaxed">
+                <p>
+                  As a full-time <span className="font-semibold text-neutral-900">Software Engineer at Microsoft</span>, I maintain a small,
+                  select group of students.
+                </p>
+                <p>
+                  I&apos;m not a big agency with hundreds of disconnected tutors. I&apos;m a dedicated mentor who has helped over 250 students maximize their potential.
+                </p>
+              </div>
+              
+              <div className="mt-8 flex flex-wrap gap-4">
+                 <div className="flex items-center gap-3 rounded-xl border border-neutral-100 bg-white px-5 py-4 shadow-xl shadow-neutral-900/5">
+                    <div className="flex bg-blue-50 p-2.5 rounded-lg">
+                        <Terminal className="w-5 h-5 text-blue-600" />
+                    </div>
+                    <div>
+                        <div className="text-[10px] font-bold uppercase tracking-wider text-neutral-400">Career</div>
+                        <div className="text-sm font-bold text-neutral-900 leading-none mt-1">Microsoft Engineer</div>
+                    </div>
+                 </div>
+                 <div className="flex items-center gap-3 rounded-xl border border-neutral-100 bg-white px-5 py-4 shadow-xl shadow-neutral-900/5">
+                    <div className="flex bg-yellow-50 p-2.5 rounded-lg">
+                        <Trophy className="w-5 h-5 text-yellow-600" />
+                    </div>
+                    <div>
+                        <div className="text-[10px] font-bold uppercase tracking-wider text-neutral-400">Score</div>
+                        <div className="text-sm font-bold text-neutral-900 leading-none mt-1">Perfect 1600</div>
+                    </div>
+                 </div>
+              </div>
+            </FadeIn>
+
+            <FadeIn direction="left" className="order-1 md:order-2">
+               <div className="relative rounded-2xl border border-neutral-200 bg-white p-2 shadow-2xl shadow-neutral-900/10 rotate-2 hover:rotate-0 transition-transform duration-500">
+                  <div className="absolute -left-4 -top-4 z-10 rounded-xl bg-red-600 px-4 py-2 text-sm font-bold text-white shadow-lg shadow-red-600/20">
+                    Live Session
+                  </div>
+                  <div className="overflow-hidden rounded-xl bg-neutral-100 relative aspect-video">
+                     <Image 
+                        src="/class-screenshot.png"
+                        alt="Manav teaching a live small group session"
+                        fill
+                        className="object-cover"
+                     />
+                  </div>
+                  {/* Decorative Elements */}
+                   <div className="absolute -bottom-6 -right-6 -z-10 h-full w-full rounded-2xl border-2 border-dashed border-neutral-200 bg-neutral-50/50"></div>
+               </div>
+            </FadeIn>
+          </div>
         </div>
       </section>
 
