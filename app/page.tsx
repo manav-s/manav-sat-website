@@ -180,21 +180,21 @@ export default function Home() {
                   Other tutors didn&apos;t care. I saw dedication. Now she has
                   transformed her academic path.&rdquo;
                 </blockquote>
-                <div className="mt-6">
-                  <cite className="not-italic font-semibold text-neutral-900">
-                    Alexisgrace
-                  </cite>
-                  <span className="ml-2 text-neutral-500">— Student</span>
+                <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-2">
+                  <div>
+                    <cite className="not-italic font-semibold text-neutral-900">
+                      Alexisgrace
+                    </cite>
+                    <span className="ml-2 text-neutral-500">— Student</span>
+                  </div>
+                  <div className="flex items-center gap-2 rounded-full border border-neutral-200 bg-neutral-50 px-3 py-1 text-sm font-medium">
+                    <span className="text-neutral-500 line-through">1080</span>
+                    <ArrowRight className="h-3 w-3 text-neutral-400" />
+                    <span className="text-green-600 font-bold">1300 SAT</span>
+                  </div>
                 </div>
               </div>
               <div className="mx-auto aspect-[9/16] w-full max-w-[320px] overflow-hidden rounded-lg bg-neutral-100 relative group">
-                {/* Score Banner */}
-                <div className="absolute top-4 left-0 right-0 z-10 mx-auto w-max rounded-full bg-white/95 px-4 py-2 text-sm font-bold shadow-lg backdrop-blur supports-[backdrop-filter]:bg-white/80">
-                  <span className="text-neutral-500 line-through">1080</span>
-                  <ArrowRight className="mx-2 inline h-3.5 w-3.5 text-neutral-400" />
-                  <span className="text-green-600">1300 SAT</span>
-                </div>
-
                 <iframe
                   className="h-full w-full"
                   src="https://www.youtube.com/embed/pLioZIuZHZc"
@@ -220,21 +220,21 @@ export default function Home() {
                   a custom plan, she scored a 1520 (Top 1%) and is applying to
                   top colleges with confidence.&rdquo;
                 </blockquote>
-                <div className="mt-6">
-                  <cite className="not-italic font-semibold text-neutral-900">
-                    Nina
-                  </cite>
-                  <span className="ml-2 text-neutral-500">— Student</span>
+                <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-2">
+                  <div>
+                    <cite className="not-italic font-semibold text-neutral-900">
+                      Nina
+                    </cite>
+                    <span className="ml-2 text-neutral-500">— Student</span>
+                  </div>
+                  <div className="flex items-center gap-2 rounded-full border border-neutral-200 bg-neutral-50 px-3 py-1 text-sm font-medium">
+                    <span className="text-neutral-500 line-through">27</span>
+                    <ArrowRight className="h-3 w-3 text-neutral-400" />
+                    <span className="text-green-600 font-bold">34 ACT</span>
+                  </div>
                 </div>
               </div>
               <div className="mx-auto aspect-[9/16] w-full max-w-[320px] overflow-hidden rounded-lg bg-neutral-100 relative group">
-                {/* Score Banner */}
-                <div className="absolute top-4 left-0 right-0 z-10 mx-auto w-max rounded-full bg-white/95 px-4 py-2 text-sm font-bold shadow-lg backdrop-blur supports-[backdrop-filter]:bg-white/80">
-                  <span className="text-neutral-500 line-through">27</span>
-                  <ArrowRight className="mx-2 inline h-3.5 w-3.5 text-neutral-400" />
-                  <span className="text-green-600">34 ACT</span>
-                </div>
-
                 <iframe
                   className="h-full w-full"
                   src="https://www.youtube.com/embed/CZpe_eG51So"
