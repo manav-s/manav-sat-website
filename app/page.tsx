@@ -31,12 +31,6 @@ export default function Home() {
           </span>
           <div className="flex items-center gap-6">
             <a
-              href="tel:3477224114"
-              className="hidden text-sm font-medium text-neutral-600 transition-colors hover:text-neutral-900 sm:block"
-            >
-              +1-347-722-4114
-            </a>
-            <a
               href={SMS_LINK}
               className="flex items-center gap-2 rounded-full bg-neutral-900 px-6 py-2.5 text-sm font-medium text-white transition-all hover:bg-neutral-800 hover:shadow-lg hover:shadow-neutral-900/10"
             >
