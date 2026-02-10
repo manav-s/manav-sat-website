@@ -187,12 +187,15 @@ export default function Home() {
                   <span className="ml-2 text-neutral-500">— Student</span>
                 </div>
               </div>
-              <div className="aspect-video w-full overflow-hidden rounded-lg bg-neutral-100">
-                {/* Video placeholder */}
-                <div className="flex h-full w-full items-center justify-center text-sm text-neutral-400">
-                  Add Video Asset
+                <div className="aspect-video w-full overflow-hidden rounded-lg bg-neutral-100">
+                  <video
+                    className="h-full w-full object-cover"
+                    controls
+                    playsInline
+                    preload="metadata"
+                    src="/alexis-grace.mov"
+                  />
                 </div>
-              </div>
             </div>
 
             <div className="flex flex-col justify-between space-y-8">
