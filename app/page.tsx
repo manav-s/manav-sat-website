@@ -121,7 +121,7 @@ export default function Home() {
                 <FadeIn delay={0.6} direction="up" className="absolute -bottom-12 -left-4 z-20 w-2/3 overflow-hidden rounded-2xl border-4 border-white bg-white shadow-2xl md:-bottom-16 md:-left-8">
                   <div className="relative aspect-[4/3]">
                     <Image
-                      src="/sat-score.png"
+                      src="/1600.png"
                       alt="Perfect 1600 SAT Score"
                       fill
                       className="object-contain"
