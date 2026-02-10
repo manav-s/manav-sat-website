@@ -516,7 +516,7 @@ export default function Home() {
 
             <FadeIn className="flex flex-col items-center justify-center space-y-6 rounded-2xl bg-white p-8 shadow-sm ring-1 ring-neutral-100">
               <h3 className="text-center font-semibold text-neutral-900">
-                Ready to transform your score?
+                Text me directly to book your free trial class.
               </h3>
               <a
                 href={SMS_LINK}
