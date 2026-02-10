@@ -118,7 +118,7 @@ export default function Home() {
                 </div>
 
                 {/* Secondary Image - SAT Score */}
-                <div className="absolute -bottom-12 -left-4 z-20 w-2/3 overflow-hidden rounded-2xl border-4 border-white bg-white shadow-2xl ring-1 ring-black md:-bottom-16 md:-left-8 motion-safe:animate-fade-in-up">
+                <div className="absolute -bottom-12 -left-4 z-20 w-[56%] overflow-hidden rounded-2xl border-4 border-white bg-white shadow-2xl ring-1 ring-black md:-bottom-16 md:-left-8 motion-safe:animate-fade-in-up">
                   <div className="relative aspect-[4/3]">
                     <Image
                       src="/1600.png"
