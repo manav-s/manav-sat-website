@@ -18,8 +18,7 @@ import {
 } from "lucide-react";
 import { FadeIn, FadeInStagger } from "@/components/animations";
 
-const CALENDLY_URL =
-  "https://calendly.com/manav-sharma-evergreenprep/intro-class-manav";
+const SMS_LINK = "sms:3477224114";
 
 export default function Home() {
   return (
@@ -38,12 +37,10 @@ export default function Home() {
               +1-347-722-4114
             </a>
             <a
-              href={CALENDLY_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={SMS_LINK}
               className="rounded-full bg-neutral-900 px-6 py-2.5 text-sm font-medium text-white transition-all hover:bg-neutral-800 hover:shadow-lg hover:shadow-neutral-900/10"
             >
-              Book First Class
+              Text to Consult
             </a>
           </div>
         </div>
@@ -97,12 +94,10 @@ export default function Home() {
               <FadeIn delay={0.4}>
                 <div className="flex flex-col gap-4 sm:flex-row">
                   <a
-                    href={CALENDLY_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href={SMS_LINK}
                     className="inline-flex items-center justify-center rounded-full bg-neutral-900 px-8 py-4 text-base font-semibold text-white transition-all hover:bg-neutral-800 hover:shadow-xl hover:shadow-neutral-900/20"
                   >
-                    Book Free Consultation
+                    Text Me: 347-722-4114
                   </a>
                   <a
                     href="#testimonials"
@@ -522,12 +517,10 @@ export default function Home() {
                 Ready to transform your score?
               </h3>
               <a
-                href={CALENDLY_URL}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={SMS_LINK}
                 className="inline-flex w-full items-center justify-center rounded-full bg-neutral-900 px-8 py-4 text-base font-semibold text-white transition-all hover:bg-neutral-800 hover:shadow-xl hover:shadow-neutral-900/20"
               >
-                Book Free Trial Class
+                Text Me to Consult
                 <ArrowRight className="ml-2 h-4 w-4" />
               </a>
               <p className="text-center text-xs text-neutral-400">
