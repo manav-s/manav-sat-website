@@ -38,9 +38,10 @@ export default function Home() {
             </a>
             <a
               href={SMS_LINK}
-              className="rounded-full bg-neutral-900 px-6 py-2.5 text-sm font-medium text-white transition-all hover:bg-neutral-800 hover:shadow-lg hover:shadow-neutral-900/10"
+              className="flex items-center gap-2 rounded-full bg-neutral-900 px-6 py-2.5 text-sm font-medium text-white transition-all hover:bg-neutral-800 hover:shadow-lg hover:shadow-neutral-900/10"
             >
-              Text to Consult
+              <Phone className="h-4 w-4" />
+              347-722-4114
             </a>
           </div>
         </div>
@@ -95,9 +96,10 @@ export default function Home() {
                 <div className="flex flex-col gap-4 sm:flex-row">
                   <a
                     href={SMS_LINK}
-                    className="inline-flex items-center justify-center rounded-full bg-neutral-900 px-8 py-4 text-base font-semibold text-white transition-all hover:bg-neutral-800 hover:shadow-xl hover:shadow-neutral-900/20"
+                    className="inline-flex items-center justify-center gap-2 rounded-full bg-neutral-900 px-8 py-4 text-base font-semibold text-white transition-all hover:bg-neutral-800 hover:shadow-xl hover:shadow-neutral-900/20"
                   >
-                    Text Me: 347-722-4114
+                    <Phone className="h-5 w-5" />
+                    347-722-4114
                   </a>
                   <a
                     href="#testimonials"
@@ -518,10 +520,10 @@ export default function Home() {
               </h3>
               <a
                 href={SMS_LINK}
-                className="inline-flex w-full items-center justify-center rounded-full bg-neutral-900 px-8 py-4 text-base font-semibold text-white transition-all hover:bg-neutral-800 hover:shadow-xl hover:shadow-neutral-900/20"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-neutral-900 px-8 py-4 text-base font-semibold text-white transition-all hover:bg-neutral-800 hover:shadow-xl hover:shadow-neutral-900/20"
               >
-                Text Me to Consult
-                <ArrowRight className="ml-2 h-4 w-4" />
+                <Phone className="h-5 w-5" />
+                347-722-4114
               </a>
               <p className="text-center text-xs text-neutral-400">
                 Limited spots available for upcoming session.
