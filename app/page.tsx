@@ -168,7 +168,7 @@ export default function Home() {
             <p className="mb-8 text-center text-sm font-medium uppercase tracking-widest text-neutral-500">
               Students Accepted Into Top Universities
             </p>
-            <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-12">
+            <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-12 lg:grid lg:grid-cols-7 lg:gap-8">
               {[
                 {
                   name: "Harvard",
