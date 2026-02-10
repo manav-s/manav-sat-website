@@ -168,7 +168,7 @@ export default function Home() {
             <p className="mb-8 text-center text-sm font-medium uppercase tracking-widest text-neutral-500">
               Students Accepted Into Top Universities
             </p>
-            <div className="grid grid-cols-2 items-center gap-6 sm:grid-cols-3 lg:grid-cols-7">
+            <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-12">
               {[
                 {
                   name: "Harvard",
@@ -347,9 +347,9 @@ export default function Home() {
       </section>
 
       {/* ── Steps ── */}
-      <section className="bg-neutral-900 py-24 text-white md:py-32">
+      <section className="bg-neutral-900 py-24 text-white md:py-32 overflow-hidden">
         <div className="mx-auto max-w-6xl px-6">
-          <div className="mb-16 md:mb-24">
+          <div className="mb-20 md:mb-32 text-center">
             <FadeIn>
               <h2 className="font-serif text-3xl md:text-4xl text-neutral-200">
                 Your path to 1600
@@ -357,38 +357,60 @@ export default function Home() {
             </FadeIn>
           </div>
 
-          <FadeInStagger className="grid gap-12 md:grid-cols-3 md:gap-16">
-            <FadeIn className="group space-y-6">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full border border-neutral-700 bg-neutral-800 text-xl font-bold transition-colors group-hover:bg-white group-hover:text-black">
-                1
-              </div>
-              <h3 className="text-xl font-bold">Schedule</h3>
-              <p className="leading-relaxed text-neutral-400">
-                A simple free intro class to assess your goals, current level,
-                and answer any questions.
-              </p>
-            </FadeIn>
-            <FadeIn className="group space-y-6">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full border border-neutral-700 bg-neutral-800 text-xl font-bold transition-colors group-hover:bg-white group-hover:text-black">
-                2
-              </div>
-              <h3 className="text-xl font-bold">Plan of Attack</h3>
-              <p className="leading-relaxed text-neutral-400">
-                Attend custom classes, complete targeted practice exams, and
-                review directly with me.
-              </p>
-            </FadeIn>
-            <FadeIn className="group space-y-6">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full border border-neutral-700 bg-neutral-800 text-xl font-bold transition-colors group-hover:bg-white group-hover:text-black">
-                3
-              </div>
-              <h3 className="text-xl font-bold">Climb the Ladder</h3>
-              <p className="leading-relaxed text-neutral-400">
-                Walk into the exam room with total confidence, get your score,
-                and apply to your dream school.
-              </p>
-            </FadeIn>
-          </FadeInStagger>
+          <div className="relative">
+            {/* Connector Line (Desktop) */}
+            <div className="absolute top-12 left-0 hidden w-full -translate-y-1/2 md:block px-12 opacity-30">
+              <div className="w-full h-px border-t-2 border-dashed border-neutral-500"></div>
+            </div>
+
+            <FadeInStagger className="relative grid gap-12 md:grid-cols-3 md:gap-12">
+              <FadeIn className="group relative z-10 flex flex-col items-center text-center">
+                <div className="mb-8 flex h-24 w-24 items-center justify-center rounded-full border border-neutral-800 bg-neutral-900 text-neutral-400 shadow-2xl transition-all duration-500 group-hover:border-white group-hover:bg-white group-hover:text-black group-hover:scale-110">
+                  <Calendar className="h-10 w-10" />
+                </div>
+                <div className="space-y-4">
+                  <div className="inline-flex items-center rounded-full border border-neutral-800 bg-neutral-900 px-3 py-1 text-xs font-medium uppercase tracking-widest text-neutral-500 transition-colors group-hover:border-neutral-700 group-hover:text-neutral-300">
+                    Step 01
+                  </div>
+                  <h3 className="text-xl font-bold text-white">Initial Consultation</h3>
+                  <p className="leading-relaxed text-neutral-400 max-w-xs mx-auto">
+                    A simple free intro class to assess your goals, current level,
+                    and answer any questions.
+                  </p>
+                </div>
+              </FadeIn>
+              <FadeIn className="group relative z-10 flex flex-col items-center text-center">
+                <div className="mb-8 flex h-24 w-24 items-center justify-center rounded-full border border-neutral-800 bg-neutral-900 text-neutral-400 shadow-2xl transition-all duration-500 group-hover:border-white group-hover:bg-white group-hover:text-black group-hover:scale-110">
+                  <Target className="h-10 w-10" />
+                </div>
+                <div className="space-y-4">
+                  <div className="inline-flex items-center rounded-full border border-neutral-800 bg-neutral-900 px-3 py-1 text-xs font-medium uppercase tracking-widest text-neutral-500 transition-colors group-hover:border-neutral-700 group-hover:text-neutral-300">
+                    Step 02
+                  </div>
+                  <h3 className="text-xl font-bold text-white">Plan of Attack</h3>
+                  <p className="leading-relaxed text-neutral-400 max-w-xs mx-auto">
+                    Attend custom classes, complete targeted practice exams, and
+                    review directly with me.
+                  </p>
+                </div>
+              </FadeIn>
+              <FadeIn className="group relative z-10 flex flex-col items-center text-center">
+                <div className="mb-8 flex h-24 w-24 items-center justify-center rounded-full border border-neutral-800 bg-neutral-900 text-neutral-400 shadow-2xl transition-all duration-500 group-hover:border-white group-hover:bg-white group-hover:text-black group-hover:scale-110">
+                  <TrendingUp className="h-10 w-10" />
+                </div>
+                <div className="space-y-4">
+                  <div className="inline-flex items-center rounded-full border border-neutral-800 bg-neutral-900 px-3 py-1 text-xs font-medium uppercase tracking-widest text-neutral-500 transition-colors group-hover:border-neutral-700 group-hover:text-neutral-300">
+                    Step 03
+                  </div>
+                  <h3 className="text-xl font-bold text-white">Climb the Ladder</h3>
+                  <p className="leading-relaxed text-neutral-400 max-w-xs mx-auto">
+                    Walk into the exam room with total confidence, get your score,
+                    and apply to your dream school.
+                  </p>
+                </div>
+              </FadeIn>
+            </FadeInStagger>
+          </div>
         </div>
       </section>
 
