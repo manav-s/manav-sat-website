@@ -187,7 +187,7 @@ export default function Home() {
                   <span className="ml-2 text-neutral-500">— Student</span>
                 </div>
               </div>
-              <div className="aspect-video w-full overflow-hidden rounded-lg bg-neutral-100">
+              <div className="mx-auto aspect-[9/16] w-full max-w-[320px] overflow-hidden rounded-lg bg-neutral-100">
                 <iframe
                   className="h-full w-full"
                   src="https://www.youtube.com/embed/pLioZIuZHZc"
@@ -220,7 +220,7 @@ export default function Home() {
                   <span className="ml-2 text-neutral-500">— Student</span>
                 </div>
               </div>
-              <div className="aspect-video w-full overflow-hidden rounded-lg bg-neutral-100">
+              <div className="mx-auto aspect-[9/16] w-full max-w-[320px] overflow-hidden rounded-lg bg-neutral-100">
                 {/* Video placeholder */}
                 <div className="flex h-full w-full items-center justify-center text-sm text-neutral-400">
                   Add Video Asset
