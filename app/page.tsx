@@ -15,10 +15,19 @@ import {
   Target,
   TrendingUp,
   Terminal,
+  User,
 } from "lucide-react";
 import { FadeIn, FadeInStagger } from "@/components/animations";
 
 const SMS_LINK = "sms:3477224114";
+
+const TOTAL_SPOTS = 6;
+const CURRENT_STUDENTS = [
+  { name: "Arjun", state: "NY" },
+  { name: "Priya", state: "NJ" },
+  { name: "Ethan", state: "CT" },
+  { name: "Sofia", state: "NY" },
+];
 
 export default function Home() {
   return (
@@ -101,6 +110,52 @@ export default function Home() {
                   >
                     See Results
                   </a>
+                </div>
+              </FadeIn>
+              <FadeIn delay={0.5}>
+                <div className="mt-8 rounded-2xl border border-neutral-200 bg-white p-5 shadow-sm max-w-sm">
+                  <div className="mb-4 flex items-center justify-between">
+                    <div>
+                        <div className="text-sm font-bold text-neutral-900">Current Session</div>
+                        <div className="text-xs text-neutral-500">Maximum 6 students</div>
+                    </div>
+                    <div className="rounded-full bg-neutral-100 px-2 py-1 text-xs font-semibold text-neutral-900">
+                        {TOTAL_SPOTS - CURRENT_STUDENTS.length} spots left
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-2 gap-2">
+                    {Array.from({ length: TOTAL_SPOTS }).map((_, i) => {
+                      const student = CURRENT_STUDENTS[i];
+                      return (
+                        <div
+                          key={i}
+                          className={`flex items-center gap-2 rounded-full py-1.5 pl-1.5 pr-3 transition-all ${
+                            student
+                              ? 'bg-neutral-900 text-white'
+                              : 'border border-dashed border-neutral-200 bg-neutral-50 text-neutral-400'
+                          }`}
+                        >
+                          {student ? (
+                            <>
+                                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-white/20 text-[10px] font-bold">
+                                    {student.name[0]}
+                                </span>
+                                <span className="text-xs font-medium truncate">
+                                    {student.name}, {student.state}
+                                </span>
+                            </>
+                          ) : (
+                            <>
+                                <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-neutral-200/50">
+                                    <User className="h-3 w-3" />
+                                </div>
+                                <span className="text-xs font-medium">Open Spot</span>
+                            </>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
                 </div>
               </FadeIn>
             </FadeIn>
@@ -520,9 +575,46 @@ export default function Home() {
                 <Phone className="h-5 w-5" />
                 347-722-4114
               </a>
-              <p className="text-center text-xs text-neutral-400">
-                Limited spots available for upcoming session.
-              </p>
+              <div className="flex flex-col items-center gap-4">
+                <div className="flex flex-wrap justify-center gap-2 max-w-sm">
+                  {Array.from({ length: TOTAL_SPOTS }).map((_, i) => {
+                    const student = CURRENT_STUDENTS[i];
+                    return (
+                        <div
+                          key={i}
+                          className={`flex items-center gap-1.5 rounded-full py-1 pl-1 pr-2.5 transition-all ${
+                            student
+                              ? 'bg-neutral-900 text-white'
+                              : 'border border-dashed border-neutral-200 bg-neutral-50 text-neutral-400'
+                          }`}
+                        >
+                          {student ? (
+                            <>
+                                <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-white/20 text-[9px] font-bold">
+                                    {student.name[0]}
+                                </span>
+                                <span className="text-[10px] font-medium">
+                                    {student.name}
+                                </span>
+                            </>
+                          ) : (
+                            <>
+                                <div className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-neutral-200/50">
+                                    <User className="h-2.5 w-2.5" />
+                                </div>
+                                <span className="text-[10px] font-medium">Open</span>
+                            </>
+                          )}
+                        </div>
+                    );
+                  })}
+                </div>
+                <p className="text-center text-xs text-neutral-500">
+                  {TOTAL_SPOTS - CURRENT_STUDENTS.length === 0
+                    ? 'Currently fully booked — join the waitlist'
+                    : `Only ${TOTAL_SPOTS - CURRENT_STUDENTS.length} of ${TOTAL_SPOTS} spots remaining`}
+                </p>
+              </div>
             </FadeIn>
           </FadeInStagger>
         </div>
