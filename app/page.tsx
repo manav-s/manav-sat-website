@@ -24,7 +24,9 @@ const SMS_LINK = "sms:3477224114";
 // Configure these in Vercel Environment Variables:
 // NEXT_PUBLIC_TOTAL_SPOTS=6
 // NEXT_PUBLIC_STUDENTS='["Arjun, NY", "Priya, NJ"]'
+// NEXT_PUBLIC_LAST_UPDATED='Feb 10, 2026'
 const TOTAL_SPOTS = Number(process.env.NEXT_PUBLIC_TOTAL_SPOTS || 6);
+const LAST_UPDATED = process.env.NEXT_PUBLIC_LAST_UPDATED || "Feb 10, 2026";
 
 let CURRENT_STUDENTS: string[] = [
   "Arjun, NY",
@@ -222,6 +224,7 @@ export default function Home() {
                             );
                             })}
                         </div>
+                        <p className="mt-3 text-xs font-medium text-neutral-900 text-right">Updated {LAST_UPDATED}</p>
                     </div>
                 </div>
             </FadeIn>
@@ -412,7 +415,7 @@ export default function Home() {
                         Before
                       </span>
                       <span className="font-mono text-xl font-medium text-neutral-400 line-through decoration-red-400/50">
-                        27
+                        1300
                       </span>
                     </div>
                     <ArrowRight className="h-5 w-5 text-neutral-300" />
@@ -421,7 +424,7 @@ export default function Home() {
                         After
                       </span>
                       <span className="font-mono text-3xl font-bold text-green-600">
-                        34 ACT
+                        1520
                       </span>
                     </div>
                   </div>
