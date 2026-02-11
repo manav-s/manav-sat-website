@@ -112,52 +112,6 @@ export default function Home() {
                   </a>
                 </div>
               </FadeIn>
-              <FadeIn delay={0.5}>
-                <div className="mt-8 rounded-2xl border border-neutral-200 bg-white p-5 shadow-sm max-w-sm">
-                  <div className="mb-4 flex items-center justify-between">
-                    <div>
-                        <div className="text-sm font-bold text-neutral-900">Current Session</div>
-                        <div className="text-xs text-neutral-500">Maximum 6 students</div>
-                    </div>
-                    <div className="rounded-full bg-neutral-100 px-2 py-1 text-xs font-semibold text-neutral-900">
-                        {TOTAL_SPOTS - CURRENT_STUDENTS.length} spots left
-                    </div>
-                  </div>
-                  <div className="grid grid-cols-2 gap-2">
-                    {Array.from({ length: TOTAL_SPOTS }).map((_, i) => {
-                      const student = CURRENT_STUDENTS[i];
-                      return (
-                        <div
-                          key={i}
-                          className={`flex items-center gap-2 rounded-full py-1.5 pl-1.5 pr-3 transition-all ${
-                            student
-                              ? 'bg-neutral-900 text-white'
-                              : 'border border-dashed border-neutral-200 bg-neutral-50 text-neutral-400'
-                          }`}
-                        >
-                          {student ? (
-                            <>
-                                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-white/20 text-[10px] font-bold">
-                                    {student.name[0]}
-                                </span>
-                                <span className="text-xs font-medium truncate">
-                                    {student.name}, {student.state}
-                                </span>
-                            </>
-                          ) : (
-                            <>
-                                <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-neutral-200/50">
-                                    <User className="h-3 w-3" />
-                                </div>
-                                <span className="text-xs font-medium">Open Spot</span>
-                            </>
-                          )}
-                        </div>
-                      );
-                    })}
-                  </div>
-                </div>
-              </FadeIn>
             </FadeIn>
             <FadeIn direction="left" delay={0.2} className="order-1 flex justify-center md:order-2">
               <div className="relative w-full max-w-[550px]">
@@ -187,6 +141,68 @@ export default function Home() {
               </div>
             </FadeIn>
           </div>
+        </div>
+      </section>
+
+      {/* ── Admissions/Tracker Section ── */}
+      <section className="border-b border-neutral-100 bg-neutral-50/50 py-12">
+        <div className="mx-auto max-w-4xl px-6">
+            <FadeIn>
+                <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
+                    <div className="text-center md:text-left">
+                        <div className="flex items-center justify-center gap-2 md:justify-start">
+                            <div className="h-2 w-2 rounded-full bg-green-500 animate-pulse"></div>
+                            <span className="text-sm font-bold uppercase tracking-wider text-green-600">Now Enrolling</span>
+                        </div>
+                        <h3 className="mt-2 text-xl font-bold text-neutral-900 md:text-2xl">March SAT Cohort</h3>
+                        <p className="mt-2 max-w-sm text-sm text-neutral-600">
+                            I strictly limit my private mentorship to <span className="font-semibold text-neutral-900">6 students per month</span> to ensure every student gets the right 1:1 attention.
+                        </p>
+                    </div>
+
+                    <div className="w-full max-w-sm rounded-2xl border border-neutral-200 bg-white p-5 shadow-sm">
+                        <div className="mb-4 flex items-center justify-between">
+                            <div className="text-sm font-bold text-neutral-900">Current Session</div>
+                             <div className="rounded-full bg-neutral-100 px-2 py-1 text-xs font-semibold text-neutral-900">
+                                {TOTAL_SPOTS - CURRENT_STUDENTS.length} spots left
+                            </div>
+                        </div>
+                        <div className="grid grid-cols-2 gap-2">
+                            {Array.from({ length: TOTAL_SPOTS }).map((_, i) => {
+                            const student = CURRENT_STUDENTS[i];
+                            return (
+                                <div
+                                key={i}
+                                className={`flex items-center gap-2 rounded-full py-1.5 pl-1.5 pr-3 transition-all ${
+                                    student
+                                    ? 'bg-neutral-900 text-white'
+                                    : 'border border-dashed border-neutral-200 bg-neutral-50 text-neutral-400'
+                                }`}
+                                >
+                                {student ? (
+                                    <>
+                                        <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-white/20 text-[10px] font-bold">
+                                            {student.name[0]}
+                                        </span>
+                                        <span className="text-xs font-medium truncate">
+                                            {student.name}, {student.state}
+                                        </span>
+                                    </>
+                                ) : (
+                                    <>
+                                        <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-neutral-200/50">
+                                            <User className="h-3 w-3" />
+                                        </div>
+                                        <span className="text-xs font-medium">Open Spot</span>
+                                    </>
+                                )}
+                                </div>
+                            );
+                            })}
+                        </div>
+                    </div>
+                </div>
+            </FadeIn>
         </div>
       </section>
 
@@ -612,7 +628,8 @@ export default function Home() {
                 <p className="text-center text-xs text-neutral-500">
                   {TOTAL_SPOTS - CURRENT_STUDENTS.length === 0
                     ? 'Currently fully booked — join the waitlist'
-                    : `Only ${TOTAL_SPOTS - CURRENT_STUDENTS.length} of ${TOTAL_SPOTS} spots remaining`}
+                    : `Only ${TOTAL_SPOTS - CURRENT_STUDENTS.length} of ${TOTAL_SPOTS} spots remaining.`}
+                  <span className="block mt-1 opacity-75">I only teach 6 students at a time.</span>
                 </p>
               </div>
             </FadeIn>
