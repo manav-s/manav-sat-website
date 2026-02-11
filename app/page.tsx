@@ -81,7 +81,7 @@ export default function Home() {
                       <Image src="https://randomuser.me/api/portraits/women/68.jpg" alt="Student" width={32} height={32} className="h-8 w-8 rounded-full border-2 border-white object-cover" />
                     </div>
                     <span className="text-sm font-medium text-neutral-600">
-                      Join 200+ successful students
+                      Join 200+ successful families
                     </span>
                   </div>
                   <div className="hidden h-8 w-px bg-neutral-200 sm:block"></div>
