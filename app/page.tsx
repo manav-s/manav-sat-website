@@ -23,19 +23,22 @@ const SMS_LINK = "sms:3477224114";
 
 // Configure these in Vercel Environment Variables:
 // NEXT_PUBLIC_TOTAL_SPOTS=6
-// NEXT_PUBLIC_STUDENTS='[{"name":"Student1","state":"NY"},{"name":"Student2","state":"CA"}]'
+// NEXT_PUBLIC_STUDENTS='["Arjun, NY", "Priya, NJ"]'
 const TOTAL_SPOTS = Number(process.env.NEXT_PUBLIC_TOTAL_SPOTS || 6);
 
-let CURRENT_STUDENTS = [
-  { name: "Arjun", state: "NY" },
-  { name: "Priya", state: "NJ" },
-  { name: "Ethan", state: "CT" },
-  { name: "Sofia", state: "NY" },
+let CURRENT_STUDENTS: string[] = [
+  "Arjun, NY",
+  "Priya, NJ",
+  "Ethan, CT",
+  "Sofia, NY",
 ];
 
 if (process.env.NEXT_PUBLIC_STUDENTS) {
   try {
-    CURRENT_STUDENTS = JSON.parse(process.env.NEXT_PUBLIC_STUDENTS);
+    const parsed = JSON.parse(process.env.NEXT_PUBLIC_STUDENTS);
+    if (Array.isArray(parsed)) {
+      CURRENT_STUDENTS = parsed;
+    }
   } catch (e) {
     console.warn("Failed to parse NEXT_PUBLIC_STUDENTS env var", e);
   }
@@ -201,10 +204,10 @@ export default function Home() {
                                 {student ? (
                                     <>
                                         <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-white/20 text-[10px] font-bold">
-                                            {student.name[0]}
+                                            {student[0]}
                                         </span>
                                         <span className="text-xs font-medium truncate">
-                                            {student.name}, {student.state}
+                                            {student}
                                         </span>
                                     </>
                                 ) : (
@@ -626,10 +629,10 @@ export default function Home() {
                           {student ? (
                             <>
                                 <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-white/20 text-[9px] font-bold">
-                                    {student.name[0]}
+                                    {student[0]}
                                 </span>
                                 <span className="text-[10px] font-medium">
-                                    {student.name}
+                                    {student}
                                 </span>
                             </>
                           ) : (
