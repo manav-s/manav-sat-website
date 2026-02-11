@@ -328,9 +328,9 @@ export default function Home() {
                   ))}
                 </div>
                 <blockquote className="mb-8 font-serif text-3xl leading-tight text-neutral-900 md:text-4xl">
-                  &ldquo;Alexisgrace came to me struggling with test-taking. Other
-                  tutors didn&apos;t care. I saw dedication. Now she has
-                  transformed her academic path.&rdquo;
+                  &ldquo;Manav is patient and explained everything in a way
+                  that I could understand, it gave me <strong>real
+                  confidence</strong> for the digital SAT.&rdquo;
                 </blockquote>
                 <div className="flex flex-wrap items-center gap-6">
                   <div>
@@ -397,9 +397,9 @@ export default function Home() {
                   ))}
                 </div>
                 <blockquote className="mb-8 font-serif text-3xl leading-tight text-neutral-900 md:text-4xl">
-                  &ldquo;Nina was exceptional but her schedule was packed. With
-                  a custom plan, she scored a 1520 (Top 1%) and is applying to
-                  top colleges with confidence.&rdquo;
+                  &ldquo;My experience with Manav has been incredibly
+                  beneficial. He provides custom resources that were great
+                  for my needs as a student.&rdquo;
                 </blockquote>
                 <div className="flex flex-wrap items-center gap-6">
                   <div>
