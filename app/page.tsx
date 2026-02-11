@@ -150,10 +150,17 @@ export default function Home() {
             <FadeIn>
                 <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
                     <div className="text-center md:text-left">
-                        <div className="flex items-center justify-center gap-2 md:justify-start">
-                            <div className="h-2 w-2 rounded-full bg-green-500 animate-pulse"></div>
-                            <span className="text-sm font-bold uppercase tracking-wider text-green-600">Now Enrolling</span>
-                        </div>
+                        {TOTAL_SPOTS - CURRENT_STUDENTS.length === 0 ? (
+                             <div className="flex items-center justify-center gap-2 md:justify-start">
+                                <div className="h-2 w-2 rounded-full bg-amber-500"></div>
+                                <span className="text-sm font-bold uppercase tracking-wider text-amber-600">Waitlist Open</span>
+                            </div>
+                        ) : (
+                            <div className="flex items-center justify-center gap-2 md:justify-start">
+                                <div className="h-2 w-2 rounded-full bg-green-500 animate-pulse"></div>
+                                <span className="text-sm font-bold uppercase tracking-wider text-green-600">Now Enrolling</span>
+                            </div>
+                        )}
                         <h3 className="mt-2 text-xl font-bold text-neutral-900 md:text-2xl">March SAT Cohort</h3>
                         <p className="mt-2 max-w-sm text-sm text-neutral-600">
                             I strictly limit my private mentorship to <span className="font-semibold text-neutral-900">6 students per month</span> to ensure every student gets the right 1:1 attention.
