@@ -180,7 +180,7 @@ export default function Home() {
                         )}
                         <h3 className="mt-2 text-xl font-bold text-neutral-900 md:text-2xl">March SAT Cohort</h3>
                         <p className="mt-2 max-w-sm text-sm text-neutral-600">
-                            I strictly limit my private mentorship to <span className="font-semibold text-neutral-900">6 students per month</span> to ensure every student gets the right 1:1 attention.
+                            I strictly limit my private mentorship to <span className="font-semibold text-neutral-900">{TOTAL_SPOTS} students per month</span> to ensure every student gets the right 1:1 attention.
                         </p>
                     </div>
 
@@ -654,7 +654,7 @@ export default function Home() {
                   {TOTAL_SPOTS - CURRENT_STUDENTS.length === 0
                     ? 'Currently fully booked — join the waitlist'
                     : `Only ${TOTAL_SPOTS - CURRENT_STUDENTS.length} of ${TOTAL_SPOTS} spots remaining.`}
-                  <span className="block mt-1 opacity-75">I only teach 6 students at a time.</span>
+                  <span className="block mt-1 opacity-75">I only teach {TOTAL_SPOTS} students at a time.</span>
                 </p>
               </div>
             </FadeIn>
