@@ -431,6 +431,64 @@ export default function Home() {
                 </div>
               </FadeIn>
             </div>
+
+            {/* Case Study 3: Ava */}
+            <div className="grid items-center gap-12 md:grid-cols-2 md:gap-24">
+              <FadeIn direction="right" className="order-2 md:order-1">
+                <div className="mb-6 flex gap-1">
+                  {[...Array(5)].map((_, i) => (
+                    <Star
+                      key={i}
+                      className="h-5 w-5 fill-neutral-900 text-neutral-900"
+                    />
+                  ))}
+                </div>
+                <blockquote className="mb-8 font-serif text-3xl leading-tight text-neutral-900 md:text-4xl">
+                  &ldquo;Manav helped me build the strategies and confidence I
+                  needed to <strong>jump 120 points</strong> on the digital
+                  SAT.&rdquo;
+                </blockquote>
+                <div className="flex flex-wrap items-center gap-6">
+                  <div>
+                    <cite className="not-italic font-bold text-lg text-neutral-900">
+                      Ava
+                    </cite>
+                    <span className="ml-2 text-neutral-500">Student</span>
+                  </div>
+                  <div className="h-8 w-px bg-neutral-200"></div>
+                  <div className="flex items-center gap-4 rounded-xl border border-neutral-100 bg-white p-4 shadow-xl shadow-neutral-900/5 ring-1 ring-neutral-900/5">
+                    <div className="flex flex-col">
+                      <span className="text-[10px] font-bold uppercase tracking-wider text-neutral-400">
+                        Before
+                      </span>
+                      <span className="font-mono text-xl font-medium text-neutral-400 line-through decoration-red-400/50">
+                        1300
+                      </span>
+                    </div>
+                    <ArrowRight className="h-5 w-5 text-neutral-300" />
+                    <div className="flex flex-col">
+                      <span className="text-[10px] font-bold uppercase tracking-wider text-green-600">
+                        After
+                      </span>
+                      <span className="font-mono text-3xl font-bold text-green-600">
+                        1420 SAT
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </FadeIn>
+              <FadeIn direction="left" className="order-1 flex justify-center md:order-2">
+                <div className="relative aspect-[9/16] w-full max-w-[320px] overflow-hidden rounded-2xl bg-neutral-900 shadow-2xl ring-1 ring-neutral-200">
+                  <iframe
+                    className="h-full w-full"
+                    src="https://www.youtube.com/embed/zuDcq9_n5jU"
+                    title="Ava testimonial"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  />
+                </div>
+              </FadeIn>
+            </div>
           </div>
         </div>
       </section>
