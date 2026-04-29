@@ -135,7 +135,7 @@ export default function Home() {
                 {/* Main Image - Manav */}
                 <div className="relative z-10 ml-auto aspect-[3/4] w-3/4 overflow-hidden rounded-2xl border-4 border-white bg-neutral-100 shadow-2xl">
                   <Image
-                    src="/headshot.jpg"
+                    src="/headshot.png"
                     alt="Manav Sharma"
                     fill
                     className="object-cover"
