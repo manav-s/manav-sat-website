@@ -138,7 +138,7 @@ export default function Home() {
                     src="/headshot.png"
                     alt="Manav Sharma"
                     fill
-                    className="object-cover"
+                    className="object-cover object-top scale-150 translate-y-8"
                     priority
                   />
                 </div>
