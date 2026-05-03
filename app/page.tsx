@@ -282,7 +282,7 @@ export default function Home() {
         <div className="mx-auto max-w-5xl px-6">
           <FadeInStagger className="grid grid-cols-1 gap-12 sm:grid-cols-3 sm:divide-x sm:divide-neutral-800">
             {[
-              { label: "Avg. Point Increase", value: "200" },
+              { label: "Avg. Point Increase", value: "170" },
               { label: "Students", value: "250+" },
               { label: "Student Results", value: "Top 1%" },
             ].map((stat) => (
