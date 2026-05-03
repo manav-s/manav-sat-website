@@ -103,13 +103,14 @@ export default function Home() {
               </FadeIn>
               <FadeIn delay={0.2}>
                 <h1 className="mb-6 font-serif text-5xl font-bold leading-[1.1] tracking-tight text-neutral-900 md:text-6xl lg:text-7xl">
-                  Get your <span className="italic">dream</span> SAT score.
+                  SAT prep from a <span className="italic">perfect</span> scorer.
                 </h1>
               </FadeIn>
               <FadeIn delay={0.3}>
                 <p className="mb-8 max-w-lg text-lg leading-relaxed text-neutral-600 md:text-xl">
-                  I scored a perfect 1600. Now I help students rewrite their
-                  futures with a proven, personalized curriculum.
+                  I scored a 1600 on the SAT. Now I help a small group of
+                  students raise their scores with focused, 1:1 coaching built
+                  around their exact weaknesses.
                 </p>
               </FadeIn>
               <FadeIn delay={0.4}>
@@ -141,6 +142,19 @@ export default function Home() {
                     className="object-cover object-top scale-150 translate-y-8"
                     priority
                   />
+                  <a
+                    href="#videos"
+                    aria-label="Jump to SAT strategy videos"
+                    className="absolute bottom-4 right-4 z-20 inline-flex items-center justify-center rounded-xl bg-red-600 px-3.5 py-2.5 shadow-lg ring-2 ring-white transition-all hover:scale-105 hover:bg-red-700 hover:shadow-xl"
+                  >
+                    <svg
+                      viewBox="0 0 24 24"
+                      className="h-6 w-6 fill-white"
+                      aria-hidden="true"
+                    >
+                      <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z" />
+                    </svg>
+                  </a>
                 </div>
 
                 {/* Secondary Image - SAT Score */}
@@ -837,7 +851,7 @@ export default function Home() {
       </section>
 
       {/* ── Free Resources Section ── */}
-      <section className="bg-background py-24 md:py-32 border-t border-neutral-100">
+      <section id="videos" className="bg-background py-24 md:py-32 border-t border-neutral-100">
         <div className="mx-auto max-w-6xl px-6">
           <FadeIn>
             <div className="mb-16 md:mb-24 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
