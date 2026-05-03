@@ -316,7 +316,7 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col gap-24 md:gap-32">
-            {/* Case Study 1: Alexisgrace */}
+            {/* Case Study 1: Michael */}
             <div className="grid items-center gap-12 md:grid-cols-2 md:gap-24">
               <FadeIn direction="right" className="order-2 md:order-1">
                 <div className="mb-6 flex gap-1">
@@ -328,14 +328,14 @@ export default function Home() {
                   ))}
                 </div>
                 <blockquote className="mb-8 font-serif text-3xl leading-tight text-neutral-900 md:text-4xl">
-                  &ldquo;Manav is patient and explained everything in a way
-                  that I could understand, it gave me <strong>real
-                  confidence</strong> for the digital SAT.&rdquo;
+                  &ldquo;Manav helped me dial in my accuracy and pacing — I
+                  jumped <strong>140 points</strong> and ended up just one
+                  question shy of perfect.&rdquo;
                 </blockquote>
                 <div className="flex flex-wrap items-center gap-6">
                   <div>
                     <cite className="not-italic font-bold text-lg text-neutral-900">
-                      Alexisgrace
+                      Michael
                     </cite>
                     <span className="ml-2 text-neutral-500">Student</span>
                   </div>
@@ -346,7 +346,7 @@ export default function Home() {
                         Before
                       </span>
                       <span className="font-mono text-xl font-medium text-neutral-400 line-through decoration-red-400/50">
-                        1080
+                        1420
                       </span>
                     </div>
                     <ArrowRight className="h-5 w-5 text-neutral-300" />
@@ -355,7 +355,7 @@ export default function Home() {
                         After
                       </span>
                       <span className="font-mono text-3xl font-bold text-green-600">
-                        1300 SAT
+                        1560 SAT
                       </span>
                     </div>
                   </div>
@@ -365,8 +365,8 @@ export default function Home() {
                 <div className="relative aspect-[9/16] w-full max-w-[320px] overflow-hidden rounded-2xl bg-neutral-900 shadow-2xl ring-1 ring-neutral-200">
                   <iframe
                     className="h-full w-full"
-                    src="https://www.youtube.com/embed/pLioZIuZHZc"
-                    title="Alexisgrace testimonial"
+                    src="https://www.youtube.com/embed/NIaOo-lZlGQ"
+                    title="Michael testimonial"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowFullScreen
                   />
@@ -548,7 +548,7 @@ export default function Home() {
               </FadeIn>
             </div>
 
-            {/* Case Study 5: Michael */}
+            {/* Case Study 5: Alexisgrace */}
             <div className="grid items-center gap-12 md:grid-cols-2 md:gap-24">
               <FadeIn direction="right" className="order-2 md:order-1">
                 <div className="mb-6 flex gap-1">
@@ -560,14 +560,14 @@ export default function Home() {
                   ))}
                 </div>
                 <blockquote className="mb-8 font-serif text-3xl leading-tight text-neutral-900 md:text-4xl">
-                  &ldquo;Manav helped me dial in my accuracy and pacing — I
-                  jumped <strong>140 points</strong> and ended up just one
-                  question shy of perfect.&rdquo;
+                  &ldquo;Manav is patient and explained everything in a way
+                  that I could understand, it gave me <strong>real
+                  confidence</strong> for the digital SAT.&rdquo;
                 </blockquote>
                 <div className="flex flex-wrap items-center gap-6">
                   <div>
                     <cite className="not-italic font-bold text-lg text-neutral-900">
-                      Michael
+                      Alexisgrace
                     </cite>
                     <span className="ml-2 text-neutral-500">Student</span>
                   </div>
@@ -578,7 +578,7 @@ export default function Home() {
                         Before
                       </span>
                       <span className="font-mono text-xl font-medium text-neutral-400 line-through decoration-red-400/50">
-                        1420
+                        1080
                       </span>
                     </div>
                     <ArrowRight className="h-5 w-5 text-neutral-300" />
@@ -587,7 +587,7 @@ export default function Home() {
                         After
                       </span>
                       <span className="font-mono text-3xl font-bold text-green-600">
-                        1560 SAT
+                        1300 SAT
                       </span>
                     </div>
                   </div>
@@ -597,8 +597,8 @@ export default function Home() {
                 <div className="relative aspect-[9/16] w-full max-w-[320px] overflow-hidden rounded-2xl bg-neutral-900 shadow-2xl ring-1 ring-neutral-200">
                   <iframe
                     className="h-full w-full"
-                    src="https://www.youtube.com/embed/NIaOo-lZlGQ"
-                    title="Michael testimonial"
+                    src="https://www.youtube.com/embed/pLioZIuZHZc"
+                    title="Alexisgrace testimonial"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowFullScreen
                   />
