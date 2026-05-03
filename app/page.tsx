@@ -113,8 +113,7 @@ export default function Home() {
               <FadeIn delay={0.3}>
                 <p className="mb-8 max-w-lg text-lg leading-relaxed text-neutral-600 md:text-xl">
                   I scored a 1600 on the SAT. Now I help a small group of
-                  students raise their scores with focused, 1:1 coaching built
-                  around their exact weaknesses.
+                  students raise theirs with focused 1:1 coaching.
                 </p>
               </FadeIn>
               <FadeIn delay={0.4}>
