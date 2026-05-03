@@ -1,7 +1,6 @@
 import Image from "next/image";
 import {
   Phone,
-  Calendar,
   Star,
   CheckCircle,
   ArrowRight,
@@ -12,12 +11,11 @@ import {
   Linkedin,
   Youtube,
   PlayCircle,
-  Target,
-  TrendingUp,
   Terminal,
   User,
 } from "lucide-react";
 import { FadeIn, FadeInStagger } from "@/components/animations";
+import { PathToSixteenHundred } from "@/components/path-to-1600";
 
 const SMS_LINK = "sms:3477224114";
 
@@ -76,9 +74,15 @@ export default function Home() {
                 <div className="mb-6 flex flex-wrap items-center gap-6">
                   <div className="flex items-center gap-3">
                     <div className="flex -space-x-2">
-                      <Image src="https://randomuser.me/api/portraits/women/44.jpg" alt="Student" width={32} height={32} className="h-8 w-8 rounded-full border-2 border-white object-cover" />
-                      <Image src="https://randomuser.me/api/portraits/men/32.jpg" alt="Student" width={32} height={32} className="h-8 w-8 rounded-full border-2 border-white object-cover" />
-                      <Image src="https://randomuser.me/api/portraits/women/68.jpg" alt="Student" width={32} height={32} className="h-8 w-8 rounded-full border-2 border-white object-cover" />
+                      <div className="h-8 w-8 overflow-hidden rounded-full border-2 border-white ring-1 ring-neutral-300">
+                        <Image src="https://img.youtube.com/vi/NIaOo-lZlGQ/hqdefault.jpg" alt="Michael, student" width={64} height={64} className="h-full w-full scale-[1.8] object-cover object-center" />
+                      </div>
+                      <div className="h-8 w-8 overflow-hidden rounded-full border-2 border-white ring-1 ring-neutral-300">
+                        <Image src="https://img.youtube.com/vi/CZpe_eG51So/hqdefault.jpg" alt="Nina, student" width={64} height={64} className="h-full w-full scale-[1.8] object-cover object-center" />
+                      </div>
+                      <div className="h-8 w-8 overflow-hidden rounded-full border-2 border-white ring-1 ring-neutral-300">
+                        <Image src="https://img.youtube.com/vi/zuDcq9_n5jU/hqdefault.jpg" alt="Ava, student" width={64} height={64} className="h-full w-full scale-[1.8] object-cover object-center" />
+                      </div>
                     </div>
                     <span className="text-sm font-medium text-neutral-600">
                       Join 200+ successful families
@@ -172,6 +176,35 @@ export default function Home() {
               </div>
             </FadeIn>
           </div>
+        </div>
+      </section>
+
+      {/* ── Credentials Strip ── */}
+      <section className="border-b border-neutral-100 bg-white py-8">
+        <div className="mx-auto max-w-6xl px-6">
+          <FadeIn>
+            <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm font-medium text-neutral-600 md:text-base">
+              <span className="inline-flex items-center gap-1.5">
+                <span aria-hidden>🏆</span>
+                <span>Perfect <span className="font-bold text-neutral-900">1600 SAT</span></span>
+              </span>
+              <span className="hidden h-1 w-1 rounded-full bg-neutral-300 md:block" />
+              <span className="inline-flex items-center gap-1.5">
+                <span aria-hidden>🥇</span>
+                <span>National Merit <span className="font-bold text-neutral-900">Scholar</span></span>
+              </span>
+              <span className="hidden h-1 w-1 rounded-full bg-neutral-300 md:block" />
+              <span className="inline-flex items-center gap-1.5">
+                <span aria-hidden>💻</span>
+                <span>SWE @ <span className="font-bold text-neutral-900">Microsoft</span></span>
+              </span>
+              <span className="hidden h-1 w-1 rounded-full bg-neutral-300 md:block" />
+              <span className="inline-flex items-center gap-1.5">
+                <span aria-hidden>🏦</span>
+                <span>Ex-<span className="font-bold text-neutral-900">JPMorgan Chase</span></span>
+              </span>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
@@ -624,72 +657,7 @@ export default function Home() {
       </section>
 
       {/* ── Steps ── */}
-      <section className="bg-neutral-900 py-24 text-white md:py-32 overflow-hidden">
-        <div className="mx-auto max-w-6xl px-6">
-          <div className="mb-20 md:mb-32 text-center">
-            <FadeIn>
-              <h2 className="font-serif text-3xl md:text-4xl text-neutral-200">
-                Your path to 1600
-              </h2>
-            </FadeIn>
-          </div>
-
-          <div className="relative">
-            {/* Connector Line (Desktop) */}
-            <div className="absolute top-12 left-0 hidden w-full -translate-y-1/2 md:block px-12 opacity-30">
-              <div className="w-full h-px border-t-2 border-dashed border-neutral-500"></div>
-            </div>
-
-            <FadeInStagger className="relative grid gap-12 md:grid-cols-3 md:gap-12">
-              <FadeIn className="group relative z-10 flex flex-col items-center text-center">
-                <div className="mb-8 flex h-24 w-24 items-center justify-center rounded-full border border-neutral-800 bg-neutral-900 text-neutral-400 shadow-2xl transition-all duration-500 group-hover:border-white group-hover:bg-white group-hover:text-black group-hover:scale-110">
-                  <Calendar className="h-10 w-10" />
-                </div>
-                <div className="space-y-4">
-                  <div className="inline-flex items-center rounded-full border border-neutral-800 bg-neutral-900 px-3 py-1 text-xs font-medium uppercase tracking-widest text-neutral-500 transition-colors group-hover:border-neutral-700 group-hover:text-neutral-300">
-                    Step 01
-                  </div>
-                  <h3 className="text-xl font-bold text-white">Initial Consultation</h3>
-                  <p className="leading-relaxed text-neutral-400 max-w-xs mx-auto">
-                    A simple free intro class to assess your goals, current level,
-                    and answer any questions.
-                  </p>
-                </div>
-              </FadeIn>
-              <FadeIn className="group relative z-10 flex flex-col items-center text-center">
-                <div className="mb-8 flex h-24 w-24 items-center justify-center rounded-full border border-neutral-800 bg-neutral-900 text-neutral-400 shadow-2xl transition-all duration-500 group-hover:border-white group-hover:bg-white group-hover:text-black group-hover:scale-110">
-                  <Target className="h-10 w-10" />
-                </div>
-                <div className="space-y-4">
-                  <div className="inline-flex items-center rounded-full border border-neutral-800 bg-neutral-900 px-3 py-1 text-xs font-medium uppercase tracking-widest text-neutral-500 transition-colors group-hover:border-neutral-700 group-hover:text-neutral-300">
-                    Step 02
-                  </div>
-                  <h3 className="text-xl font-bold text-white">Plan of Attack</h3>
-                  <p className="leading-relaxed text-neutral-400 max-w-xs mx-auto">
-                    Attend custom classes, complete targeted practice exams, and
-                    review directly with me.
-                  </p>
-                </div>
-              </FadeIn>
-              <FadeIn className="group relative z-10 flex flex-col items-center text-center">
-                <div className="mb-8 flex h-24 w-24 items-center justify-center rounded-full border border-neutral-800 bg-neutral-900 text-neutral-400 shadow-2xl transition-all duration-500 group-hover:border-white group-hover:bg-white group-hover:text-black group-hover:scale-110">
-                  <TrendingUp className="h-10 w-10" />
-                </div>
-                <div className="space-y-4">
-                  <div className="inline-flex items-center rounded-full border border-neutral-800 bg-neutral-900 px-3 py-1 text-xs font-medium uppercase tracking-widest text-neutral-500 transition-colors group-hover:border-neutral-700 group-hover:text-neutral-300">
-                    Step 03
-                  </div>
-                  <h3 className="text-xl font-bold text-white">Climb the Ladder</h3>
-                  <p className="leading-relaxed text-neutral-400 max-w-xs mx-auto">
-                    Walk into the exam room with total confidence, get your score,
-                    and apply to your dream school.
-                  </p>
-                </div>
-              </FadeIn>
-            </FadeInStagger>
-          </div>
-        </div>
-      </section>
+      <PathToSixteenHundred />
 
       {/* ── About / Limited Availability ── */}
       <section className="py-24 md:py-32 overflow-hidden">
