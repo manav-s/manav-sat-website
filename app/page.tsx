@@ -75,13 +75,13 @@ export default function Home() {
                   <div className="flex items-center gap-3">
                     <div className="flex -space-x-2">
                       <div className="h-8 w-8 overflow-hidden rounded-full border-2 border-white ring-1 ring-neutral-300">
-                        <Image src="https://img.youtube.com/vi/NIaOo-lZlGQ/hqdefault.jpg" alt="Michael, student" width={64} height={64} className="h-full w-full scale-[1.8] object-cover object-center" />
+                        <Image src="https://img.youtube.com/vi/NIaOo-lZlGQ/hqdefault.jpg" alt="Michael — student who improved his SAT score by 140 points to a 1560" width={64} height={64} className="h-full w-full scale-[1.8] object-cover object-center" />
                       </div>
                       <div className="h-8 w-8 overflow-hidden rounded-full border-2 border-white ring-1 ring-neutral-300">
-                        <Image src="https://img.youtube.com/vi/CZpe_eG51So/hqdefault.jpg" alt="Nina, student" width={64} height={64} className="h-full w-full scale-[1.8] object-cover object-center" />
+                        <Image src="https://img.youtube.com/vi/CZpe_eG51So/hqdefault.jpg" alt="Nina — SAT tutoring student who jumped 110 points" width={64} height={64} className="h-full w-full scale-[1.8] object-cover object-center" />
                       </div>
                       <div className="h-8 w-8 overflow-hidden rounded-full border-2 border-white ring-1 ring-neutral-300">
-                        <Image src="https://img.youtube.com/vi/zuDcq9_n5jU/hqdefault.jpg" alt="Ava, student" width={64} height={64} className="h-full w-full scale-[1.8] object-cover object-center" />
+                        <Image src="https://img.youtube.com/vi/zuDcq9_n5jU/hqdefault.jpg" alt="Ava — SAT student who improved 120 points on the digital SAT" width={64} height={64} className="h-full w-full scale-[1.8] object-cover object-center" />
                       </div>
                     </div>
                     <span className="text-sm font-medium text-neutral-600">
@@ -140,7 +140,7 @@ export default function Home() {
                 <div className="relative z-10 ml-auto aspect-[3/4] w-3/4 overflow-hidden rounded-2xl border-4 border-white bg-neutral-100 shadow-2xl">
                   <Image
                     src="/headshot.png"
-                    alt="Manav Sharma"
+                    alt="Manav Sharma — perfect 1600 SAT scorer and private SAT tutor"
                     fill
                     className="object-cover object-top scale-150 translate-y-8"
                     priority
@@ -165,7 +165,7 @@ export default function Home() {
                   <div className="relative aspect-[4/3]">
                     <Image
                       src="/1600.png"
-                      alt="Perfect 1600 SAT Score"
+                      alt="Manav Sharma's perfect 1600 SAT score report from the College Board"
                       fill
                       className="object-contain"
                       priority
@@ -710,7 +710,7 @@ export default function Home() {
                   <div className="overflow-hidden rounded-xl bg-neutral-100 relative aspect-video">
                      <Image 
                         src="/class-screenshot.png"
-                        alt="Manav teaching a live small group session"
+                        alt="Manav teaching a 1:1 SAT prep session over video"
                         fill
                         className="object-cover"
                      />
