@@ -19,12 +19,21 @@ import { PathToSixteenHundred } from "@/components/path-to-1600";
 
 const SMS_LINK = "sms:3477224114";
 
+export const dynamic = "force-dynamic";
+
 // Configure these in Vercel Environment Variables:
 // NEXT_PUBLIC_TOTAL_SPOTS=6
 // NEXT_PUBLIC_STUDENTS='["Arjun, NY", "Priya, NJ"]'
 // NEXT_PUBLIC_LAST_UPDATED='Feb 10, 2026'
 const TOTAL_SPOTS = Number(process.env.NEXT_PUBLIC_TOTAL_SPOTS || 6);
 const LAST_UPDATED = process.env.NEXT_PUBLIC_LAST_UPDATED || "Feb 10, 2026";
+
+function getCurrentCohortMonth() {
+  return new Intl.DateTimeFormat("en-US", {
+    month: "long",
+    timeZone: "America/New_York",
+  }).format(new Date());
+}
 
 let CURRENT_STUDENTS: string[] = [
   "Arjun, NY",
@@ -45,6 +54,8 @@ if (process.env.NEXT_PUBLIC_STUDENTS) {
 }
 
 export default function Home() {
+  const cohortMonth = getCurrentCohortMonth();
+
   return (
     <div className="min-h-screen bg-background text-neutral-900">
       {/* ── Navigation ── */}
@@ -224,7 +235,7 @@ export default function Home() {
                                 <span className="text-sm font-bold uppercase tracking-wider text-green-600">Now Enrolling</span>
                             </div>
                         )}
-                        <h3 className="mt-2 text-xl font-bold text-neutral-900 md:text-2xl">March SAT Cohort</h3>
+                        <h3 className="mt-2 text-xl font-bold text-neutral-900 md:text-2xl">{cohortMonth} SAT Cohort</h3>
                         <p className="mt-2 max-w-sm text-sm text-neutral-600">
                             I strictly limit my private mentorship to <span className="font-semibold text-neutral-900">{TOTAL_SPOTS} students per month</span> to ensure every student gets the right 1:1 attention.
                         </p>
