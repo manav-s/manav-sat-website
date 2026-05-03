@@ -958,6 +958,12 @@ export default function Home() {
               Contact
             </a>
             <a
+              href="/blog"
+              className="text-sm font-medium text-neutral-500 transition-colors hover:text-neutral-900"
+            >
+              Blog
+            </a>
+            <a
               href="#"
               className="text-sm font-medium text-neutral-500 transition-colors hover:text-neutral-900"
             >
