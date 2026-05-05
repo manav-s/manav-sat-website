@@ -1,9 +1,12 @@
+import { VIDEO_POSTS } from "./video-posts";
+
 export type BlogPost = {
   slug: string;
   title: string;
   description: string;
   publishedAt: string;
   readingTime: string;
+  videoId?: string;
   keywords: string[];
   intro: string[];
   sections: {
@@ -14,7 +17,7 @@ export type BlogPost = {
   closing: string[];
 };
 
-export const BLOG_POSTS: BlogPost[] = [
+const WRITTEN_BLOG_POSTS: BlogPost[] = [
   {
     slug: "stuck-at-1350-1450-digital-sat",
     title: "Why You're Stuck at 1350 to 1450 on the Digital SAT, Even After Studying",
@@ -852,6 +855,8 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
   },
 ];
+
+export const BLOG_POSTS: BlogPost[] = [...WRITTEN_BLOG_POSTS, ...VIDEO_POSTS];
 
 export function getPostBySlug(slug: string) {
   return BLOG_POSTS.find((post) => post.slug === slug);

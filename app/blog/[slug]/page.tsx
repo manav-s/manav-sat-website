@@ -78,6 +78,17 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       name: "Perfect Score Manav",
       url: SITE_URL,
     },
+    ...(post.videoId
+      ? {
+          video: {
+            "@type": "VideoObject",
+            name: post.title,
+            description: post.description,
+            thumbnailUrl: `https://img.youtube.com/vi/${post.videoId}/maxresdefault.jpg`,
+            embedUrl: `https://www.youtube.com/embed/${post.videoId}`,
+          },
+        }
+      : {}),
     mainEntityOfPage: `${SITE_URL}/blog/${post.slug}`,
   };
 
@@ -104,6 +115,19 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             <p className="mt-6 text-xl leading-relaxed text-neutral-600">
               {post.description}
             </p>
+            {post.videoId && (
+              <div className="mt-10 overflow-hidden rounded-3xl bg-neutral-950 shadow-2xl ring-1 ring-neutral-200">
+                <div className="aspect-video">
+                  <iframe
+                    className="h-full w-full"
+                    src={`https://www.youtube.com/embed/${post.videoId}`}
+                    title={post.title}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  />
+                </div>
+              </div>
+            )}
           </div>
         </header>
 
