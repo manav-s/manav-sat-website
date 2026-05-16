@@ -137,10 +137,10 @@ export default function Home() {
                     347-722-4114
                   </a>
                   <a
-                    href="#testimonials"
+                    href="#vsl"
                     className="inline-flex items-center justify-center rounded-full bg-neutral-100 px-8 py-4 text-base font-semibold text-neutral-900 transition-all hover:bg-neutral-200"
                   >
-                    See Results
+                    Watch Video
                   </a>
                 </div>
               </FadeIn>
@@ -213,6 +213,56 @@ export default function Home() {
                 <span aria-hidden>🏦</span>
                 <span>Ex-<span className="font-bold text-neutral-900">JPMorgan Chase</span></span>
               </span>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* ── VSL Section ── */}
+      <section id="vsl" className="border-b border-neutral-100 bg-neutral-50 py-20 md:py-28">
+        <div className="mx-auto max-w-5xl px-6">
+          <FadeIn>
+            <div className="mx-auto mb-10 max-w-2xl text-center">
+              <p className="mb-3 text-sm font-bold uppercase tracking-widest text-neutral-500">
+                Watch this first
+              </p>
+              <h2 className="font-serif text-4xl font-bold tracking-tight text-neutral-900 md:text-5xl">
+                Why smart students get stuck on the SAT
+              </h2>
+              <p className="mt-5 text-lg leading-relaxed text-neutral-600">
+                In this short breakdown, I explain why more random practice usually
+                is not the answer, and how I figure out what is actually holding a
+                student&apos;s score back.
+              </p>
+            </div>
+          </FadeIn>
+
+          <FadeIn delay={0.15}>
+            <div className="overflow-hidden rounded-3xl border border-neutral-200 bg-black shadow-2xl shadow-neutral-900/15">
+              <video
+                src="/vsl-captioned.mp4"
+                controls
+                playsInline
+                preload="metadata"
+                className="aspect-video w-full bg-black"
+                aria-label="Video explaining Manav Sharma's SAT tutoring approach"
+              />
+            </div>
+          </FadeIn>
+
+          <FadeIn delay={0.25}>
+            <div className="mt-8 flex flex-col items-center justify-center gap-4 text-center sm:flex-row">
+              <a
+                href={SMS_LINK}
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-neutral-900 px-8 py-4 text-base font-semibold text-white transition-all hover:bg-neutral-800 hover:shadow-xl hover:shadow-neutral-900/20"
+              >
+                <Phone className="h-5 w-5" />
+                Text me your score report
+              </a>
+              <p className="max-w-sm text-sm leading-relaxed text-neutral-500">
+                Send your current score, target score, and test date. I&apos;ll
+                tell you what I would fix first.
+              </p>
             </div>
           </FadeIn>
         </div>
