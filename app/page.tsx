@@ -92,7 +92,7 @@ export default function Home() {
                         <Image src="https://img.youtube.com/vi/CZpe_eG51So/hqdefault.jpg" alt="Nina — SAT tutoring student who jumped 110 points" width={64} height={64} className="h-full w-full scale-[1.8] object-cover object-center" />
                       </div>
                       <div className="h-8 w-8 overflow-hidden rounded-full border-2 border-white ring-1 ring-neutral-300">
-                        <Image src="https://img.youtube.com/vi/zuDcq9_n5jU/hqdefault.jpg" alt="Ava — SAT student who improved 120 points on the digital SAT" width={64} height={64} className="h-full w-full scale-[1.8] object-cover object-center" />
+                        <Image src="https://img.youtube.com/vi/zuDcq9_n5jU/hqdefault.jpg" alt="Ava — SAT student who improved 130 points on the digital SAT" width={64} height={64} className="h-full w-full scale-[1.8] object-cover object-center" />
                       </div>
                     </div>
                     <span className="text-sm font-medium text-neutral-600">
@@ -552,7 +552,7 @@ export default function Home() {
                 </div>
                 <blockquote className="mb-8 font-serif text-3xl leading-tight text-neutral-900 md:text-4xl">
                   &ldquo;Manav helped me build the strategies and confidence I
-                  needed to <strong>jump 120 points</strong> on the digital
+                  needed to <strong>jump 130 points</strong> on the digital
                   SAT.&rdquo;
                 </blockquote>
                 <div className="flex flex-wrap items-center gap-6">
@@ -578,7 +578,7 @@ export default function Home() {
                         After
                       </span>
                       <span className="font-mono text-3xl font-bold text-green-600">
-                        1420 SAT
+                        1430 SAT
                       </span>
                     </div>
                   </div>
@@ -621,7 +621,7 @@ export default function Home() {
                 </div>
                 <blockquote className="mb-8 font-serif text-3xl leading-tight text-neutral-900 md:text-4xl">
                   &ldquo;In just a few weeks of working with Manav, I picked up
-                  <strong> 60 points</strong> and finally felt in control of
+                  <strong> 110 points</strong> and finally felt in control of
                   the test.&rdquo;
                 </blockquote>
                 <div className="flex flex-wrap items-center gap-6">
@@ -647,7 +647,7 @@ export default function Home() {
                         After
                       </span>
                       <span className="font-mono text-3xl font-bold text-green-600">
-                        1350 SAT
+                        1400 SAT
                       </span>
                     </div>
                   </div>
