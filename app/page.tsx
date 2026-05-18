@@ -136,24 +136,36 @@ export default function Home() {
       </section>
 
       {/* ── Credentials Strip ── */}
-      <section className="border-b border-[#e4d8c1] bg-white py-8">
+      <section className="border-b border-[#e4d8c1] bg-white py-5 md:py-8">
         <div className="mx-auto max-w-7xl px-6">
           <FadeIn>
-            <div className="flex flex-nowrap items-center justify-center gap-x-4 overflow-x-auto whitespace-nowrap text-[11px] font-semibold uppercase tracking-[0.16em] text-[#00356B]/80 md:text-xs lg:gap-x-5">
-              <span className="inline-flex shrink-0 items-center gap-1.5">
-                <span>Perfect <span className="font-bold text-[#00356B]">1600 SAT</span></span>
+            <div className="grid grid-cols-2 gap-2 text-center text-[10px] font-semibold uppercase tracking-[0.14em] text-[#00356B]/80 md:flex md:flex-nowrap md:items-center md:justify-center md:gap-x-4 md:text-xs md:tracking-[0.16em] lg:gap-x-5">
+              <span className="inline-flex items-center justify-center border border-[#e4d8c1] bg-[#fbf8f1] px-3 py-2 md:shrink-0 md:border-0 md:bg-transparent md:p-0">
+                <span>
+                  <span className="md:hidden">1600 SAT</span>
+                  <span className="hidden md:inline">Perfect <span className="font-bold text-[#00356B]">1600 SAT</span></span>
+                </span>
               </span>
               <span className="hidden h-px w-6 shrink-0 bg-[#d8c9aa] md:block" />
-              <span className="inline-flex shrink-0 items-center gap-1.5">
-                <span>National Merit <span className="font-bold text-[#00356B]">Scholar</span></span>
+              <span className="inline-flex items-center justify-center border border-[#e4d8c1] bg-[#fbf8f1] px-3 py-2 md:shrink-0 md:border-0 md:bg-transparent md:p-0">
+                <span>
+                  <span className="md:hidden">National Merit</span>
+                  <span className="hidden md:inline">National Merit <span className="font-bold text-[#00356B]">Scholar</span></span>
+                </span>
               </span>
               <span className="hidden h-px w-6 shrink-0 bg-[#d8c9aa] md:block" />
-              <span className="inline-flex shrink-0 items-center gap-1.5">
-                <span>Software Engineer, <span className="font-bold text-[#00356B]">Microsoft</span></span>
+              <span className="inline-flex items-center justify-center border border-[#e4d8c1] bg-[#fbf8f1] px-3 py-2 md:shrink-0 md:border-0 md:bg-transparent md:p-0">
+                <span>
+                  <span className="md:hidden">Microsoft SWE</span>
+                  <span className="hidden md:inline">Software Engineer, <span className="font-bold text-[#00356B]">Microsoft</span></span>
+                </span>
               </span>
               <span className="hidden h-px w-6 shrink-0 bg-[#d8c9aa] md:block" />
-              <span className="inline-flex shrink-0 items-center gap-1.5">
-                <span>Formerly <span className="font-bold text-[#00356B]">JPMorgan Chase</span></span>
+              <span className="inline-flex items-center justify-center border border-[#e4d8c1] bg-[#fbf8f1] px-3 py-2 md:shrink-0 md:border-0 md:bg-transparent md:p-0">
+                <span>
+                  <span className="md:hidden">JPMorgan</span>
+                  <span className="hidden md:inline">Formerly <span className="font-bold text-[#00356B]">JPMorgan Chase</span></span>
+                </span>
               </span>
             </div>
           </FadeIn>
