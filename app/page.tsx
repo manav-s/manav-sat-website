@@ -70,7 +70,7 @@ export default function Home() {
               className="flex items-center gap-2 rounded-full bg-neutral-900 px-6 py-2.5 text-sm font-medium text-white transition-all hover:bg-neutral-800 hover:shadow-lg hover:shadow-neutral-900/10"
             >
               <Phone className="h-4 w-4" />
-              347-722-4114
+              Score Review
             </a>
           </div>
         </div>
@@ -118,13 +118,13 @@ export default function Home() {
               </FadeIn>
               <FadeIn delay={0.2}>
                 <h1 className="mb-6 font-serif text-5xl font-bold leading-[1.1] tracking-tight text-neutral-900 md:text-6xl lg:text-7xl">
-                  SAT prep from a <span className="italic">perfect</span> scorer.
+                  Private SAT coaching from a <span className="italic">perfect</span> scorer.
                 </h1>
               </FadeIn>
               <FadeIn delay={0.3}>
                 <p className="mb-8 max-w-lg text-lg leading-relaxed text-neutral-600 md:text-xl">
-                  I scored a 1600 on the SAT. Now I help a small group of
-                  students raise theirs with focused 1:1 coaching.
+                  I scored a 1600 on the SAT. Now I work with a small number
+                  of families who want a clear, personal plan for a higher score.
                 </p>
               </FadeIn>
               <FadeIn delay={0.4}>
@@ -134,13 +134,13 @@ export default function Home() {
                     className="inline-flex items-center justify-center gap-2 rounded-full bg-neutral-900 px-8 py-4 text-base font-semibold text-white transition-all hover:bg-neutral-800 hover:shadow-xl hover:shadow-neutral-900/20"
                   >
                     <Phone className="h-5 w-5" />
-                    347-722-4114
+                    Request a Private Score Review
                   </a>
                   <a
                     href="#vsl"
                     className="inline-flex items-center justify-center rounded-full bg-neutral-100 px-8 py-4 text-base font-semibold text-neutral-900 transition-all hover:bg-neutral-200"
                   >
-                    Watch Video
+                    Watch Parent Note
                   </a>
                 </div>
               </FadeIn>
@@ -224,15 +224,15 @@ export default function Home() {
           <FadeIn>
             <div className="mx-auto mb-10 max-w-2xl text-center">
               <p className="mb-3 text-sm font-bold uppercase tracking-widest text-neutral-500">
-                Watch this first
+                A short note for parents
               </p>
               <h2 className="font-serif text-4xl font-bold tracking-tight text-neutral-900 md:text-5xl">
-                Why smart students get stuck on the SAT
+                How I find where SAT points are leaking
               </h2>
               <p className="mt-5 text-lg leading-relaxed text-neutral-600">
-                In this short breakdown, I explain why more random practice usually
-                is not the answer, and how I figure out what is actually holding a
-                student&apos;s score back.
+                In this short breakdown, I explain the SAT Precision Framework:
+                how I review a student&apos;s work, identify the real score bottleneck,
+                and decide what should be fixed first.
               </p>
             </div>
           </FadeIn>
@@ -257,10 +257,10 @@ export default function Home() {
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-neutral-900 px-8 py-4 text-base font-semibold text-white transition-all hover:bg-neutral-800 hover:shadow-xl hover:shadow-neutral-900/20"
               >
                 <Phone className="h-5 w-5" />
-                Text me your score report
+                Request a Private Score Review
               </a>
               <p className="max-w-sm text-sm leading-relaxed text-neutral-500">
-                Send your current score, target score, and test date. I&apos;ll
+                Send the current score, target score, and test date. I&apos;ll
                 tell you what I would fix first.
               </p>
             </div>
@@ -282,18 +282,18 @@ export default function Home() {
                         ) : (
                             <div className="flex items-center justify-center gap-2 md:justify-start">
                                 <div className="h-2 w-2 rounded-full bg-green-500 animate-pulse"></div>
-                                <span className="text-sm font-bold uppercase tracking-wider text-green-600">Now Enrolling</span>
+                                <span className="text-sm font-bold uppercase tracking-wider text-green-600">Private Intake Open</span>
                             </div>
                         )}
-                        <h3 className="mt-2 text-xl font-bold text-neutral-900 md:text-2xl">{cohortMonth} SAT Cohort</h3>
+                        <h3 className="mt-2 text-xl font-bold text-neutral-900 md:text-2xl">{cohortMonth} Private Coaching</h3>
                         <p className="mt-2 max-w-sm text-sm text-neutral-600">
-                            I strictly limit my private mentorship to <span className="font-semibold text-neutral-900">{TOTAL_SPOTS} students per month</span> to ensure every student gets the right 1:1 attention.
+                            I work with <span className="font-semibold text-neutral-900">{TOTAL_SPOTS} students at a time</span> so each family gets direct attention, a clear plan, and careful review.
                         </p>
                     </div>
 
                     <div className="w-full max-w-sm rounded-2xl border border-neutral-200 bg-white p-5 shadow-sm">
                         <div className="mb-4 flex items-center justify-between">
-                            <div className="text-sm font-bold text-neutral-900">Current Session</div>
+                            <div className="text-sm font-bold text-neutral-900">Current Client Roster</div>
                              <div className="rounded-full bg-neutral-100 px-2 py-1 text-xs font-semibold text-neutral-900">
                                 {TOTAL_SPOTS - CURRENT_STUDENTS.length} spots left
                             </div>
@@ -324,7 +324,7 @@ export default function Home() {
                                         <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-neutral-200/50">
                                             <User className="h-3 w-3" />
                                         </div>
-                                        <span className="text-xs font-medium">Open Spot</span>
+                                        <span className="text-xs font-medium">Private Intake</span>
                                     </>
                                 )}
                                 </div>
@@ -362,9 +362,9 @@ export default function Home() {
 
           <div className="mt-20 border-t border-neutral-800 pt-12">
             <p className="mb-8 text-center text-sm font-medium uppercase tracking-widest text-neutral-500">
-              Students Accepted Into Top Universities
+              Students I&apos;ve Worked With Have Gone On To Attend
             </p>
-            <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-12 lg:grid lg:grid-cols-7 lg:gap-8">
+            <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-12 lg:grid lg:grid-cols-6 lg:gap-8">
               {[
                 {
                   name: "Harvard",
@@ -373,10 +373,6 @@ export default function Home() {
                 {
                   name: "Yale",
                   logo: "/schools/yale.png",
-                },
-                {
-                  name: "MIT",
-                  logo: "/schools/mit.png",
                 },
                 {
                   name: "Princeton",
@@ -422,10 +418,11 @@ export default function Home() {
             </FadeIn>
           </div>
 
-          <div className="flex flex-col gap-24 md:gap-32">
+          <div className="flex flex-col gap-16 md:gap-24">
+            <div className="grid gap-10 lg:grid-cols-2">
             {/* Case Study 1: Michael */}
-            <div className="grid items-center gap-12 md:grid-cols-2 md:gap-24">
-              <FadeIn direction="right" className="order-2 md:order-1">
+            <div className="flex flex-col gap-8 rounded-3xl border border-neutral-100 bg-white p-6 shadow-xl shadow-neutral-900/5 md:p-8">
+              <FadeIn direction="right" className="order-2">
                 <div className="mb-6 flex gap-1">
                   {[...Array(5)].map((_, i) => (
                     <Star
@@ -434,7 +431,7 @@ export default function Home() {
                     />
                   ))}
                 </div>
-                <blockquote className="mb-8 font-serif text-3xl leading-tight text-neutral-900 md:text-4xl">
+                <blockquote className="mb-8 font-serif text-3xl leading-tight text-neutral-900">
                   &ldquo;Manav helped me dial in my accuracy and pacing — I
                   jumped <strong>140 points</strong> and ended up just one
                   question shy of perfect.&rdquo;
@@ -468,7 +465,7 @@ export default function Home() {
                   </div>
                 </div>
               </FadeIn>
-              <FadeIn direction="left" className="order-1 flex justify-center md:order-2">
+              <FadeIn direction="left" className="order-1 flex justify-center">
                 <div className="relative aspect-[9/16] w-full max-w-[320px] overflow-hidden rounded-2xl bg-neutral-900 shadow-2xl ring-1 ring-neutral-200">
                   <iframe
                     className="h-full w-full"
@@ -482,7 +479,7 @@ export default function Home() {
             </div>
 
             {/* Case Study 2: Nina */}
-            <div className="grid items-center gap-12 md:grid-cols-2 md:gap-24">
+            <div className="flex flex-col gap-8 rounded-3xl border border-neutral-100 bg-white p-6 shadow-xl shadow-neutral-900/5 md:p-8">
               <FadeIn direction="right" className="order-1 flex justify-center">
                 <div className="relative aspect-[9/16] w-full max-w-[320px] overflow-hidden rounded-2xl bg-neutral-900 shadow-2xl ring-1 ring-neutral-200">
                   <iframe
@@ -503,7 +500,7 @@ export default function Home() {
                     />
                   ))}
                 </div>
-                <blockquote className="mb-8 font-serif text-3xl leading-tight text-neutral-900 md:text-4xl">
+                <blockquote className="mb-8 font-serif text-3xl leading-tight text-neutral-900">
                   &ldquo;My experience with Manav has been incredibly
                   beneficial. He provides custom resources that were great
                   for my needs as a student.&rdquo;
@@ -538,180 +535,39 @@ export default function Home() {
                 </div>
               </FadeIn>
             </div>
-
-            {/* Case Study 3: Ava */}
-            <div className="grid items-center gap-12 md:grid-cols-2 md:gap-24">
-              <FadeIn direction="right" className="order-2 md:order-1">
-                <div className="mb-6 flex gap-1">
-                  {[...Array(5)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className="h-5 w-5 fill-neutral-900 text-neutral-900"
-                    />
-                  ))}
-                </div>
-                <blockquote className="mb-8 font-serif text-3xl leading-tight text-neutral-900 md:text-4xl">
-                  &ldquo;Manav helped me build the strategies and confidence I
-                  needed to <strong>jump 130 points</strong> on the digital
-                  SAT.&rdquo;
-                </blockquote>
-                <div className="flex flex-wrap items-center gap-6">
-                  <div>
-                    <cite className="not-italic font-bold text-lg text-neutral-900">
-                      Ava
-                    </cite>
-                    <span className="ml-2 text-neutral-500">Student</span>
-                  </div>
-                  <div className="h-8 w-px bg-neutral-200"></div>
-                  <div className="flex items-center gap-4 rounded-xl border border-neutral-100 bg-white p-4 shadow-xl shadow-neutral-900/5 ring-1 ring-neutral-900/5">
-                    <div className="flex flex-col">
-                      <span className="text-[10px] font-bold uppercase tracking-wider text-neutral-400">
-                        Before
-                      </span>
-                      <span className="font-mono text-xl font-medium text-neutral-400 line-through decoration-red-400/50">
-                        1300
-                      </span>
-                    </div>
-                    <ArrowRight className="h-5 w-5 text-neutral-300" />
-                    <div className="flex flex-col">
-                      <span className="text-[10px] font-bold uppercase tracking-wider text-green-600">
-                        After
-                      </span>
-                      <span className="font-mono text-3xl font-bold text-green-600">
-                        1430 SAT
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </FadeIn>
-              <FadeIn direction="left" className="order-1 flex justify-center md:order-2">
-                <div className="relative aspect-[9/16] w-full max-w-[320px] overflow-hidden rounded-2xl bg-neutral-900 shadow-2xl ring-1 ring-neutral-200">
-                  <iframe
-                    className="h-full w-full"
-                    src="https://www.youtube.com/embed/zuDcq9_n5jU"
-                    title="Ava testimonial"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowFullScreen
-                  />
-                </div>
-              </FadeIn>
             </div>
 
-            {/* Case Study 4: Amy */}
-            <div className="grid items-center gap-12 md:grid-cols-2 md:gap-24">
-              <FadeIn direction="right" className="order-1 flex justify-center">
-                <div className="relative aspect-[9/16] w-full max-w-[320px] overflow-hidden rounded-2xl bg-neutral-900 shadow-2xl ring-1 ring-neutral-200">
-                  <iframe
-                    className="h-full w-full"
-                    src="https://www.youtube.com/embed/bl9OWDqbAtQ"
-                    title="Amy testimonial"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowFullScreen
-                  />
-                </div>
-              </FadeIn>
-              <FadeIn direction="left" className="order-2">
-                <div className="mb-6 flex gap-1">
-                  {[...Array(5)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className="h-5 w-5 fill-neutral-900 text-neutral-900"
+            <FadeInStagger className="grid gap-8 md:grid-cols-3">
+              {[
+                {
+                  name: "Ava",
+                  id: "zuDcq9_n5jU",
+                },
+                {
+                  name: "Amy",
+                  id: "bl9OWDqbAtQ",
+                },
+                {
+                  name: "Alexisgrace",
+                  id: "pLioZIuZHZc",
+                },
+              ].map((student) => (
+                <FadeIn key={student.id} className="text-center">
+                  <div className="mx-auto aspect-[9/16] w-full max-w-[280px] overflow-hidden rounded-2xl bg-neutral-900 shadow-2xl ring-1 ring-neutral-200">
+                    <iframe
+                      className="h-full w-full"
+                      src={`https://www.youtube.com/embed/${student.id}`}
+                      title={`${student.name} testimonial`}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
                     />
-                  ))}
-                </div>
-                <blockquote className="mb-8 font-serif text-3xl leading-tight text-neutral-900 md:text-4xl">
-                  &ldquo;In just a few weeks of working with Manav, I picked up
-                  <strong> 110 points</strong> and finally felt in control of
-                  the test.&rdquo;
-                </blockquote>
-                <div className="flex flex-wrap items-center gap-6">
-                  <div>
-                    <cite className="not-italic font-bold text-lg text-neutral-900">
-                      Amy
-                    </cite>
-                    <span className="ml-2 text-neutral-500">Student</span>
                   </div>
-                  <div className="h-8 w-px bg-neutral-200"></div>
-                  <div className="flex items-center gap-4 rounded-xl border border-neutral-100 bg-white p-4 shadow-xl shadow-neutral-900/5 ring-1 ring-neutral-900/5">
-                    <div className="flex flex-col">
-                      <span className="text-[10px] font-bold uppercase tracking-wider text-neutral-400">
-                        Before
-                      </span>
-                      <span className="font-mono text-xl font-medium text-neutral-400 line-through decoration-red-400/50">
-                        1290
-                      </span>
-                    </div>
-                    <ArrowRight className="h-5 w-5 text-neutral-300" />
-                    <div className="flex flex-col">
-                      <span className="text-[10px] font-bold uppercase tracking-wider text-green-600">
-                        After
-                      </span>
-                      <span className="font-mono text-3xl font-bold text-green-600">
-                        1400 SAT
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </FadeIn>
-            </div>
-
-            {/* Case Study 5: Alexisgrace */}
-            <div className="grid items-center gap-12 md:grid-cols-2 md:gap-24">
-              <FadeIn direction="right" className="order-2 md:order-1">
-                <div className="mb-6 flex gap-1">
-                  {[...Array(5)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className="h-5 w-5 fill-neutral-900 text-neutral-900"
-                    />
-                  ))}
-                </div>
-                <blockquote className="mb-8 font-serif text-3xl leading-tight text-neutral-900 md:text-4xl">
-                  &ldquo;Manav is patient and explained everything in a way
-                  that I could understand, it gave me <strong>real
-                  confidence</strong> for the digital SAT.&rdquo;
-                </blockquote>
-                <div className="flex flex-wrap items-center gap-6">
-                  <div>
-                    <cite className="not-italic font-bold text-lg text-neutral-900">
-                      Alexisgrace
-                    </cite>
-                    <span className="ml-2 text-neutral-500">Student</span>
-                  </div>
-                  <div className="h-8 w-px bg-neutral-200"></div>
-                  <div className="flex items-center gap-4 rounded-xl border border-neutral-100 bg-white p-4 shadow-xl shadow-neutral-900/5 ring-1 ring-neutral-900/5">
-                    <div className="flex flex-col">
-                      <span className="text-[10px] font-bold uppercase tracking-wider text-neutral-400">
-                        Before
-                      </span>
-                      <span className="font-mono text-xl font-medium text-neutral-400 line-through decoration-red-400/50">
-                        1080
-                      </span>
-                    </div>
-                    <ArrowRight className="h-5 w-5 text-neutral-300" />
-                    <div className="flex flex-col">
-                      <span className="text-[10px] font-bold uppercase tracking-wider text-green-600">
-                        After
-                      </span>
-                      <span className="font-mono text-3xl font-bold text-green-600">
-                        1300 SAT
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </FadeIn>
-              <FadeIn direction="left" className="order-1 flex justify-center md:order-2">
-                <div className="relative aspect-[9/16] w-full max-w-[320px] overflow-hidden rounded-2xl bg-neutral-900 shadow-2xl ring-1 ring-neutral-200">
-                  <iframe
-                    className="h-full w-full"
-                    src="https://www.youtube.com/embed/pLioZIuZHZc"
-                    title="Alexisgrace testimonial"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowFullScreen
-                  />
-                </div>
-              </FadeIn>
-            </div>
+                  <p className="mt-4 text-lg font-bold text-neutral-900">
+                    {student.name}
+                  </p>
+                </FadeIn>
+              ))}
+            </FadeInStagger>
           </div>
         </div>
       </section>
@@ -729,15 +585,20 @@ export default function Home() {
                 Limited Availability
               </div>
               <h2 className="mb-6 font-serif text-4xl font-bold md:text-5xl">
-                My approach.
+                The SAT Precision Framework.
               </h2>
               <div className="space-y-6 text-lg text-neutral-600 md:text-xl leading-relaxed">
                 <p>
-                  As a full-time <span className="font-semibold text-neutral-900">Software Engineer at Microsoft</span>, I maintain a small,
-                  select group of students.
+                  I do not start by assigning more random practice. I start by
+                  finding where points are actually leaking: comprehension,
+                  timing, careless errors, question recognition, or test strategy.
                 </p>
                 <p>
-                  I&apos;m not a big agency with hundreds of disconnected tutors. I&apos;m a dedicated mentor who has helped over 250 students maximize their potential.
+                  Then I build the coaching around the few changes most likely
+                  to move the score. Your student works directly with me: a
+                  perfect scorer, National Merit Scholar, and{" "}
+                  <span className="font-semibold text-neutral-900">Software Engineer at Microsoft</span> who
+                  has helped 250+ students build a more precise SAT plan.
                 </p>
               </div>
               
@@ -784,12 +645,49 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── Fit Section ── */}
+      <section className="border-y border-neutral-100 bg-white py-20 md:py-28">
+        <div className="mx-auto max-w-6xl px-6">
+          <FadeIn>
+            <div className="mx-auto mb-14 max-w-2xl text-center">
+              <p className="mb-3 text-sm font-bold uppercase tracking-widest text-neutral-500">
+                Who this is for
+              </p>
+              <h2 className="font-serif text-4xl font-bold tracking-tight text-neutral-900 md:text-5xl">
+                Built for families who want more than generic SAT prep.
+              </h2>
+            </div>
+          </FadeIn>
+
+          <FadeInStagger className="grid gap-6 md:grid-cols-2">
+            {[
+              "A student aiming for a top score, not just a small bump.",
+              "A family that wants a SAT Precision Framework review before more practice.",
+              "A student who has tried videos, apps, classes, or tutors and still feels stuck.",
+              "A parent who wants direct 1:1 attention, accountability, and a clear next step.",
+            ].map((item) => (
+              <FadeIn
+                key={item}
+                className="rounded-2xl border border-neutral-100 bg-neutral-50 p-6 shadow-sm"
+              >
+                <div className="flex gap-4">
+                  <CheckCircle className="mt-1 h-5 w-5 shrink-0 text-neutral-900" />
+                  <p className="text-lg leading-relaxed text-neutral-700">
+                    {item}
+                  </p>
+                </div>
+              </FadeIn>
+            ))}
+          </FadeInStagger>
+        </div>
+      </section>
+
       {/* ── CTA ── */}
       <section className="bg-neutral-50 py-24 md:py-32">
         <div className="mx-auto max-w-4xl px-6">
           <FadeIn>
             <h2 className="mb-12 text-center font-serif text-3xl font-bold md:text-4xl">
-              Experience it yourself
+              Start with a private score review
             </h2>
           </FadeIn>
           
@@ -797,33 +695,33 @@ export default function Home() {
             <FadeIn className="space-y-6">
               <div className="flex gap-4">
                 <CheckCircle className="h-6 w-6 shrink-0 text-neutral-900" />
-                <p className="text-lg text-neutral-700">Proven teaching methods</p>
+                <p className="text-lg text-neutral-700">A SAT Precision Framework review of the current score and target score</p>
               </div>
               <div className="flex gap-4">
                 <CheckCircle className="h-6 w-6 shrink-0 text-neutral-900" />
-                <p className="text-lg text-neutral-700">Learn applicable strategies</p>
+                <p className="text-lg text-neutral-700">A clear diagnosis of where points are leaking</p>
               </div>
               <div className="flex gap-4">
                 <CheckCircle className="h-6 w-6 shrink-0 text-neutral-900" />
-                <p className="text-lg text-neutral-700">Detailed Q&A session</p>
+                <p className="text-lg text-neutral-700">A recommendation for what to fix first</p>
               </div>
               
               <div className="pt-6">
                 <div className="inline-flex items-center gap-2 border-l-2 border-neutral-900 pl-4">
                   <Shield className="h-5 w-5 text-neutral-900" />
                   <span className="font-semibold text-neutral-900">
-                    100% Refund Guarantee
+                    Selective fit
                   </span>
                 </div>
                 <p className="mt-2 pl-4 text-sm text-neutral-500">
-                  If there is no improvement after 30 days.
+                  If I do not think I can help, I&apos;ll tell you directly.
                 </p>
               </div>
             </FadeIn>
 
             <FadeIn className="flex flex-col items-center justify-center space-y-6 rounded-2xl bg-white p-8 shadow-sm ring-1 ring-neutral-100">
               <h3 className="text-center font-semibold text-neutral-900">
-                Text me directly to book your free trial class.
+                Text me directly for a private score review.
               </h3>
               <a
                 href={SMS_LINK}
@@ -870,7 +768,7 @@ export default function Home() {
                   {TOTAL_SPOTS - CURRENT_STUDENTS.length === 0
                     ? 'Currently fully booked — join the waitlist'
                     : `Only ${TOTAL_SPOTS - CURRENT_STUDENTS.length} of ${TOTAL_SPOTS} spots remaining.`}
-                  <span className="block mt-1 opacity-75">I only teach {TOTAL_SPOTS} students at a time.</span>
+                  <span className="block mt-1 opacity-75">I only work with {TOTAL_SPOTS} students at a time.</span>
                 </p>
               </div>
             </FadeIn>

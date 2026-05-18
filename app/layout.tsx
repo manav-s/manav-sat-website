@@ -1,15 +1,10 @@
 import type { Metadata } from "next";
-import { Inter, Libre_Baskerville } from "next/font/google";
+import { Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-});
-
-const libreBaskerville = Libre_Baskerville({
-  variable: "--font-serif",
-  weight: ["400", "700"],
+const cormorantGaramond = Cormorant_Garamond({
+  variable: "--font-cormorant",
+  weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
 });
 
@@ -19,11 +14,11 @@ const SITE_NAME = "Perfect Score Manav";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "1600 SAT Tutor | 1:1 Coaching with a Perfect Scorer — Manav Sharma",
+    default: "Private SAT Coaching | 1600 Scorer Manav Sharma",
     template: "%s | Perfect Score Manav",
   },
   description:
-    "Score in the 1500s with 1:1 SAT coaching from Manav Sharma — perfect 1600 scorer, National Merit Scholar. 170-point average increase. Only 6 students per cohort.",
+    "Private SAT coaching and score reviews with Manav Sharma — perfect 1600 scorer, National Merit Scholar, and Microsoft software engineer.",
   keywords: [
     "SAT tutor",
     "perfect score SAT tutor",
@@ -40,9 +35,9 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "1600 SAT Tutor | 1:1 Coaching with a Perfect Scorer",
+    title: "Private SAT Coaching with a 1600 Scorer",
     description:
-      "Perfect 1600 scorer and National Merit Scholar coaching a small cohort of students 1:1. Average increase: 170 points.",
+      "Private SAT score reviews and 1:1 coaching with Manav Sharma, a perfect 1600 scorer and National Merit Scholar.",
     url: SITE_URL,
     siteName: SITE_NAME,
     type: "website",
@@ -50,9 +45,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary",
-    title: "1600 SAT Tutor | 1:1 Coaching with a Perfect Scorer",
+    title: "Private SAT Coaching with a 1600 Scorer",
     description:
-      "Perfect 1600 scorer and National Merit Scholar coaching a small cohort of students 1:1. Average increase: 170 points.",
+      "Private SAT score reviews and 1:1 coaching with Manav Sharma, a perfect 1600 scorer and National Merit Scholar.",
   },
   robots: {
     index: true,
@@ -111,7 +106,7 @@ const structuredData = {
         name: "United States",
       },
       description:
-        "Private 1:1 SAT coaching from a perfect 1600 scorer. Small cohort of 6 students per month with a 170-point average score increase.",
+        "Private SAT score reviews and 1:1 coaching from a perfect 1600 scorer using the SAT Precision Framework.",
       url: SITE_URL,
       audience: {
         "@type": "Audience",
@@ -152,7 +147,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${inter.variable} ${libreBaskerville.variable} font-sans antialiased text-neutral-900 bg-white`}
+        className={`${cormorantGaramond.variable} font-sans antialiased text-neutral-900 bg-white`}
       >
         {children}
         <script
