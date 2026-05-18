@@ -163,7 +163,7 @@ export default function Home() {
               <span className="hidden h-px w-6 shrink-0 bg-[#d8c9aa] md:block" />
               <span className="inline-flex items-center justify-center border border-[#e4d8c1] bg-[#fbf8f1] px-3 py-2 md:shrink-0 md:border-0 md:bg-transparent md:p-0">
                 <span>
-                  <span className="md:hidden">JPMorgan</span>
+                  <span className="md:hidden">Ex-JPMorgan</span>
                   <span className="hidden md:inline">Formerly <span className="font-bold text-[#00356B]">JPMorgan Chase</span></span>
                 </span>
               </span>
