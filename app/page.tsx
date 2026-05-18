@@ -131,16 +131,16 @@ export default function Home() {
                 <div className="flex flex-col gap-4 sm:flex-row">
                   <a
                     href={SMS_LINK}
-                    className="inline-flex items-center justify-center gap-2 rounded-full bg-neutral-900 px-8 py-4 text-base font-semibold text-white transition-all hover:bg-neutral-800 hover:shadow-xl hover:shadow-neutral-900/20"
+                    className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full bg-neutral-900 px-7 py-4 text-base font-semibold text-white transition-all hover:bg-neutral-800 hover:shadow-xl hover:shadow-neutral-900/20"
                   >
                     <Phone className="h-5 w-5" />
-                    Request a Private Score Review
+                    Private Score Review
                   </a>
                   <a
                     href="#vsl"
-                    className="inline-flex items-center justify-center rounded-full bg-neutral-100 px-8 py-4 text-base font-semibold text-neutral-900 transition-all hover:bg-neutral-200"
+                    className="inline-flex items-center justify-center whitespace-nowrap rounded-full bg-neutral-100 px-7 py-4 text-base font-semibold text-neutral-900 transition-all hover:bg-neutral-200"
                   >
-                    Watch Parent Note
+                    Watch Video
                   </a>
                 </div>
               </FadeIn>

@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond } from "next/font/google";
+import { Cormorant_Garamond, Inter } from "next/font/google";
 import "./globals.css";
+
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+});
 
 const cormorantGaramond = Cormorant_Garamond({
   variable: "--font-cormorant",
@@ -147,7 +152,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${cormorantGaramond.variable} font-sans antialiased text-neutral-900 bg-white`}
+        className={`${inter.variable} ${cormorantGaramond.variable} font-sans antialiased text-neutral-900 bg-white`}
       >
         {children}
         <script
