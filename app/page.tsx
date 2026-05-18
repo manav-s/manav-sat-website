@@ -57,90 +57,61 @@ export default function Home() {
   const cohortMonth = getCurrentCohortMonth();
 
   return (
-    <div className="min-h-screen bg-background text-neutral-900">
+    <div className="min-h-screen bg-[#fbf8f1] text-[#161616]">
       {/* ── Navigation ── */}
-      <nav className="fixed top-0 z-50 w-full border-b border-neutral-100 bg-background/90 backdrop-blur-md">
+      <nav className="fixed top-0 z-50 w-full border-b border-[#e4d8c1] bg-[#fbf8f1]/90 backdrop-blur-md">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-          <span className="font-serif text-xl font-bold tracking-tight">
-            Manav Sharma
+          <span className="font-serif text-xl font-bold tracking-tight text-[#00356B]">
+            Manav Sharma Academic Coaching
           </span>
           <div className="flex items-center gap-6">
             <a
               href={SMS_LINK}
-              className="flex items-center gap-2 rounded-full bg-neutral-900 px-6 py-2.5 text-sm font-medium text-white transition-all hover:bg-neutral-800 hover:shadow-lg hover:shadow-neutral-900/10"
+              className="flex items-center gap-2 rounded-sm bg-[#00356B] px-5 py-2.5 text-xs font-semibold uppercase tracking-[0.18em] text-white transition-all hover:bg-[#00264d]"
             >
               <Phone className="h-4 w-4" />
-              Score Review
+              Inquire
             </a>
           </div>
         </div>
       </nav>
 
       {/* ── Hero Section ── */}
-      <section className="relative pt-32 pb-20 md:pt-48 md:pb-32">
+      <section className="relative border-b border-[#e4d8c1] bg-[#fbf8f1] pt-32 pb-20 md:pt-48 md:pb-32">
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid items-center gap-16 md:grid-cols-2 lg:gap-24">
             <FadeIn direction="right" className="relative z-10 order-2 md:order-1">
               <FadeIn delay={0.1}>
-                <div className="mb-6 flex flex-wrap items-center gap-6">
-                  <div className="flex items-center gap-3">
-                    <div className="flex -space-x-2">
-                      <div className="h-8 w-8 overflow-hidden rounded-full border-2 border-white ring-1 ring-neutral-300">
-                        <Image src="https://img.youtube.com/vi/NIaOo-lZlGQ/hqdefault.jpg" alt="Michael — student who improved his SAT score by 140 points to a 1560" width={64} height={64} className="h-full w-full scale-[1.8] object-cover object-center" />
-                      </div>
-                      <div className="h-8 w-8 overflow-hidden rounded-full border-2 border-white ring-1 ring-neutral-300">
-                        <Image src="https://img.youtube.com/vi/CZpe_eG51So/hqdefault.jpg" alt="Nina — SAT tutoring student who jumped 110 points" width={64} height={64} className="h-full w-full scale-[1.8] object-cover object-center" />
-                      </div>
-                      <div className="h-8 w-8 overflow-hidden rounded-full border-2 border-white ring-1 ring-neutral-300">
-                        <Image src="https://img.youtube.com/vi/zuDcq9_n5jU/hqdefault.jpg" alt="Ava — SAT student who improved 130 points on the digital SAT" width={64} height={64} className="h-full w-full scale-[1.8] object-cover object-center" />
-                      </div>
-                    </div>
-                    <span className="text-sm font-medium text-neutral-600">
-                      Join 200+ successful families
-                    </span>
-                  </div>
-                  <div className="hidden h-8 w-px bg-neutral-200 sm:block"></div>
-                  <div className="flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-3 py-1 text-sm font-medium text-neutral-700 shadow-sm">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      viewBox="0 0 23 23"
-                    >
-                      <path fill="#f35325" d="M1 1h10v10H1z" />
-                      <path fill="#81bc06" d="M12 1h10v10H12z" />
-                      <path fill="#05a6f0" d="M1 12h10v10H1z" />
-                      <path fill="#ffba08" d="M12 12h10v10H12z" />
-                    </svg>
-                    Software Engineer at Microsoft
-                  </div>
+                <div className="mb-7 border-l-2 border-[#B89B5E] pl-5 text-xs font-semibold uppercase tracking-[0.24em] text-[#00356B]">
+                  1600 SAT · National Merit Scholar · Microsoft Engineer
                 </div>
               </FadeIn>
               <FadeIn delay={0.2}>
-                <h1 className="mb-6 font-serif text-5xl font-bold leading-[1.1] tracking-tight text-neutral-900 md:text-6xl lg:text-7xl">
+                <h1 className="mb-6 font-serif text-5xl font-bold leading-[1.05] tracking-tight text-[#111111] md:text-6xl lg:text-7xl">
                   Private SAT coaching from a <span className="italic">perfect</span> scorer.
                 </h1>
               </FadeIn>
               <FadeIn delay={0.3}>
-                <p className="mb-8 max-w-lg text-lg leading-relaxed text-neutral-600 md:text-xl">
-                  I scored a 1600 on the SAT. Now I work with a small number
-                  of families who want a clear, personal plan for a higher score.
+                <p className="mb-8 max-w-lg text-lg leading-relaxed text-[#4b4b4b] md:text-xl">
+                  Private coaching for families seeking a careful,
+                  individualized path to stronger scores and greater academic
+                  confidence.
                 </p>
               </FadeIn>
               <FadeIn delay={0.4}>
                 <div className="flex flex-col gap-4 sm:flex-row">
                   <a
                     href={SMS_LINK}
-                    className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full bg-neutral-900 px-7 py-4 text-base font-semibold text-white transition-all hover:bg-neutral-800 hover:shadow-xl hover:shadow-neutral-900/20"
+                    className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-sm bg-[#00356B] px-6 py-4 text-sm font-semibold uppercase tracking-[0.16em] text-white transition-all hover:bg-[#00264d]"
                   >
                     <Phone className="h-5 w-5" />
                     Private Score Review
                   </a>
                   <a
                     href="#vsl"
-                    className="inline-flex items-center justify-center whitespace-nowrap rounded-full bg-neutral-100 px-7 py-4 text-base font-semibold text-neutral-900 transition-all hover:bg-neutral-200"
+                    className="inline-flex items-center justify-center whitespace-nowrap rounded-sm border border-[#00356B]/25 bg-transparent px-6 py-4 text-sm font-semibold uppercase tracking-[0.16em] text-[#00356B] transition-all hover:border-[#00356B] hover:bg-white/50"
                   >
-                    Watch Video
+                    Hear the Approach
                   </a>
                 </div>
               </FadeIn>
@@ -148,7 +119,7 @@ export default function Home() {
             <FadeIn direction="left" delay={0.2} className="order-1 flex justify-center md:order-2">
               <div className="relative w-full max-w-[550px]">
                 {/* Main Image - Manav */}
-                <div className="relative z-10 ml-auto aspect-[3/4] w-3/4 overflow-hidden rounded-2xl border-4 border-white bg-neutral-100 shadow-2xl">
+                <div className="relative z-10 ml-auto aspect-[3/4] w-3/4 overflow-hidden rounded-sm border border-[#d8c9aa] bg-white">
                   <Image
                     src="/headshot.png"
                     alt="Manav Sharma — perfect 1600 SAT scorer and private SAT tutor"
@@ -156,33 +127,8 @@ export default function Home() {
                     className="object-cover object-top scale-150 translate-y-8"
                     priority
                   />
-                  <a
-                    href="#videos"
-                    aria-label="Jump to SAT strategy videos"
-                    className="absolute bottom-4 right-4 z-20 inline-flex items-center justify-center rounded-xl bg-red-600 px-3.5 py-2.5 shadow-lg ring-2 ring-white transition-all hover:scale-105 hover:bg-red-700 hover:shadow-xl"
-                  >
-                    <svg
-                      viewBox="0 0 24 24"
-                      className="h-6 w-6 fill-white"
-                      aria-hidden="true"
-                    >
-                      <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z" />
-                    </svg>
-                  </a>
                 </div>
 
-                {/* Secondary Image - SAT Score */}
-                <div className="absolute -bottom-12 -left-4 z-20 w-[56%] overflow-hidden rounded-2xl border-4 border-white bg-white shadow-2xl ring-1 ring-black md:-bottom-16 md:-left-8 motion-safe:animate-fade-in-up">
-                  <div className="relative aspect-[4/3]">
-                    <Image
-                      src="/1600.png"
-                      alt="Manav Sharma's perfect 1600 SAT score report from the College Board"
-                      fill
-                      className="object-contain"
-                      priority
-                    />
-                  </div>
-                </div>
               </div>
             </FadeIn>
           </div>
@@ -190,28 +136,24 @@ export default function Home() {
       </section>
 
       {/* ── Credentials Strip ── */}
-      <section className="border-b border-neutral-100 bg-white py-8">
-        <div className="mx-auto max-w-6xl px-6">
+      <section className="border-b border-[#e4d8c1] bg-white py-8">
+        <div className="mx-auto max-w-7xl px-6">
           <FadeIn>
-            <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm font-medium text-neutral-600 md:text-base">
-              <span className="inline-flex items-center gap-1.5">
-                <span aria-hidden>🏆</span>
-                <span>Perfect <span className="font-bold text-neutral-900">1600 SAT</span></span>
+            <div className="flex flex-nowrap items-center justify-center gap-x-4 overflow-x-auto whitespace-nowrap text-[11px] font-semibold uppercase tracking-[0.16em] text-[#00356B]/80 md:text-xs lg:gap-x-5">
+              <span className="inline-flex shrink-0 items-center gap-1.5">
+                <span>Perfect <span className="font-bold text-[#00356B]">1600 SAT</span></span>
               </span>
-              <span className="hidden h-1 w-1 rounded-full bg-neutral-300 md:block" />
-              <span className="inline-flex items-center gap-1.5">
-                <span aria-hidden>🥇</span>
-                <span>National Merit <span className="font-bold text-neutral-900">Scholar</span></span>
+              <span className="hidden h-px w-6 shrink-0 bg-[#d8c9aa] md:block" />
+              <span className="inline-flex shrink-0 items-center gap-1.5">
+                <span>National Merit <span className="font-bold text-[#00356B]">Scholar</span></span>
               </span>
-              <span className="hidden h-1 w-1 rounded-full bg-neutral-300 md:block" />
-              <span className="inline-flex items-center gap-1.5">
-                <span aria-hidden>💻</span>
-                <span>SWE @ <span className="font-bold text-neutral-900">Microsoft</span></span>
+              <span className="hidden h-px w-6 shrink-0 bg-[#d8c9aa] md:block" />
+              <span className="inline-flex shrink-0 items-center gap-1.5">
+                <span>Software Engineer, <span className="font-bold text-[#00356B]">Microsoft</span></span>
               </span>
-              <span className="hidden h-1 w-1 rounded-full bg-neutral-300 md:block" />
-              <span className="inline-flex items-center gap-1.5">
-                <span aria-hidden>🏦</span>
-                <span>Ex-<span className="font-bold text-neutral-900">JPMorgan Chase</span></span>
+              <span className="hidden h-px w-6 shrink-0 bg-[#d8c9aa] md:block" />
+              <span className="inline-flex shrink-0 items-center gap-1.5">
+                <span>Formerly <span className="font-bold text-[#00356B]">JPMorgan Chase</span></span>
               </span>
             </div>
           </FadeIn>
@@ -219,17 +161,17 @@ export default function Home() {
       </section>
 
       {/* ── VSL Section ── */}
-      <section id="vsl" className="border-b border-neutral-100 bg-neutral-50 py-20 md:py-28">
+      <section id="vsl" className="border-b border-[#e4d8c1] bg-[#f7f1e6] py-20 md:py-28">
         <div className="mx-auto max-w-5xl px-6">
           <FadeIn>
             <div className="mx-auto mb-10 max-w-2xl text-center">
-              <p className="mb-3 text-sm font-bold uppercase tracking-widest text-neutral-500">
+              <p className="mb-3 text-sm font-bold uppercase tracking-[0.22em] text-[#00356B]">
                 A short note for parents
               </p>
-              <h2 className="font-serif text-4xl font-bold tracking-tight text-neutral-900 md:text-5xl">
-                How I find where SAT points are leaking
+              <h2 className="font-serif text-4xl font-bold tracking-tight text-[#111111] md:text-5xl">
+                How I find where SAT points are being lost
               </h2>
-              <p className="mt-5 text-lg leading-relaxed text-neutral-600">
+              <p className="mt-5 text-lg leading-relaxed text-[#4b4b4b]">
                 In this short breakdown, I explain the SAT Precision Framework:
                 how I review a student&apos;s work, identify the real score bottleneck,
                 and decide what should be fixed first.
@@ -238,7 +180,7 @@ export default function Home() {
           </FadeIn>
 
           <FadeIn delay={0.15}>
-            <div className="overflow-hidden rounded-3xl border border-neutral-200 bg-black shadow-2xl shadow-neutral-900/15">
+            <div className="overflow-hidden rounded-sm border border-[#d8c9aa] bg-black">
               <video
                 src="/vsl-captioned.mp4"
                 controls
@@ -254,12 +196,12 @@ export default function Home() {
             <div className="mt-8 flex flex-col items-center justify-center gap-4 text-center sm:flex-row">
               <a
                 href={SMS_LINK}
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-neutral-900 px-8 py-4 text-base font-semibold text-white transition-all hover:bg-neutral-800 hover:shadow-xl hover:shadow-neutral-900/20"
+                className="inline-flex items-center justify-center gap-2 rounded-sm bg-[#00356B] px-6 py-4 text-sm font-semibold uppercase tracking-[0.16em] text-white transition-all hover:bg-[#00264d]"
               >
                 <Phone className="h-5 w-5" />
                 Request a Private Score Review
               </a>
-              <p className="max-w-sm text-sm leading-relaxed text-neutral-500">
+              <p className="max-w-sm text-sm leading-relaxed text-[#5f5b53]">
                 Send the current score, target score, and test date. I&apos;ll
                 tell you what I would fix first.
               </p>
@@ -269,32 +211,32 @@ export default function Home() {
       </section>
 
       {/* ── Admissions/Tracker Section ── */}
-      <section className="border-b border-neutral-100 bg-neutral-50/50 py-12">
+      <section className="border-b border-[#e4d8c1] bg-[#fbf8f1] py-12">
         <div className="mx-auto max-w-4xl px-6">
             <FadeIn>
                 <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
                     <div className="text-center md:text-left">
                         {TOTAL_SPOTS - CURRENT_STUDENTS.length === 0 ? (
                              <div className="flex items-center justify-center gap-2 md:justify-start">
-                                <div className="h-2 w-2 rounded-full bg-amber-500"></div>
-                                <span className="text-sm font-bold uppercase tracking-wider text-amber-600">Waitlist Open</span>
+                                <div className="h-2 w-2 rounded-full bg-[#B89B5E]"></div>
+                                <span className="text-sm font-bold uppercase tracking-[0.2em] text-[#8c733f]">Waitlist Open</span>
                             </div>
                         ) : (
                             <div className="flex items-center justify-center gap-2 md:justify-start">
-                                <div className="h-2 w-2 rounded-full bg-green-500 animate-pulse"></div>
-                                <span className="text-sm font-bold uppercase tracking-wider text-green-600">Private Intake Open</span>
+                                <div className="h-2 w-2 rounded-full bg-[#B89B5E] animate-pulse"></div>
+                                <span className="text-sm font-bold uppercase tracking-[0.2em] text-[#00356B]">Private Intake Open</span>
                             </div>
                         )}
-                        <h3 className="mt-2 text-xl font-bold text-neutral-900 md:text-2xl">{cohortMonth} Private Coaching</h3>
-                        <p className="mt-2 max-w-sm text-sm text-neutral-600">
-                            I work with <span className="font-semibold text-neutral-900">{TOTAL_SPOTS} students at a time</span> so each family gets direct attention, a clear plan, and careful review.
+                        <h3 className="mt-2 font-serif text-2xl font-bold text-[#111111] md:text-3xl">{cohortMonth} Private Roster</h3>
+                        <p className="mt-2 max-w-sm text-sm leading-relaxed text-[#4b4b4b]">
+                            I work with <span className="font-semibold text-[#111111]">{TOTAL_SPOTS} students at a time</span> so each family receives direct attention, a clear plan, and careful review.
                         </p>
                     </div>
 
-                    <div className="w-full max-w-sm rounded-2xl border border-neutral-200 bg-white p-5 shadow-sm">
+                    <div className="w-full max-w-sm rounded-sm border border-[#d8c9aa] bg-white p-5">
                         <div className="mb-4 flex items-center justify-between">
-                            <div className="text-sm font-bold text-neutral-900">Current Client Roster</div>
-                             <div className="rounded-full bg-neutral-100 px-2 py-1 text-xs font-semibold text-neutral-900">
+                            <div className="text-sm font-bold text-[#111111]">Current Private Roster</div>
+                             <div className="rounded-sm bg-[#f7f1e6] px-2 py-1 text-xs font-semibold text-[#00356B]">
                                 {TOTAL_SPOTS - CURRENT_STUDENTS.length} spots left
                             </div>
                         </div>
@@ -306,8 +248,8 @@ export default function Home() {
                                 key={i}
                                 className={`flex items-center gap-2 rounded-full py-1.5 pl-1.5 pr-3 transition-all ${
                                     student
-                                    ? 'bg-neutral-900 text-white'
-                                    : 'border border-dashed border-neutral-200 bg-neutral-50 text-neutral-400'
+                                    ? 'bg-[#00356B] text-white'
+                                    : 'border border-dashed border-[#d8c9aa] bg-[#fbf8f1] text-[#8d8577]'
                                 }`}
                                 >
                                 {student ? (
@@ -331,7 +273,7 @@ export default function Home() {
                             );
                             })}
                         </div>
-                        <p className="mt-3 text-xs font-medium text-neutral-900 text-right">Updated {LAST_UPDATED}</p>
+                        <p className="mt-3 text-right text-xs font-medium text-[#00356B]">Updated {LAST_UPDATED}</p>
                     </div>
                 </div>
             </FadeIn>
@@ -352,7 +294,7 @@ export default function Home() {
                   <div className="font-serif text-4xl font-bold text-white md:text-5xl">
                     {stat.value}
                   </div>
-                  <div className="mt-2 text-sm font-medium uppercase tracking-wider text-neutral-400">
+                  <div className="mt-2 text-sm font-medium uppercase tracking-[0.2em] text-neutral-400">
                     {stat.label}
                   </div>
                 </div>
@@ -361,7 +303,7 @@ export default function Home() {
           </FadeInStagger>
 
           <div className="mt-20 border-t border-neutral-800 pt-12">
-            <p className="mb-8 text-center text-sm font-medium uppercase tracking-widest text-neutral-500">
+            <p className="mb-8 text-center text-sm font-medium uppercase tracking-[0.2em] text-neutral-500">
               Students I&apos;ve Worked With Have Gone On To Attend
             </p>
             <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-12 lg:grid lg:grid-cols-6 lg:gap-8">
@@ -407,13 +349,15 @@ export default function Home() {
       </section>
 
       {/* ── Testimonials ── */}
-      <section id="testimonials" className="py-24 md:py-32 bg-background">
+      <section id="testimonials" className="bg-white py-24 md:py-32">
         <div className="mx-auto max-w-6xl px-6">
           <div className="mb-20 md:mb-32 text-center md:text-left">
             <FadeIn>
-              <h2 className="mb-6 font-serif text-4xl font-bold md:text-5xl">
-                Real students. <br />
-                <span className="text-neutral-400">Real results.</span>
+              <p className="mb-3 text-sm font-bold uppercase tracking-[0.22em] text-[#00356B]">
+                Student outcomes
+              </p>
+              <h2 className="mb-6 font-serif text-4xl font-bold text-[#111111] md:text-5xl">
+                Selected student results.
               </h2>
             </FadeIn>
           </div>
@@ -421,30 +365,27 @@ export default function Home() {
           <div className="flex flex-col gap-16 md:gap-24">
             <div className="grid gap-10 lg:grid-cols-2">
             {/* Case Study 1: Michael */}
-            <div className="flex flex-col gap-8 rounded-3xl border border-neutral-100 bg-white p-6 shadow-xl shadow-neutral-900/5 md:p-8">
+            <div className="flex flex-col gap-8 rounded-sm border border-[#e4d8c1] bg-white p-6 md:p-8">
               <FadeIn direction="right" className="order-2">
                 <div className="mb-6 flex gap-1">
                   {[...Array(5)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className="h-5 w-5 fill-neutral-900 text-neutral-900"
-                    />
+                    <Star key={i} className="h-5 w-5 fill-[#B89B5E] text-[#B89B5E]" />
                   ))}
                 </div>
-                <blockquote className="mb-8 font-serif text-3xl leading-tight text-neutral-900">
+                <blockquote className="mb-8 font-serif text-3xl leading-tight text-[#111111]">
                   &ldquo;Manav helped me dial in my accuracy and pacing — I
                   jumped <strong>140 points</strong> and ended up just one
                   question shy of perfect.&rdquo;
                 </blockquote>
                 <div className="flex flex-wrap items-center gap-6">
                   <div>
-                    <cite className="not-italic font-bold text-lg text-neutral-900">
+                    <cite className="not-italic text-lg font-bold text-[#111111]">
                       Michael
                     </cite>
-                    <span className="ml-2 text-neutral-500">Student</span>
+                    <span className="ml-2 text-[#5f5b53]">Student</span>
                   </div>
                   <div className="h-8 w-px bg-neutral-200"></div>
-                  <div className="flex items-center gap-4 rounded-xl border border-neutral-100 bg-white p-4 shadow-xl shadow-neutral-900/5 ring-1 ring-neutral-900/5">
+                  <div className="flex items-center gap-4 rounded-sm border border-[#e4d8c1] bg-[#fbf8f1] p-4">
                     <div className="flex flex-col">
                       <span className="text-[10px] font-bold uppercase tracking-wider text-neutral-400">
                         Before
@@ -455,10 +396,10 @@ export default function Home() {
                     </div>
                     <ArrowRight className="h-5 w-5 text-neutral-300" />
                     <div className="flex flex-col">
-                      <span className="text-[10px] font-bold uppercase tracking-wider text-green-600">
+                      <span className="text-[10px] font-bold uppercase tracking-wider text-[#00356B]">
                         After
                       </span>
-                      <span className="font-mono text-3xl font-bold text-green-600">
+                      <span className="font-mono text-3xl font-bold text-[#00356B]">
                         1560 SAT
                       </span>
                     </div>
@@ -466,7 +407,7 @@ export default function Home() {
                 </div>
               </FadeIn>
               <FadeIn direction="left" className="order-1 flex justify-center">
-                <div className="relative aspect-[9/16] w-full max-w-[320px] overflow-hidden rounded-2xl bg-neutral-900 shadow-2xl ring-1 ring-neutral-200">
+                <div className="relative aspect-[9/16] w-full max-w-[320px] overflow-hidden rounded-sm border border-[#e4d8c1] bg-neutral-900">
                   <iframe
                     className="h-full w-full"
                     src="https://www.youtube.com/embed/NIaOo-lZlGQ"
@@ -479,9 +420,9 @@ export default function Home() {
             </div>
 
             {/* Case Study 2: Nina */}
-            <div className="flex flex-col gap-8 rounded-3xl border border-neutral-100 bg-white p-6 shadow-xl shadow-neutral-900/5 md:p-8">
+            <div className="flex flex-col gap-8 rounded-sm border border-[#e4d8c1] bg-white p-6 md:p-8">
               <FadeIn direction="right" className="order-1 flex justify-center">
-                <div className="relative aspect-[9/16] w-full max-w-[320px] overflow-hidden rounded-2xl bg-neutral-900 shadow-2xl ring-1 ring-neutral-200">
+                <div className="relative aspect-[9/16] w-full max-w-[320px] overflow-hidden rounded-sm border border-[#e4d8c1] bg-neutral-900">
                   <iframe
                     className="h-full w-full"
                     src="https://www.youtube.com/embed/CZpe_eG51So"
@@ -494,26 +435,23 @@ export default function Home() {
               <FadeIn direction="left" className="order-2">
                 <div className="mb-6 flex gap-1">
                   {[...Array(5)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className="h-5 w-5 fill-neutral-900 text-neutral-900"
-                    />
+                    <Star key={i} className="h-5 w-5 fill-[#B89B5E] text-[#B89B5E]" />
                   ))}
                 </div>
-                <blockquote className="mb-8 font-serif text-3xl leading-tight text-neutral-900">
+                <blockquote className="mb-8 font-serif text-3xl leading-tight text-[#111111]">
                   &ldquo;My experience with Manav has been incredibly
                   beneficial. He provides custom resources that were great
                   for my needs as a student.&rdquo;
                 </blockquote>
                 <div className="flex flex-wrap items-center gap-6">
                   <div>
-                    <cite className="not-italic font-bold text-lg text-neutral-900">
+                    <cite className="not-italic text-lg font-bold text-[#111111]">
                       Nina
                     </cite>
-                    <span className="ml-2 text-neutral-500">Student</span>
+                    <span className="ml-2 text-[#5f5b53]">Student</span>
                   </div>
                   <div className="h-8 w-px bg-neutral-200"></div>
-                  <div className="flex items-center gap-4 rounded-xl border border-neutral-100 bg-white p-4 shadow-xl shadow-neutral-900/5 ring-1 ring-neutral-900/5">
+                  <div className="flex items-center gap-4 rounded-sm border border-[#e4d8c1] bg-[#fbf8f1] p-4">
                     <div className="flex flex-col">
                       <span className="text-[10px] font-bold uppercase tracking-wider text-neutral-400">
                         Before
@@ -524,10 +462,10 @@ export default function Home() {
                     </div>
                     <ArrowRight className="h-5 w-5 text-neutral-300" />
                     <div className="flex flex-col">
-                      <span className="text-[10px] font-bold uppercase tracking-wider text-green-600">
+                      <span className="text-[10px] font-bold uppercase tracking-wider text-[#00356B]">
                         After
                       </span>
-                      <span className="font-mono text-3xl font-bold text-green-600">
+                      <span className="font-mono text-3xl font-bold text-[#00356B]">
                         1520
                       </span>
                     </div>
@@ -553,7 +491,7 @@ export default function Home() {
                 },
               ].map((student) => (
                 <FadeIn key={student.id} className="text-center">
-                  <div className="mx-auto aspect-[9/16] w-full max-w-[280px] overflow-hidden rounded-2xl bg-neutral-900 shadow-2xl ring-1 ring-neutral-200">
+                  <div className="mx-auto aspect-[9/16] w-full max-w-[280px] overflow-hidden rounded-sm border border-[#e4d8c1] bg-neutral-900">
                     <iframe
                       className="h-full w-full"
                       src={`https://www.youtube.com/embed/${student.id}`}
@@ -562,7 +500,7 @@ export default function Home() {
                       allowFullScreen
                     />
                   </div>
-                  <p className="mt-4 text-lg font-bold text-neutral-900">
+                  <p className="mt-4 text-lg font-bold text-[#111111]">
                     {student.name}
                   </p>
                 </FadeIn>
@@ -576,18 +514,18 @@ export default function Home() {
       <PathToSixteenHundred />
 
       {/* ── About / Limited Availability ── */}
-      <section className="py-24 md:py-32 overflow-hidden">
+      <section className="overflow-hidden bg-[#fbf8f1] py-24 md:py-32">
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid items-center gap-16 md:grid-cols-2">
             <FadeIn direction="right" className="order-2 md:order-1">
-              <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-neutral-50 px-4 py-1.5 text-sm font-medium text-neutral-600">
+              <div className="mb-8 inline-flex items-center gap-2 rounded-sm border border-[#d8c9aa] bg-white px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-[#00356B]">
                 <Clock className="h-4 w-4" />
-                Limited Availability
+                Private guidance
               </div>
-              <h2 className="mb-6 font-serif text-4xl font-bold md:text-5xl">
-                The SAT Precision Framework.
+              <h2 className="mb-6 font-serif text-4xl font-bold text-[#111111] md:text-5xl">
+                A more careful approach to SAT preparation.
               </h2>
-              <div className="space-y-6 text-lg text-neutral-600 md:text-xl leading-relaxed">
+              <div className="space-y-6 text-lg leading-relaxed text-[#4b4b4b] md:text-xl">
                 <p>
                   I do not start by assigning more random practice. I start by
                   finding where points are actually leaking: comprehension,
@@ -597,39 +535,39 @@ export default function Home() {
                   Then I build the coaching around the few changes most likely
                   to move the score. Your student works directly with me: a
                   perfect scorer, National Merit Scholar, and{" "}
-                  <span className="font-semibold text-neutral-900">Software Engineer at Microsoft</span> who
+                  <span className="font-semibold text-[#111111]">Software Engineer at Microsoft</span> who
                   has helped 250+ students build a more precise SAT plan.
                 </p>
               </div>
               
               <div className="mt-8 flex flex-wrap gap-4">
-                 <div className="flex items-center gap-3 rounded-xl border border-neutral-100 bg-white px-5 py-4 shadow-xl shadow-neutral-900/5">
-                    <div className="flex bg-blue-50 p-2.5 rounded-lg">
-                        <Terminal className="w-5 h-5 text-blue-600" />
-                    </div>
-                    <div>
-                        <div className="text-[10px] font-bold uppercase tracking-wider text-neutral-400">Career</div>
-                        <div className="text-sm font-bold text-neutral-900 leading-none mt-1">Microsoft Engineer</div>
-                    </div>
-                 </div>
-                 <div className="flex items-center gap-3 rounded-xl border border-neutral-100 bg-white px-5 py-4 shadow-xl shadow-neutral-900/5">
-                    <div className="flex bg-yellow-50 p-2.5 rounded-lg">
-                        <Trophy className="w-5 h-5 text-yellow-600" />
-                    </div>
-                    <div>
-                        <div className="text-[10px] font-bold uppercase tracking-wider text-neutral-400">Score</div>
-                        <div className="text-sm font-bold text-neutral-900 leading-none mt-1">Perfect 1600</div>
-                    </div>
-                 </div>
-              </div>
+                  <div className="flex items-center gap-3 rounded-sm border border-[#d8c9aa] bg-white px-5 py-4">
+                     <div className="flex rounded-sm bg-[#f7f1e6] p-2.5">
+                         <Terminal className="h-5 w-5 text-[#00356B]" />
+                     </div>
+                     <div>
+                         <div className="text-[10px] font-bold uppercase tracking-wider text-[#8d8577]">Career</div>
+                         <div className="mt-1 text-sm font-bold leading-none text-[#111111]">Microsoft Engineer</div>
+                     </div>
+                  </div>
+                  <div className="flex items-center gap-3 rounded-sm border border-[#d8c9aa] bg-white px-5 py-4">
+                     <div className="flex rounded-sm bg-[#f7f1e6] p-2.5">
+                         <Trophy className="h-5 w-5 text-[#B89B5E]" />
+                     </div>
+                     <div>
+                         <div className="text-[10px] font-bold uppercase tracking-wider text-[#8d8577]">Score</div>
+                         <div className="mt-1 text-sm font-bold leading-none text-[#111111]">Perfect 1600</div>
+                     </div>
+                  </div>
+               </div>
             </FadeIn>
 
             <FadeIn direction="left" className="order-1 md:order-2">
-               <div className="relative rounded-2xl border border-neutral-200 bg-white p-2 shadow-2xl shadow-neutral-900/10 rotate-2 hover:rotate-0 transition-transform duration-500">
-                  <div className="absolute -left-4 -top-4 z-10 rounded-xl bg-red-600 px-4 py-2 text-sm font-bold text-white shadow-lg shadow-red-600/20">
+               <div className="relative rounded-sm border border-[#d8c9aa] bg-white p-2 transition-transform duration-500 hover:-translate-y-1">
+                  <div className="absolute -left-4 -top-4 z-10 rounded-sm bg-[#00356B] px-4 py-2 text-xs font-bold uppercase tracking-[0.16em] text-white">
                     Live Session
                   </div>
-                  <div className="overflow-hidden rounded-xl bg-neutral-100 relative aspect-video">
+                  <div className="relative aspect-video overflow-hidden rounded-sm bg-neutral-100">
                      <Image 
                         src="/class-screenshot.png"
                         alt="Manav teaching a 1:1 SAT prep session over video"
@@ -638,7 +576,7 @@ export default function Home() {
                      />
                   </div>
                   {/* Decorative Elements */}
-                   <div className="absolute -bottom-6 -right-6 -z-10 h-full w-full rounded-2xl border-2 border-dashed border-neutral-200 bg-neutral-50/50"></div>
+                   <div className="absolute -bottom-6 -right-6 -z-10 h-full w-full rounded-sm border border-dashed border-[#d8c9aa] bg-[#f7f1e6]"></div>
                </div>
             </FadeIn>
           </div>
@@ -646,15 +584,15 @@ export default function Home() {
       </section>
 
       {/* ── Fit Section ── */}
-      <section className="border-y border-neutral-100 bg-white py-20 md:py-28">
+      <section className="border-y border-[#e4d8c1] bg-white py-20 md:py-28">
         <div className="mx-auto max-w-6xl px-6">
           <FadeIn>
             <div className="mx-auto mb-14 max-w-2xl text-center">
-              <p className="mb-3 text-sm font-bold uppercase tracking-widest text-neutral-500">
-                Who this is for
+              <p className="mb-3 text-sm font-bold uppercase tracking-[0.22em] text-[#00356B]">
+                Private fit
               </p>
-              <h2 className="font-serif text-4xl font-bold tracking-tight text-neutral-900 md:text-5xl">
-                Built for families who want more than generic SAT prep.
+              <h2 className="font-serif text-4xl font-bold tracking-tight text-[#111111] md:text-5xl">
+                For families seeking private academic guidance.
               </h2>
             </div>
           </FadeIn>
@@ -668,11 +606,11 @@ export default function Home() {
             ].map((item) => (
               <FadeIn
                 key={item}
-                className="rounded-2xl border border-neutral-100 bg-neutral-50 p-6 shadow-sm"
+                className="rounded-sm border border-[#e4d8c1] bg-[#fbf8f1] p-6"
               >
                 <div className="flex gap-4">
-                  <CheckCircle className="mt-1 h-5 w-5 shrink-0 text-neutral-900" />
-                  <p className="text-lg leading-relaxed text-neutral-700">
+                  <CheckCircle className="mt-1 h-5 w-5 shrink-0 text-[#00356B]" />
+                  <p className="text-lg leading-relaxed text-[#4b4b4b]">
                     {item}
                   </p>
                 </div>
@@ -683,10 +621,10 @@ export default function Home() {
       </section>
 
       {/* ── CTA ── */}
-      <section className="bg-neutral-50 py-24 md:py-32">
+      <section className="bg-[#f7f1e6] py-24 md:py-32">
         <div className="mx-auto max-w-4xl px-6">
           <FadeIn>
-            <h2 className="mb-12 text-center font-serif text-3xl font-bold md:text-4xl">
+            <h2 className="mb-12 text-center font-serif text-3xl font-bold text-[#111111] md:text-4xl">
               Start with a private score review
             </h2>
           </FadeIn>
@@ -694,38 +632,38 @@ export default function Home() {
           <FadeInStagger className="grid gap-8 md:grid-cols-2">
             <FadeIn className="space-y-6">
               <div className="flex gap-4">
-                <CheckCircle className="h-6 w-6 shrink-0 text-neutral-900" />
-                <p className="text-lg text-neutral-700">A SAT Precision Framework review of the current score and target score</p>
+                <CheckCircle className="h-6 w-6 shrink-0 text-[#00356B]" />
+                <p className="text-lg text-[#4b4b4b]">A SAT Precision Framework review of the current score and target score</p>
               </div>
               <div className="flex gap-4">
-                <CheckCircle className="h-6 w-6 shrink-0 text-neutral-900" />
-                <p className="text-lg text-neutral-700">A clear diagnosis of where points are leaking</p>
+                <CheckCircle className="h-6 w-6 shrink-0 text-[#00356B]" />
+                <p className="text-lg text-[#4b4b4b]">A clear diagnosis of where points are leaking</p>
               </div>
               <div className="flex gap-4">
-                <CheckCircle className="h-6 w-6 shrink-0 text-neutral-900" />
-                <p className="text-lg text-neutral-700">A recommendation for what to fix first</p>
+                <CheckCircle className="h-6 w-6 shrink-0 text-[#00356B]" />
+                <p className="text-lg text-[#4b4b4b]">A recommendation for what to fix first</p>
               </div>
               
               <div className="pt-6">
-                <div className="inline-flex items-center gap-2 border-l-2 border-neutral-900 pl-4">
-                  <Shield className="h-5 w-5 text-neutral-900" />
-                  <span className="font-semibold text-neutral-900">
+                <div className="inline-flex items-center gap-2 border-l-2 border-[#B89B5E] pl-4">
+                  <Shield className="h-5 w-5 text-[#00356B]" />
+                  <span className="font-semibold text-[#111111]">
                     Selective fit
                   </span>
                 </div>
-                <p className="mt-2 pl-4 text-sm text-neutral-500">
+                <p className="mt-2 pl-4 text-sm text-[#5f5b53]">
                   If I do not think I can help, I&apos;ll tell you directly.
                 </p>
               </div>
             </FadeIn>
 
-            <FadeIn className="flex flex-col items-center justify-center space-y-6 rounded-2xl bg-white p-8 shadow-sm ring-1 ring-neutral-100">
-              <h3 className="text-center font-semibold text-neutral-900">
+            <FadeIn className="flex flex-col items-center justify-center space-y-6 rounded-sm border border-[#d8c9aa] bg-white p-8">
+              <h3 className="text-center font-semibold text-[#111111]">
                 Text me directly for a private score review.
               </h3>
               <a
                 href={SMS_LINK}
-                className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-neutral-900 px-8 py-4 text-base font-semibold text-white transition-all hover:bg-neutral-800 hover:shadow-xl hover:shadow-neutral-900/20"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-sm bg-[#00356B] px-8 py-4 text-sm font-semibold uppercase tracking-[0.16em] text-white transition-all hover:bg-[#00264d]"
               >
                 <Phone className="h-5 w-5" />
                 347-722-4114
@@ -739,8 +677,8 @@ export default function Home() {
                           key={i}
                           className={`flex items-center gap-1.5 rounded-full py-1 pl-1 pr-2.5 transition-all ${
                             student
-                              ? 'bg-neutral-900 text-white'
-                              : 'border border-dashed border-neutral-200 bg-neutral-50 text-neutral-400'
+                              ? 'bg-[#00356B] text-white'
+                              : 'border border-dashed border-[#d8c9aa] bg-[#fbf8f1] text-[#8d8577]'
                           }`}
                         >
                           {student ? (
@@ -764,7 +702,7 @@ export default function Home() {
                     );
                   })}
                 </div>
-                <p className="text-center text-xs text-neutral-500">
+                <p className="text-center text-xs text-[#5f5b53]">
                   {TOTAL_SPOTS - CURRENT_STUDENTS.length === 0
                     ? 'Currently fully booked — join the waitlist'
                     : `Only ${TOTAL_SPOTS - CURRENT_STUDENTS.length} of ${TOTAL_SPOTS} spots remaining.`}
@@ -777,15 +715,15 @@ export default function Home() {
       </section>
 
       {/* ── Free Resources Section ── */}
-      <section id="videos" className="bg-background py-24 md:py-32 border-t border-neutral-100">
+      <section id="videos" className="border-t border-[#e4d8c1] bg-white py-24 md:py-32">
         <div className="mx-auto max-w-6xl px-6">
           <FadeIn>
             <div className="mb-16 md:mb-24 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
               <div className="max-w-2xl">
-                <h2 className="mb-6 font-serif text-4xl font-bold md:text-5xl">
-                  Watch & Learn
+                <h2 className="mb-6 font-serif text-4xl font-bold text-[#111111] md:text-5xl">
+                  SAT notes and instruction
                 </h2>
-                <p className="text-lg leading-relaxed text-neutral-600">
+                <p className="text-lg leading-relaxed text-[#4b4b4b]">
                   Get a preview of my teaching style and free strategies on my
                   YouTube channel.
                 </p>
@@ -794,7 +732,7 @@ export default function Home() {
                 href="https://www.youtube.com/@Manav-Sharma-swe/videos"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 font-semibold text-neutral-900 hover:text-neutral-600 transition-colors"
+                className="inline-flex items-center gap-2 font-semibold text-[#00356B] transition-colors hover:text-[#00264d]"
               >
                 View all videos <ArrowRight className="h-4 w-4" />
               </a>
@@ -821,7 +759,7 @@ export default function Home() {
                 href={`https://www.youtube.com/watch?v=${video.id}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative aspect-video w-full overflow-hidden rounded-2xl bg-neutral-100"
+                className="group relative aspect-video w-full overflow-hidden rounded-sm bg-neutral-100"
               >
                 <Image
                   src={`https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`}
@@ -830,7 +768,7 @@ export default function Home() {
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 flex items-center justify-center bg-black/10 transition-colors group-hover:bg-black/20">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white/90 shadow-xl backdrop-blur-sm transition-transform duration-300 group-hover:scale-110">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white/90 backdrop-blur-sm transition-transform duration-300 group-hover:scale-110">
                     <PlayCircle className="h-6 w-6 fill-neutral-900 text-neutral-900 ml-1" />
                   </div>
                 </div>
@@ -862,7 +800,7 @@ export default function Home() {
                 href={`https://www.youtube.com/watch?v=${video.id}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative aspect-video w-full overflow-hidden rounded-2xl bg-neutral-100"
+                className="group relative aspect-video w-full overflow-hidden rounded-sm bg-neutral-100"
               >
                 <Image
                   src={`https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`}
@@ -871,7 +809,7 @@ export default function Home() {
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 flex items-center justify-center bg-black/10 transition-colors group-hover:bg-black/20">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white/90 shadow-xl backdrop-blur-sm transition-transform duration-300 group-hover:scale-110">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white/90 backdrop-blur-sm transition-transform duration-300 group-hover:scale-110">
                     <PlayCircle className="h-6 w-6 fill-neutral-900 text-neutral-900 ml-1" />
                   </div>
                 </div>
@@ -882,10 +820,10 @@ export default function Home() {
       </section>
 
       {/* ── Footer ── */}
-      <footer className="bg-background py-12">
+      <footer className="border-t border-[#e4d8c1] bg-[#fbf8f1] py-12">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 px-6 md:flex-row">
           <div className="flex flex-col items-center gap-4 md:items-start">
-            <p className="text-sm font-medium text-neutral-500">
+            <p className="text-sm font-medium text-[#5f5b53]">
               © {new Date().getFullYear()} Manav Sharma. All rights reserved.
             </p>
             <div className="flex gap-4">
@@ -893,7 +831,7 @@ export default function Home() {
                 href="https://www.linkedin.com/in/manavsharma-sh/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-neutral-400 transition-colors hover:text-[#0077b5]"
+                className="text-[#8d8577] transition-colors hover:text-[#00356B]"
                 aria-label="LinkedIn Profile"
               >
                 <Linkedin className="h-5 w-5" />
@@ -902,7 +840,7 @@ export default function Home() {
                 href="https://www.youtube.com/@Manav-Sharma-swe/videos"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-neutral-400 transition-colors hover:text-[#FF0000]"
+                className="text-[#8d8577] transition-colors hover:text-[#00356B]"
                 aria-label="YouTube Channel"
               >
                 <Youtube className="h-5 w-5" />
@@ -912,19 +850,19 @@ export default function Home() {
           <div className="flex items-center gap-8">
             <a
               href="mailto:contact@manavsharma.com"
-              className="text-sm font-medium text-neutral-500 transition-colors hover:text-neutral-900"
+              className="text-sm font-medium text-[#5f5b53] transition-colors hover:text-[#00356B]"
             >
               Contact
             </a>
             <a
               href="/blog"
-              className="text-sm font-medium text-neutral-500 transition-colors hover:text-neutral-900"
+              className="text-sm font-medium text-[#5f5b53] transition-colors hover:text-[#00356B]"
             >
               Blog
             </a>
             <a
               href="#"
-              className="text-sm font-medium text-neutral-500 transition-colors hover:text-neutral-900"
+              className="text-sm font-medium text-[#5f5b53] transition-colors hover:text-[#00356B]"
             >
               Privacy
             </a>
