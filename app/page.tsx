@@ -62,7 +62,7 @@ export default function Home() {
       <nav className="fixed top-0 z-50 w-full border-b border-[#e4d8c1] bg-[#fbf8f1]/90 backdrop-blur-md">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <span className="font-serif text-xl font-bold tracking-tight text-[#00356B]">
-            Manav Sharma Academic Coaching
+            Manav Sharma
           </span>
           <div className="flex items-center gap-6">
             <a
@@ -83,7 +83,7 @@ export default function Home() {
             <FadeIn direction="right" className="relative z-10 order-2 md:order-1">
               <FadeIn delay={0.1}>
                 <div className="mb-7 border-l-2 border-[#B89B5E] pl-5 text-xs font-semibold uppercase tracking-[0.24em] text-[#00356B]">
-                  1600 SAT · National Merit Scholar · Microsoft Engineer
+                  1600 SAT · National Merit Scholar
                 </div>
               </FadeIn>
               <FadeIn delay={0.2}>
