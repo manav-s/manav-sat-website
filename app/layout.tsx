@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Inter } from "next/font/google";
+import { Crimson_Pro, Inter } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -7,9 +7,10 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-const cormorantGaramond = Cormorant_Garamond({
-  variable: "--font-cormorant",
+const crimsonPro = Crimson_Pro({
+  variable: "--font-crimson",
   weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
   subsets: ["latin"],
 });
 
@@ -152,7 +153,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${inter.variable} ${cormorantGaramond.variable} font-sans antialiased text-neutral-900 bg-white`}
+        className={`${inter.variable} ${crimsonPro.variable} font-sans antialiased text-neutral-900 bg-white`}
       >
         {children}
         <script

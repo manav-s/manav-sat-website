@@ -61,7 +61,7 @@ export default function Home() {
       {/* ── Navigation ── */}
       <nav className="fixed top-0 z-50 w-full border-b border-[#e4d8c1] bg-[#fbf8f1]/90 backdrop-blur-md">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-          <span className="font-serif text-xl font-bold tracking-tight text-[#00356B]">
+          <span className="font-serif text-xl font-normal tracking-tight text-[#00356B]">
             Manav Sharma
           </span>
           <div className="flex items-center gap-6">
@@ -87,7 +87,7 @@ export default function Home() {
                 </div>
               </FadeIn>
               <FadeIn delay={0.2}>
-                <h1 className="mb-6 font-serif text-5xl font-bold leading-[1.05] tracking-tight text-[#111111] md:text-6xl lg:text-7xl">
+                <h1 className="mb-6 font-serif text-5xl font-normal leading-[1.05] tracking-tight text-[#111111] md:text-6xl lg:text-7xl">
                   Private SAT coaching from a <span className="italic">perfect</span> scorer.
                 </h1>
               </FadeIn>
@@ -180,7 +180,7 @@ export default function Home() {
               <p className="mb-3 text-sm font-bold uppercase tracking-[0.22em] text-[#00356B]">
                 A short note for parents
               </p>
-              <h2 className="font-serif text-4xl font-bold tracking-tight text-[#111111] md:text-5xl">
+              <h2 className="font-serif text-4xl font-normal tracking-tight text-[#111111] md:text-5xl">
                 How I find where SAT points are being lost
               </h2>
               <p className="mt-5 text-lg leading-relaxed text-[#4b4b4b]">
@@ -239,7 +239,7 @@ export default function Home() {
                                 <span className="text-sm font-bold uppercase tracking-[0.2em] text-[#00356B]">Private Intake Open</span>
                             </div>
                         )}
-                        <h3 className="mt-2 font-serif text-2xl font-bold text-[#111111] md:text-3xl">{cohortMonth} Private Roster</h3>
+                        <h3 className="mt-2 font-serif text-2xl font-normal text-[#111111] md:text-3xl">{cohortMonth} Private Roster</h3>
                         <p className="mt-2 max-w-sm text-sm leading-relaxed text-[#4b4b4b]">
                             I work with <span className="font-semibold text-[#111111]">{TOTAL_SPOTS} students at a time</span> so each family receives direct attention, a clear plan, and careful review.
                         </p>
@@ -303,7 +303,7 @@ export default function Home() {
             ].map((stat) => (
               <FadeIn key={stat.label} direction="up">
                 <div className="text-center sm:px-8">
-                  <div className="font-serif text-4xl font-bold text-white md:text-5xl">
+                  <div className="font-serif text-4xl font-normal text-white md:text-5xl">
                     {stat.value}
                   </div>
                   <div className="mt-2 text-sm font-medium uppercase tracking-[0.2em] text-neutral-400">
@@ -368,7 +368,7 @@ export default function Home() {
               <p className="mb-3 text-sm font-bold uppercase tracking-[0.22em] text-[#00356B]">
                 Student outcomes
               </p>
-              <h2 className="mb-6 font-serif text-4xl font-bold text-[#111111] md:text-5xl">
+              <h2 className="mb-6 font-serif text-4xl font-normal text-[#111111] md:text-5xl">
                 Selected student results.
               </h2>
             </FadeIn>
@@ -534,7 +534,7 @@ export default function Home() {
                 <Clock className="h-4 w-4" />
                 Private guidance
               </div>
-              <h2 className="mb-6 font-serif text-4xl font-bold text-[#111111] md:text-5xl">
+              <h2 className="mb-6 font-serif text-4xl font-normal text-[#111111] md:text-5xl">
                 A more careful approach to SAT preparation.
               </h2>
               <div className="space-y-6 text-lg leading-relaxed text-[#4b4b4b] md:text-xl">
@@ -603,7 +603,7 @@ export default function Home() {
               <p className="mb-3 text-sm font-bold uppercase tracking-[0.22em] text-[#00356B]">
                 Private fit
               </p>
-              <h2 className="font-serif text-4xl font-bold tracking-tight text-[#111111] md:text-5xl">
+              <h2 className="font-serif text-4xl font-normal tracking-tight text-[#111111] md:text-5xl">
                 For families seeking private academic guidance.
               </h2>
             </div>
@@ -636,7 +636,7 @@ export default function Home() {
       <section className="bg-[#f7f1e6] py-24 md:py-32">
         <div className="mx-auto max-w-4xl px-6">
           <FadeIn>
-            <h2 className="mb-12 text-center font-serif text-3xl font-bold text-[#111111] md:text-4xl">
+            <h2 className="mb-12 text-center font-serif text-3xl font-normal text-[#111111] md:text-4xl">
               Start with a private score review
             </h2>
           </FadeIn>
@@ -732,7 +732,7 @@ export default function Home() {
           <FadeIn>
             <div className="mb-16 md:mb-24 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
               <div className="max-w-2xl">
-                <h2 className="mb-6 font-serif text-4xl font-bold text-[#111111] md:text-5xl">
+                <h2 className="mb-6 font-serif text-4xl font-normal text-[#111111] md:text-5xl">
                   SAT notes and instruction
                 </h2>
                 <p className="text-lg leading-relaxed text-[#4b4b4b]">
