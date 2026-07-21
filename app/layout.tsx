@@ -14,8 +14,7 @@ const crimsonPro = Crimson_Pro({
   subsets: ["latin"],
 });
 
-const SITE_URL = "https://perfectscoremanav.com";
-const SITE_NAME = "Perfect Score Manav";
+import { SITE_NAME, SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -39,6 +38,9 @@ export const metadata: Metadata = {
   creator: "Manav Sharma",
   alternates: {
     canonical: "/",
+    types: {
+      "text/markdown": "/index.md",
+    },
   },
   openGraph: {
     title: "Private SAT Coaching with a 1600 Scorer",

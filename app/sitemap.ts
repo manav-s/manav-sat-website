@@ -1,7 +1,6 @@
 import type { MetadataRoute } from "next";
 import { BLOG_POSTS } from "./blog/posts";
-
-const SITE_URL = "https://perfectscoremanav.com";
+import { SITE_URL } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [

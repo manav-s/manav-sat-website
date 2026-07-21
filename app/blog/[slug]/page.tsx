@@ -3,8 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { BLOG_POSTS, getPostBySlug } from "../posts";
-
-const SITE_URL = "https://perfectscoremanav.com";
+import { SITE_URL } from "@/lib/site";
 
 type BlogPostPageProps = {
   params: Promise<{
@@ -34,6 +33,9 @@ export async function generateMetadata({
     keywords: post.keywords,
     alternates: {
       canonical: `/blog/${post.slug}`,
+      types: {
+        "text/markdown": `/blog/${post.slug}.md`,
+      },
     },
     openGraph: {
       title: post.title,
