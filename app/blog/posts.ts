@@ -30,7 +30,7 @@ const WRITTEN_BLOG_POSTS: BlogPost[] = [
     slug: "ava-1310-to-1430-sat-superscore",
     title: "How Ava Went From a 1310 to a 1430 SAT Superscore",
     description:
-      "A first-name-only SAT tutoring case study on how Ava raised her superscore from 1310 to 1430 with targeted prep.",
+      "How Ava raised her SAT superscore from 1310 to 1430 with targeted prep and a cleaner test-day process.",
     publishedAt: "2026-07-21",
     readingTime: "4 min read",
     image: {
@@ -113,7 +113,7 @@ const WRITTEN_BLOG_POSTS: BlogPost[] = [
     slug: "wyatt-1180-to-1390-bluebook-sat-practice",
     title: "How Wyatt Built a 1390 Bluebook SAT Practice Score in Two Weeks",
     description:
-      "A first-name-only SAT tutoring case study on Wyatt's two-week sprint from an 1180 official SAT starting point to a 1390 Bluebook practice score.",
+      "How Wyatt used a two-week SAT prep sprint to move from an 1180 official starting point to a 1390 Bluebook practice score.",
     publishedAt: "2026-07-21",
     readingTime: "4 min read",
     image: {
@@ -203,7 +203,7 @@ const WRITTEN_BLOG_POSTS: BlogPost[] = [
     slug: "amy-1290-to-1400-sat-superscore",
     title: "How Amy Went From a 1290 SAT to a 1400 Superscore",
     description:
-      "A first-name-only SAT tutoring case study on how Amy raised her SAT score from 1290 to a 1400 superscore with focused Math prep.",
+      "How Amy used focused Math prep to move from a 1290 SAT to a 1400 superscore.",
     publishedAt: "2026-07-21",
     readingTime: "4 min read",
     image: {
