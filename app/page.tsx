@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import {
   Phone,
   Star,
@@ -7,7 +8,6 @@ import {
   Clock,
   Trophy,
   Shield,
-  GraduationCap,
   Linkedin,
   Youtube,
   PlayCircle,
@@ -64,7 +64,13 @@ export default function Home() {
           <span className="font-serif text-xl font-normal tracking-tight text-[#00356B]">
             Manav Sharma
           </span>
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-3 sm:gap-5">
+            <Link
+              href="/blog"
+              className="text-xs font-semibold uppercase tracking-[0.16em] text-[#00356B] transition-colors hover:text-[#001f3f]"
+            >
+              Blog
+            </Link>
             <a
               href={SMS_LINK}
               className="flex items-center gap-2 rounded-sm bg-[#00356B] px-5 py-2.5 text-xs font-semibold uppercase tracking-[0.18em] text-white transition-all hover:bg-[#00264d]"
@@ -866,12 +872,12 @@ export default function Home() {
             >
               Contact
             </a>
-            <a
+            <Link
               href="/blog"
               className="text-sm font-medium text-[#5f5b53] transition-colors hover:text-[#00356B]"
             >
               Blog
-            </a>
+            </Link>
             <a
               href="#"
               className="text-sm font-medium text-[#5f5b53] transition-colors hover:text-[#00356B]"
