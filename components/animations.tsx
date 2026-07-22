@@ -29,7 +29,6 @@ export function FadeIn({
   const Component = props.href ? motion.a : motion.div;
 
   return (
-    // @ts-ignore - Dynamic component typing is tricky with framer-motion unions
     <Component
       initial={{ opacity: 0, ...directions[direction] }}
       whileInView={{ opacity: 1, x: 0, y: 0 }}

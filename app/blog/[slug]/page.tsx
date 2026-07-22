@@ -137,7 +137,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             {post.image && (
               <figure className="mt-10 overflow-hidden rounded-3xl border border-neutral-200 bg-white shadow-xl shadow-neutral-900/5">
                 <div className="grid items-center gap-0 md:grid-cols-[minmax(0,0.78fr)_minmax(0,1fr)]">
-                  <div className="relative mx-auto aspect-[946/1478] w-full max-w-[360px] overflow-hidden bg-neutral-100 md:max-w-none">
+                  <div
+                    className="relative mx-auto w-full max-w-[360px] overflow-hidden bg-neutral-100 md:max-w-none"
+                    style={{
+                      aspectRatio: `${post.image.width} / ${post.image.height}`,
+                    }}
+                  >
                     <Image
                       src={post.image.src}
                       alt={post.image.alt}
@@ -152,7 +157,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                       Student result
                     </p>
                     <p className="font-serif text-4xl font-bold leading-tight tracking-tight text-neutral-950 md:text-5xl">
-                      1310 to 1430
+                      {post.image.result ?? "Student result"}
                     </p>
                     <p className="mt-4 text-lg leading-8 text-neutral-600">
                       {post.image.caption}

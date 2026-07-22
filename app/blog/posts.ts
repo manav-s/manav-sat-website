@@ -11,6 +11,7 @@ export type BlogPost = {
     src: string;
     alt: string;
     caption?: string;
+    result?: string;
     width: number;
     height: number;
   };
@@ -36,6 +37,7 @@ const WRITTEN_BLOG_POSTS: BlogPost[] = [
       src: "/blog/ava-sat-case-study.png",
       alt: "Ava, a SAT tutoring student who raised her SAT superscore from 1310 to 1430",
       caption: "Ava raised her SAT superscore from 1310 to 1430.",
+      result: "1310 to 1430",
       width: 946,
       height: 1478,
     },
@@ -105,6 +107,96 @@ const WRITTEN_BLOG_POSTS: BlogPost[] = [
     closing: [
       "Ava's case is a good example of what SAT prep should do for a strong student. It should make the test less random.",
       "When the review is specific and the plan is built around the student's real score leaks, improvement does not have to come from endless practice. It can come from knowing exactly what to fix next.",
+    ],
+  },
+  {
+    slug: "wyatt-1180-to-1390-bluebook-sat-practice",
+    title: "How Wyatt Built a 1390 Bluebook SAT Practice Score in Two Weeks",
+    description:
+      "A first-name-only SAT tutoring case study on Wyatt's two-week sprint from an 1180 official SAT starting point to a 1390 Bluebook practice score.",
+    publishedAt: "2026-07-21",
+    readingTime: "4 min read",
+    image: {
+      src: "/blog/wyatt-sat-case-study.png",
+      alt: "Wyatt, a SAT tutoring student who built a 1390 Bluebook practice score after an 1180 official SAT starting point",
+      caption:
+        "Wyatt moved from an 1180 official SAT starting point to a 1390 Bluebook practice score in a two-week prep window.",
+      result: "1180 to 1390",
+      width: 400,
+      height: 400,
+    },
+    keywords: [
+      "SAT tutoring case study",
+      "two week SAT prep",
+      "1180 to 1390 SAT",
+      "Bluebook SAT practice test",
+      "SAT prep for athletes",
+      "engineering SAT score",
+    ],
+    intro: [
+      "Wyatt came in with a tight timeline.",
+      "He had taken the SAT on May 2 and scored an 1180: 600 Math and 580 Reading and Writing. His next SAT was already scheduled for June 6, which meant there was no time for a slow, generic prep plan.",
+      "The context mattered. Wyatt had a 4.0 GPA, was being recruited for college football, and was interested in engineering. Some of the stronger academic programs looking at him wanted to see a much higher SAT score, closer to the 1400 range.",
+    ],
+    sections: [
+      {
+        heading: "A short timeline changes the plan",
+        body: [
+          "The first thing I told Wyatt's family was that the timeline was short, so expectations had to be realistic.",
+          "But I also saw upside, especially on Math. A 600 Math score without having fully learned some of the higher-level SAT concepts yet is not a bad starting point. It usually means the student has ability, but the test is exposing missing curriculum and unfamiliar question types.",
+          "So we treated the two weeks like a sprint.",
+        ],
+      },
+      {
+        heading: "What the sprint looked like",
+        body: [
+          "The plan was focused: five 90-minute tutoring sessions, targeted homework, full-length practice tests, and direct work on the concepts most likely to move his score quickly.",
+          "We did not have time to study everything equally. We had to find the highest-value fixes first.",
+          "That meant diagnosing the score, drilling the topics that could move fastest, and building a simple process Wyatt could actually use on test day.",
+        ],
+        bullets: [
+          "Five 90-minute tutoring sessions",
+          "Targeted homework and classwork",
+          "Full-length Bluebook practice testing",
+          "Focused Math content repair",
+          "Reading and Writing process work",
+        ],
+      },
+      {
+        heading: "Math was the clearest opportunity",
+        body: [
+          "For Wyatt, Math was the clearest opportunity. He was naturally stronger there, but he had gaps in topics like trigonometry and higher-level algebra that he had not fully covered in school yet.",
+          "Once those patterns were named, they became trainable.",
+          "That is a different problem from a student who has seen every topic and still cannot execute. Wyatt needed fast exposure, clean examples, and enough repetition to make unfamiliar SAT patterns feel less random.",
+        ],
+      },
+      {
+        heading: "Reading and Writing needed a process",
+        body: [
+          "Reading and Writing required a different kind of work.",
+          "The goal was to make his process more reliable: slower answer elimination, cleaner reading on long questions, and less guessing from instinct when the choices sounded similar.",
+          "In a two-week window, Reading and Writing cannot become a completely different section overnight. But the student can stop giving away points by rushing, overtrusting vibes, or failing to compare answer choices carefully.",
+        ],
+      },
+      {
+        heading: "The practice result",
+        body: [
+          "After the focused prep sprint, Wyatt took a Bluebook practice test and scored a 1390.",
+          "That result mattered because it showed that his original 1180 was not his ceiling. He had the ability to operate much higher when the missing content, timing pressure, and SAT-specific patterns were addressed directly.",
+          "The takeaway is not that every student can jump to a perfect score in two weeks. The takeaway is that a short window can still produce meaningful progress when the work is precise.",
+        ],
+        bullets: [
+          "Official starting SAT: 1180",
+          "Starting Math: 600",
+          "Starting Reading and Writing: 580",
+          "Bluebook practice score after focused prep: 1390",
+          "Prep window: two weeks",
+        ],
+      },
+    ],
+    closing: [
+      "Wyatt's case is a good example of why a first SAT score does not always reflect a student's real ceiling.",
+      "Sometimes the student is capable, but the test is revealing curriculum gaps, pacing issues, and unfamiliar question patterns all at once. When those are separated, the plan gets much clearer.",
     ],
   },
   {
