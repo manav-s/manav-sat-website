@@ -200,6 +200,103 @@ const WRITTEN_BLOG_POSTS: BlogPost[] = [
     ],
   },
   {
+    slug: "amy-1290-to-1400-sat-superscore",
+    title: "How Amy Went From a 1290 SAT to a 1400 Superscore",
+    description:
+      "A first-name-only SAT tutoring case study on how Amy raised her SAT score from 1290 to a 1400 superscore with focused Math prep.",
+    publishedAt: "2026-07-21",
+    readingTime: "4 min read",
+    image: {
+      src: "/blog/amy-sat-case-study.png",
+      alt: "Amy, a SAT tutoring student who raised her SAT superscore from 1290 to 1400",
+      caption:
+        "Amy improved in both sections, raised her official SAT from 1290 to 1350, and later reached a 1400 superscore.",
+      result: "1290 to 1400",
+      width: 924,
+      height: 1532,
+    },
+    keywords: [
+      "SAT tutoring case study",
+      "SAT superscore improvement",
+      "1290 to 1400 SAT",
+      "SAT math prep",
+      "private SAT tutor results",
+      "digital SAT tutoring",
+    ],
+    intro: [
+      "Amy came in as a strong student who already had a lot working in her favor.",
+      "Her Reading and Writing foundation was strong, but Math still needed a more deliberate plan. The goal was not to rebuild her entire SAT approach. The goal was to sharpen the section that had the most room to move.",
+      "She started from a 1290 SAT and eventually reached a 1400 superscore.",
+    ],
+    sections: [
+      {
+        heading: "The starting point",
+        body: [
+          "Amy's earlier SAT score was a 1290. That is already a solid score, but it was not fully aligned with the kind of student she was.",
+          "Her English side was already strong. Math was the section where extra structure could make the biggest difference.",
+          "That meant the prep had to be specific. Instead of treating every topic equally, we focused on the Math patterns that were most likely to show up repeatedly and cost real points.",
+        ],
+      },
+      {
+        heading: "The eight-week Math push",
+        body: [
+          "The March SAT gave us a clear timeline. We had roughly eight weeks to drill, repeat, and clean up the topics that were still inconsistent.",
+          "The structure was simple: a weekly class, assigned homework, review of mistakes, and repeated exposure to high-value Math question types.",
+          "That kind of repetition matters. A student does not become more consistent by seeing a concept once. They become more consistent by seeing the same idea in enough forms that the test stops feeling random.",
+        ],
+        bullets: [
+          "Weekly 75-90 minute sessions",
+          "Focused SAT Math review",
+          "Assigned homework between classes",
+          "Repeated drilling of high-value topics",
+          "Review built around actual missed questions",
+        ],
+      },
+      {
+        heading: "The first score jump",
+        body: [
+          "After that prep cycle, Amy reported back with a 1350 SAT.",
+          "That was a 60-point increase from her earlier 1290, and importantly, she improved in both Reading and Writing and Math.",
+          "For a student who already had a strong academic base, that kind of movement showed that the issue was not ability. It was precision, repetition, and test-specific execution.",
+        ],
+        bullets: [
+          "Previous SAT: 1290",
+          "New official SAT: 1350",
+          "Overall improvement: 60 points",
+          "Improved in both sections",
+        ],
+      },
+      {
+        heading: "The May retake",
+        body: [
+          "Amy kept pushing and took the SAT again in May.",
+          "Her total score moved to a 1360, but the bigger story was the superscore. Her Math score improved by 50 points, which brought her superscore to a 1400.",
+          "That is exactly why section-specific work matters. If a student's Reading and Writing is already strong, even a targeted Math increase can change the full admissions picture.",
+        ],
+        bullets: [
+          "May SAT total: 1360",
+          "Math improvement: 50 points",
+          "Final SAT superscore: 1400",
+          "Total superscore gain from starting point: 110 points",
+        ],
+      },
+      {
+        heading: "Amy's note",
+        body: [
+          "After getting her May score back, Amy sent a simple update saying she had reached her goal and could not have done it without the help.",
+          "That is the kind of result I care about most: not just a higher number, but a student who feels the work actually got them where they were trying to go.",
+        ],
+        bullets: [
+          "\"I could not have done it without you thank you for helping me reach my goal!\"",
+        ],
+      },
+    ],
+    closing: [
+      "Amy's case is a good example of how SAT prep should work for a strong student with one section holding the score back.",
+      "The plan does not need to be dramatic. It needs to be honest about where the points are being lost, disciplined enough to repeat the right skills, and specific enough to turn ability into a higher score.",
+    ],
+  },
+  {
     slug: "stuck-at-1350-1450-digital-sat",
     title: "Why You're Stuck at 1350 to 1450 on the Digital SAT, Even After Studying",
     description:

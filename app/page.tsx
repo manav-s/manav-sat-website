@@ -849,25 +849,25 @@ export default function Home() {
             id="sat-guides"
             className="mt-20 border-t border-[#e4d8c1] pt-16 md:mt-24 md:pt-20"
           >
-            <FadeInStagger className="grid gap-6 lg:grid-cols-2">
+            <FadeInStagger className="grid gap-6 md:grid-cols-3">
               {CASE_STUDY_POSTS.map((post) => (
                 <FadeIn
                   key={post.slug}
                   href={`/blog/${post.slug}`}
-                  className="group grid overflow-hidden rounded-sm border border-[#d8c9aa] bg-[#fbf8f1] transition-all hover:-translate-y-1 hover:border-[#B89B5E] hover:shadow-2xl hover:shadow-[#6d5b35]/10 sm:grid-cols-[190px_minmax(0,1fr)]"
+                  className="group flex min-h-[620px] flex-col overflow-hidden rounded-sm border border-[#d8c9aa] bg-[#fbf8f1] transition-all hover:-translate-y-1 hover:border-[#B89B5E] hover:shadow-2xl hover:shadow-[#6d5b35]/10"
                 >
                   {post.image && (
-                    <div className="relative min-h-[260px] overflow-hidden bg-[#efe6d6] sm:h-full">
+                    <div className="relative h-[320px] shrink-0 overflow-hidden bg-[#efe6d6]">
                       <Image
                         src={post.image.src}
                         alt={post.image.alt}
                         fill
-                        sizes="(min-width: 1024px) 190px, (min-width: 640px) 190px, 100vw"
+                        sizes="(min-width: 768px) 33vw, 100vw"
                         className="object-cover object-center transition-transform duration-700 group-hover:scale-[1.04]"
                       />
                     </div>
                   )}
-                  <div className="flex min-h-[260px] flex-col justify-between p-6 md:p-7">
+                  <div className="flex flex-1 flex-col justify-between p-6 md:p-7">
                     <div>
                       <div className="mb-5 flex flex-wrap items-center gap-3 text-[10px] font-bold uppercase tracking-[0.18em] text-[#8c733f]">
                         <span>Case study</span>
