@@ -7,6 +7,13 @@ export type BlogPost = {
   publishedAt: string;
   readingTime: string;
   videoId?: string;
+  image?: {
+    src: string;
+    alt: string;
+    caption?: string;
+    width: number;
+    height: number;
+  };
   keywords: string[];
   intro: string[];
   sections: {
@@ -18,6 +25,88 @@ export type BlogPost = {
 };
 
 const WRITTEN_BLOG_POSTS: BlogPost[] = [
+  {
+    slug: "ava-1310-to-1430-sat-superscore",
+    title: "How Ava Went From a 1310 to a 1430 SAT Superscore",
+    description:
+      "A first-name-only SAT tutoring case study on how Ava raised her superscore from 1310 to 1430 with targeted prep.",
+    publishedAt: "2026-07-21",
+    readingTime: "4 min read",
+    image: {
+      src: "/blog/ava-sat-case-study.png",
+      alt: "Ava, a SAT tutoring student who raised her SAT superscore from 1310 to 1430",
+      caption: "Ava raised her SAT superscore from 1310 to 1430.",
+      width: 946,
+      height: 1478,
+    },
+    keywords: [
+      "SAT tutoring case study",
+      "SAT superscore improvement",
+      "1310 to 1430 SAT",
+      "private SAT tutor results",
+      "digital SAT tutoring",
+    ],
+    intro: [
+      "Ava came in as a strong student with a 1310 SAT. She was already capable, but her score did not yet reflect the full level of work she could do.",
+      "Her family was looking for private SAT prep that would give her a clear plan instead of more generic practice. The goal was not to bury her in random assignments. The goal was to figure out where the points were actually leaking and train those areas directly.",
+      "By the end of the process, Ava raised her SAT superscore to a 1430.",
+    ],
+    sections: [
+      {
+        heading: "The starting point",
+        body: [
+          "Ava started with a 1310. At that level, a student usually does not need to relearn the entire test from scratch.",
+          "The work is more precise. You have to separate content gaps from timing issues, rushed reading, trap answers, and avoidable mistakes. A vague plan like do more practice tests is usually not enough.",
+          "For Ava, the main job was to build a cleaner process for Reading and Writing while keeping Math strong.",
+        ],
+      },
+      {
+        heading: "The first official result",
+        body: [
+          "After working together, Ava got a 1360 on an official SAT: 630 Reading and Writing and 730 Math.",
+          "That gave her a 1420 superscore. The Math score showed she had a strong section high to protect, and the next opportunity was clear: if Reading and Writing moved, the superscore could move with it.",
+          "That is one reason superscoring matters. A student does not need every section to peak on the same test date. The goal is to build section highs that hold up across attempts.",
+        ],
+      },
+      {
+        heading: "The last-minute retake",
+        body: [
+          "A few weeks later, Ava decided to take the SAT again pretty last minute. She did not do a major final prep push. She took it to see what would happen.",
+          "That test came back as a 1330, but the split mattered more than the total: 700 Reading and Writing and 630 Math.",
+          "Combined with her previous 730 Math, that raised her superscore to a 1430.",
+        ],
+        bullets: [
+          "Starting SAT: 1310",
+          "Best Math section: 730",
+          "Best Reading and Writing section: 700",
+          "Final SAT superscore: 1430",
+          "Total superscore increase: 120 points",
+        ],
+      },
+      {
+        heading: "Why the result mattered",
+        body: [
+          "The most important part of Ava's result was not just that the number went up. It was that the work carried over even when the retake was last minute.",
+          "Ava later said the Reading section still felt hard in places, especially when some questions were long and time got tight. That is normal. Strong SAT results do not require the test to feel easy.",
+          "They require a student to stay organized under pressure, protect the questions they should get right, and have a better process when the test gets uncomfortable.",
+        ],
+      },
+      {
+        heading: "Ava's note",
+        body: [
+          "After the retake, Ava sent a simple update: she had raised her superscore again and wanted to say thank you.",
+          "That is the kind of result I like seeing. Not a miracle promise. Not a fake overnight transformation. A strong student got a more accurate process, built section highs, and turned a 1310 into a 1430 superscore.",
+        ],
+        bullets: [
+          "\"Just wanted to say thank u so much for all ur help again!\"",
+        ],
+      },
+    ],
+    closing: [
+      "Ava's case is a good example of what SAT prep should do for a strong student. It should make the test less random.",
+      "When the review is specific and the plan is built around the student's real score leaks, improvement does not have to come from endless practice. It can come from knowing exactly what to fix next.",
+    ],
+  },
   {
     slug: "stuck-at-1350-1450-digital-sat",
     title: "Why You're Stuck at 1350 to 1450 on the Digital SAT, Even After Studying",

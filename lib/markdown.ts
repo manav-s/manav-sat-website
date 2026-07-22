@@ -18,6 +18,15 @@ export function postToMarkdown(post: BlogPost): string {
     );
   }
 
+  if (post.image) {
+    lines.push(
+      `![${post.image.alt}](${SITE_URL}${post.image.src})`,
+      "",
+      post.image.caption ?? "",
+      "",
+    );
+  }
+
   for (const paragraph of post.intro) {
     lines.push(paragraph, "");
   }

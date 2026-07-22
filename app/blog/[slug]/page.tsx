@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight } from "lucide-react";
@@ -44,11 +45,22 @@ export async function generateMetadata({
       type: "article",
       publishedTime: post.publishedAt,
       authors: ["Manav Sharma"],
+      images: post.image
+        ? [
+            {
+              url: post.image.src,
+              width: post.image.width,
+              height: post.image.height,
+              alt: post.image.alt,
+            },
+          ]
+        : undefined,
     },
     twitter: {
-      card: "summary",
+      card: post.image ? "summary_large_image" : "summary",
       title: post.title,
       description: post.description,
+      images: post.image ? [post.image.src] : undefined,
     },
   };
 }
@@ -80,6 +92,11 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       name: "Perfect Score Manav",
       url: SITE_URL,
     },
+    ...(post.image
+      ? {
+          image: `${SITE_URL}${post.image.src}`,
+        }
+      : {}),
     ...(post.videoId
       ? {
           video: {
@@ -117,6 +134,33 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             <p className="mt-6 text-xl leading-relaxed text-neutral-600">
               {post.description}
             </p>
+            {post.image && (
+              <figure className="mt-10 overflow-hidden rounded-3xl border border-neutral-200 bg-white shadow-xl shadow-neutral-900/5">
+                <div className="grid items-center gap-0 md:grid-cols-[minmax(0,0.78fr)_minmax(0,1fr)]">
+                  <div className="relative mx-auto aspect-[946/1478] w-full max-w-[360px] overflow-hidden bg-neutral-100 md:max-w-none">
+                    <Image
+                      src={post.image.src}
+                      alt={post.image.alt}
+                      fill
+                      sizes="(min-width: 768px) 360px, 85vw"
+                      className="object-cover"
+                      priority
+                    />
+                  </div>
+                  <figcaption className="p-8 md:p-10">
+                    <p className="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-neutral-500">
+                      Student result
+                    </p>
+                    <p className="font-serif text-4xl font-bold leading-tight tracking-tight text-neutral-950 md:text-5xl">
+                      1310 to 1430
+                    </p>
+                    <p className="mt-4 text-lg leading-8 text-neutral-600">
+                      {post.image.caption}
+                    </p>
+                  </figcaption>
+                </div>
+              </figure>
+            )}
             {post.videoId && (
               <div className="mt-10 overflow-hidden rounded-3xl bg-neutral-950 shadow-2xl ring-1 ring-neutral-200">
                 <div className="aspect-video">
