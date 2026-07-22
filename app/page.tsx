@@ -30,6 +30,13 @@ const TOTAL_SPOTS = Number(process.env.NEXT_PUBLIC_TOTAL_SPOTS || 6);
 const LAST_UPDATED = process.env.NEXT_PUBLIC_LAST_UPDATED || "Feb 10, 2026";
 const CASE_STUDY_POSTS = BLOG_POSTS.filter((post) => post.image);
 const STRATEGY_POSTS = BLOG_POSTS.filter((post) => !post.image);
+const VISIBLE_HOMEPAGE_POST_COUNT = 5;
+const VISIBLE_STRATEGY_COUNT = Math.max(
+  0,
+  VISIBLE_HOMEPAGE_POST_COUNT - CASE_STUDY_POSTS.length,
+);
+const VISIBLE_STRATEGY_POSTS = STRATEGY_POSTS.slice(0, VISIBLE_STRATEGY_COUNT);
+const MORE_STRATEGY_POSTS = STRATEGY_POSTS.slice(VISIBLE_STRATEGY_COUNT);
 
 function getCurrentCohortMonth() {
   return new Intl.DateTimeFormat("en-US", {
@@ -840,26 +847,8 @@ export default function Home() {
 
           <div
             id="sat-guides"
-            className="mt-24 border-t border-[#e4d8c1] pt-20 md:mt-28 md:pt-24"
+            className="mt-20 border-t border-[#e4d8c1] pt-16 md:mt-24 md:pt-20"
           >
-            <FadeIn>
-              <div className="mb-12 grid gap-8 lg:grid-cols-[minmax(0,0.75fr)_minmax(0,1fr)] lg:items-end">
-                <div>
-                  <p className="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-[#00356B]">
-                    Case studies and guides
-                  </p>
-                  <h2 className="font-serif text-4xl font-normal leading-tight tracking-tight text-[#111111] md:text-5xl">
-                    The same ideas, written out.
-                  </h2>
-                </div>
-                <p className="max-w-2xl text-lg leading-8 text-[#4b4b4b] lg:justify-self-end">
-                  Student results, SAT strategy notes, and edited video
-                  transcripts are now part of the homepage so parents can move
-                  from the videos straight into the proof and tactics.
-                </p>
-              </div>
-            </FadeIn>
-
             <FadeInStagger className="grid gap-6 lg:grid-cols-2">
               {CASE_STUDY_POSTS.map((post) => (
                 <FadeIn
@@ -868,18 +857,13 @@ export default function Home() {
                   className="group grid overflow-hidden rounded-sm border border-[#d8c9aa] bg-[#fbf8f1] transition-all hover:-translate-y-1 hover:border-[#B89B5E] hover:shadow-2xl hover:shadow-[#6d5b35]/10 sm:grid-cols-[190px_minmax(0,1fr)]"
                 >
                   {post.image && (
-                    <div
-                      className="relative min-h-[260px] overflow-hidden bg-[#efe6d6] sm:min-h-0"
-                      style={{
-                        aspectRatio: `${post.image.width} / ${post.image.height}`,
-                      }}
-                    >
+                    <div className="relative min-h-[260px] overflow-hidden bg-[#efe6d6] sm:h-full">
                       <Image
                         src={post.image.src}
                         alt={post.image.alt}
                         fill
                         sizes="(min-width: 1024px) 190px, (min-width: 640px) 190px, 100vw"
-                        className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+                        className="object-cover object-center transition-transform duration-700 group-hover:scale-[1.04]"
                       />
                     </div>
                   )}
@@ -925,7 +909,7 @@ export default function Home() {
             </FadeIn>
 
             <FadeInStagger className="divide-y divide-[#e4d8c1] border-b border-[#e4d8c1]">
-              {STRATEGY_POSTS.map((post) => (
+              {VISIBLE_STRATEGY_POSTS.map((post) => (
                 <FadeIn
                   key={post.slug}
                   href={`/blog/${post.slug}`}
@@ -952,6 +936,45 @@ export default function Home() {
                 </FadeIn>
               ))}
             </FadeInStagger>
+
+            {MORE_STRATEGY_POSTS.length > 0 && (
+              <details className="group mt-6">
+                <summary className="inline-flex cursor-pointer list-none items-center gap-2 rounded-sm border border-[#00356B]/20 px-5 py-3 text-sm font-bold uppercase tracking-[0.16em] text-[#00356B] transition-colors hover:border-[#00356B] hover:bg-[#fbf8f1] [&::-webkit-details-marker]:hidden">
+                  See more guides
+                  <ArrowRight className="h-4 w-4 transition-transform group-open:rotate-90" />
+                </summary>
+                <FadeInStagger className="mt-6 divide-y divide-[#e4d8c1] border-y border-[#e4d8c1]">
+                  {MORE_STRATEGY_POSTS.map((post) => (
+                    <FadeIn
+                      key={post.slug}
+                      href={`/blog/${post.slug}`}
+                      className="group/post grid gap-4 py-6 transition-colors hover:bg-[#fbf8f1] md:grid-cols-[170px_minmax(0,1fr)_32px] md:px-5"
+                    >
+                      <div className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.16em] text-[#8c733f] md:block">
+                        <span>
+                          {post.videoId ? "Video transcript" : "SAT guide"}
+                        </span>
+                        <span className="h-1 w-1 rounded-full bg-[#d8c9aa] md:hidden" />
+                        <span className="text-[#8b8579] md:mt-3 md:block">
+                          {post.readingTime}
+                        </span>
+                      </div>
+                      <div>
+                        <h4 className="font-serif text-2xl font-normal leading-tight tracking-tight text-[#111111] md:text-3xl">
+                          {post.title}
+                        </h4>
+                        <p className="mt-3 max-w-3xl text-base leading-7 text-[#5f5b53]">
+                          {post.description}
+                        </p>
+                      </div>
+                      <div className="hidden items-center justify-center md:flex">
+                        <ArrowRight className="h-5 w-5 text-[#00356B] transition-transform group-hover/post:translate-x-1" />
+                      </div>
+                    </FadeIn>
+                  ))}
+                </FadeInStagger>
+              </details>
+            )}
           </div>
         </div>
       </section>
