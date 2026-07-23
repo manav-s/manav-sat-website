@@ -297,6 +297,104 @@ const WRITTEN_BLOG_POSTS: BlogPost[] = [
     ],
   },
   {
+    slug: "alexis-grace-sat-bright-futures-fsu",
+    title:
+      "How Alexis Grace Improved 90 Points, Earned Bright Futures, and Got Into FSU",
+    description:
+      "How Alexis Grace raised her SAT score by 90 points to a 1160, earned 75% Bright Futures, and reached her first-choice school, Florida State University.",
+    publishedAt: "2026-07-22",
+    readingTime: "5 min read",
+    image: {
+      src: "/blog/alexis-grace-case-study.png",
+      alt: "Alexis Grace, an SAT and college essay student who earned Bright Futures and attended Florida State University",
+      caption:
+        "Alexis Grace improved her SAT score by 90 points, earned 75% Bright Futures, and began college at Florida State University.",
+      result: "FSU + Bright Futures",
+      width: 1224,
+      height: 1330,
+    },
+    keywords: [
+      "SAT tutoring case study",
+      "Bright Futures SAT prep",
+      "FSU essay help",
+      "SAT prep for dyslexia",
+      "college essay tutoring",
+      "Florida State University admission",
+      "90 point SAT improvement",
+    ],
+    intro: [
+      "Alexis Grace's story was never just about one SAT score.",
+      "She was working toward Florida's Bright Futures scholarship while applying to colleges and developing an essay that could explain the persistence behind her academic record. Standardized testing had always been one of her hardest environments, but it did not reflect the effort, leadership, or purpose she brought to school.",
+      "During the process, Alexis Grace raised her SAT score by 90 points to a 1160. She kept going, earned the 75% Bright Futures award, and started classes at her first-choice school, Florida State University.",
+    ],
+    sections: [
+      {
+        heading: "A score that was moving, but not finished",
+        body: [
+          "Alexis Grace came into the process with meaningful ground to make up. Some of the SAT material was still unfamiliar, and her earlier classes had not fully prepared her for the level or style of questions the test demanded.",
+          "The early progress was real. After one test, she reported a 90-point improvement to a 1160. But she was still 50 points away from the Bright Futures target she was chasing.",
+          "That update captured the challenge clearly: she had proof that the work was helping, but the larger goal still required patience and another push.",
+        ],
+        bullets: [
+          "SAT improvement: 90 points",
+          "New official score: 1160",
+          "Immediate goal: close the remaining Bright Futures gap",
+          "Long-term goal: attend Florida State University",
+        ],
+      },
+      {
+        heading: "Preparing for the student, not just the test",
+        body: [
+          "Alexis Grace had been diagnosed with dyslexia and a phonological processing disorder when she was young. Timed testing could make her knowledge harder to access, even when she understood the underlying material.",
+          "That meant the work had to be structured around clarity, repetition, and self-advocacy. The goal was not to make her learn like someone else. It was to help her recognize what a question was asking, use the strategies that already worked for her, and stay composed when the clock created pressure.",
+          "She worked hard, grasped the material, and began showing visible progress even while there was still more to learn.",
+        ],
+      },
+      {
+        heading: "The essay had to show the person behind the score",
+        body: [
+          "SAT preparation was only one part of the application. Alexis Grace also needed an FSU essay that made sense of a much longer educational journey.",
+          "Her strongest opening was direct: she had nearly been held back in kindergarten. From there, the essay connected her early frustration with reading and processing to the systems she built over time, the leadership roles she earned in high school, and her decision to study elementary education.",
+          "The editing work focused on turning a long list of obstacles and accomplishments into one coherent story. Her learning differences were part of the context, but persistence, self-advocacy, and her desire to become an educator were the real throughline.",
+        ],
+        bullets: [
+          "President of Future Educators of America",
+          "Secretary of the National English Honor Society",
+          "Member of the National Honor Society",
+          "Member of the National Technical Honor Society",
+          "Intended major: Elementary Education",
+        ],
+      },
+      {
+        heading: "Her first-choice acceptance",
+        body: [
+          "Alexis Grace received several college acceptances, including the one her family cared about most: Florida State University, her first choice.",
+          "Her mother later wrote that the essay support made a difference. No single essay or test score can be credited for an admission decision, but the application now gave FSU a clearer view of the student behind the numbers.",
+          "At that point, one goal remained. She was still just short of the 75% Bright Futures award, and she continued working toward it.",
+        ],
+        bullets: [
+          "Accepted to multiple colleges",
+          "Accepted to her first-choice school, FSU",
+          "Continued pursuing the 75% Bright Futures award",
+        ],
+      },
+      {
+        heading: "The update that completed the story",
+        body: [
+          "The final update arrived after Alexis Grace had started college. Her mother wrote to say that she had earned the 75% Bright Futures award and was beginning classes at Florida State University.",
+          "That outcome was bigger than a clean before-and-after SAT number. Alexis Grace improved her score, kept working after the first jump, earned meaningful scholarship support, and reached the school she had been writing about from the beginning.",
+        ],
+        bullets: [
+          "\"Today was Alexis Grace's first day of classes at Florida State University. She did get her 75% Bright Futures and she is living her best life. Thank you for your help.\"",
+        ],
+      },
+    ],
+    closing: [
+      "Alexis Grace's case is a reminder that test preparation and college admissions work are often connected. The SAT can create access to scholarship money, while the essay helps an admissions team understand what a score cannot explain on its own.",
+      "Her result came from treating both parts seriously: improving the measurable score, then telling the deeper academic story with honesty and direction.",
+    ],
+  },
+  {
     slug: "stuck-at-1350-1450-digital-sat",
     title: "Why You're Stuck at 1350 to 1450 on the Digital SAT, Even After Studying",
     description:

@@ -849,7 +849,7 @@ export default function Home() {
             id="sat-guides"
             className="mt-20 border-t border-[#e4d8c1] pt-16 md:mt-24 md:pt-20"
           >
-            <FadeInStagger className="grid gap-6 md:grid-cols-3">
+            <FadeInStagger className="grid gap-6 md:grid-cols-2">
               {CASE_STUDY_POSTS.map((post) => (
                 <FadeIn
                   key={post.slug}
