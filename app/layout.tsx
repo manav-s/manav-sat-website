@@ -50,12 +50,21 @@ export const metadata: Metadata = {
     siteName: SITE_NAME,
     type: "website",
     locale: "en_US",
+    images: [
+      {
+        url: "/sat-coaching-1600-manav-preview.png",
+        width: 1200,
+        height: 630,
+        alt: "Private SAT coaching with Manav Sharma, a 1600 scorer",
+      },
+    ],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "Private SAT Coaching with a 1600 Scorer",
     description:
       "Private SAT score reviews and 1:1 coaching with Manav Sharma, a perfect 1600 scorer and National Merit Scholar.",
+    images: ["/sat-coaching-1600-manav-preview.png"],
   },
   robots: {
     index: true,
