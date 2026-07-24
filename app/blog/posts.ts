@@ -7,6 +7,7 @@ export type BlogPost = {
   publishedAt: string;
   readingTime: string;
   videoId?: string;
+  videoPresentation?: "short";
   image?: {
     src: string;
     alt: string;
@@ -14,6 +15,7 @@ export type BlogPost = {
     result?: string;
     width: number;
     height: number;
+    presentation?: "wide";
   };
   keywords: string[];
   intro: string[];
@@ -26,6 +28,93 @@ export type BlogPost = {
 };
 
 const WRITTEN_BLOG_POSTS: BlogPost[] = [
+  {
+    slug: "nina-34-act-score-personalized-test-prep",
+    title: "How Nina Earned a 34 ACT Score With Personalized Test Prep",
+    description:
+      "How Nina improved her SAT and ACT performance through personalized lessons, targeted practice, and detailed review—culminating in a 34 ACT.",
+    publishedAt: "2026-07-23",
+    readingTime: "4 min read",
+    videoId: "CZpe_eG51So",
+    videoPresentation: "short",
+    image: {
+      src: "/blog/nina-34-act-case-study.png",
+      alt: "Text messages celebrating Nina's 34 ACT score and the impact of her test preparation",
+      caption:
+        "After Nina earned a 34 ACT, her family described the tutoring as time and money well spent—and planned to continue working together for her younger siblings.",
+      result: "34 ACT",
+      width: 968,
+      height: 561,
+      presentation: "wide",
+    },
+    keywords: [
+      "ACT tutoring case study",
+      "34 ACT score",
+      "private ACT tutor results",
+      "personalized ACT prep",
+      "SAT and ACT tutoring",
+      "99th percentile ACT",
+      "Manav Sharma tutor",
+    ],
+    intro: [
+      "Nina's story started with a short form submission and a five-minute call.",
+      "After the first session, her mother, Sheila, said Nina liked the class and asked how to sign up. The first full lesson went well, the homework went out, and the work became a steady process: identify what Nina did not understand, build resources around those gaps, and explain missed questions until she could handle them on the real exam.",
+      "That process ultimately helped Nina earn a 34 composite score on the ACT.",
+    ],
+    sections: [
+      {
+        heading: "A strong first session became an individualized plan",
+        body: [
+          "The early messages were simple but important. Nina enjoyed the first session, her family wanted to continue, and the first class gave us a strong foundation for the work ahead.",
+          "From there, the plan was built around Nina rather than a generic curriculum. When she had little or no understanding of a topic, we covered the lesson directly. When a practice question did not make sense, we slowed down and explained the reasoning so the same pattern would be recognizable on test day.",
+          "That distinction matters. Practice only helps when the student understands what a missed question is teaching them. Nina did not just need more material. She needed the right material, delivered at the right level, with enough explanation to make it stick.",
+        ],
+      },
+      {
+        heading: "The result: a 34 ACT",
+        body: [
+          "Nina's mother shared the result before Nina had a chance to deliver the news herself: a 34 on the ACT.",
+          "Current ACT national ranks place a 34 composite at the 99th percentile. At that level, the testing portion of a college application is no longer a weakness to explain. It is a clear academic strength.",
+          "The message also captured what made the result meaningful. Her mother was not only grateful for the score; she thanked me for the work behind it and asked me to act surprised when Nina shared the news herself.",
+        ],
+        bullets: [
+          "Final ACT composite: 34",
+          "ACT national rank: 99th percentile",
+          "Improved performance across both SAT and ACT preparation",
+          "\"Nina got a 34 on her ACT test! ... THANK YOU for all the work you are doing with her!\"",
+        ],
+      },
+      {
+        heading: "What her family said afterward",
+        body: [
+          "The family text exchange after the score came back said as much as any formal review could.",
+          "Nina's father wrote that she had \"absolutely crushed the ACT\" and that finding her tutor had \"obviously been time and money well spent.\" Her mother replied that she was proud of Nina and that the family planned to keep working with me for Alex and Nadia, Nina's younger siblings.",
+          "That kind of message means a great deal. A score can show that the academic plan worked. A family deciding to return for their other children shows that the experience itself felt worthwhile.",
+        ],
+      },
+      {
+        heading: "Nina's testimonial",
+        body: [
+          "Nina described the process in her own words:",
+        ],
+        bullets: [
+          "\"Hi, my name is Nina. I'm a junior in high school, and my experience with Manav has been incredibly beneficial. He provides personalized resources that match your needs as a student. Whether that is covering lessons on topics that you have little to no understanding of, or providing practice tests and explanations to questions that you may not have understood in the past, the goal is for you to understand it on the actual exam. With Manav, I've seen my test scores go up for the SAT and ACT. Working with him was time very much well spent.\"",
+        ],
+      },
+      {
+        heading: "Why this result stands out",
+        body: [
+          "I am lucky to receive encouraging messages from students and parents on a regular basis, but this one genuinely stood out.",
+          "Nina was hardworking, relentless, and willing to engage with the details. Personalized prep only works when the student meets the plan with consistent effort. She did that, and the 34 reflects both the quality of the process and the work she put into it.",
+          "The best outcome is not just a high score. It is a student who understands why the score moved and a family that feels the time was well spent.",
+        ],
+      },
+    ],
+    closing: [
+      "Nina's case is a good example of what individualized test preparation should look like. The tutoring adapted to her needs, the practice was paired with explanation, and the work transferred across both the SAT and ACT.",
+      "A 34 ACT is an exceptional result. More importantly, it came from a process Nina can carry into every demanding academic setting that comes next.",
+    ],
+  },
   {
     slug: "ava-1310-to-1430-sat-superscore",
     title: "How Ava Went From a 1310 to a 1430 SAT Superscore",

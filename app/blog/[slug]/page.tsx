@@ -136,9 +136,19 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             </p>
             {post.image && (
               <figure className="mt-10 overflow-hidden rounded-3xl border border-neutral-200 bg-white shadow-xl shadow-neutral-900/5">
-                <div className="grid items-center gap-0 md:grid-cols-[minmax(0,0.78fr)_minmax(0,1fr)]">
+                <div
+                  className={
+                    post.image.presentation === "wide"
+                      ? "grid gap-0"
+                      : "grid items-center gap-0 md:grid-cols-[minmax(0,0.78fr)_minmax(0,1fr)]"
+                  }
+                >
                   <div
-                    className="relative mx-auto w-full max-w-[360px] overflow-hidden bg-neutral-100 md:max-w-none"
+                    className={
+                      post.image.presentation === "wide"
+                        ? "relative w-full overflow-hidden bg-neutral-100"
+                        : "relative mx-auto w-full max-w-[360px] overflow-hidden bg-neutral-100 md:max-w-none"
+                    }
                     style={{
                       aspectRatio: `${post.image.width} / ${post.image.height}`,
                     }}
@@ -147,8 +157,16 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                       src={post.image.src}
                       alt={post.image.alt}
                       fill
-                      sizes="(min-width: 768px) 360px, 85vw"
-                      className="object-cover"
+                      sizes={
+                        post.image.presentation === "wide"
+                          ? "(min-width: 768px) 768px, 100vw"
+                          : "(min-width: 768px) 360px, 85vw"
+                      }
+                      className={
+                        post.image.presentation === "wide"
+                          ? "object-contain"
+                          : "object-cover"
+                      }
                       priority
                     />
                   </div>
@@ -168,7 +186,13 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             )}
             {post.videoId && (
               <div className="mt-10 overflow-hidden rounded-3xl bg-neutral-950 shadow-2xl ring-1 ring-neutral-200">
-                <div className="aspect-video">
+                <div
+                  className={
+                    post.videoPresentation === "short"
+                      ? "mx-auto aspect-[9/16] max-w-[360px]"
+                      : "aspect-video"
+                  }
+                >
                   <iframe
                     className="h-full w-full"
                     src={`https://www.youtube.com/embed/${post.videoId}`}
