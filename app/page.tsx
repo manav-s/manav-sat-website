@@ -376,6 +376,70 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── Case Studies ── */}
+      <section id="case-studies" className="border-b border-[#e4d8c1] bg-[#fbf8f1] py-24 md:py-32">
+        <div className="mx-auto max-w-6xl px-6">
+          <FadeIn>
+            <div className="mb-16 max-w-3xl md:mb-20">
+              <p className="mb-3 text-sm font-bold uppercase tracking-[0.22em] text-[#00356B]">
+                Detailed outcomes
+              </p>
+              <h2 className="font-serif text-4xl font-normal text-[#111111] md:text-5xl">
+                The work behind the scores.
+              </h2>
+              <p className="mt-6 max-w-2xl text-lg leading-relaxed text-[#4b4b4b]">
+                Read how individual students diagnosed their score gaps,
+                changed their preparation, and translated the work into
+                measurable results.
+              </p>
+            </div>
+          </FadeIn>
+
+          <FadeInStagger className="grid gap-6 md:grid-cols-2">
+            {CASE_STUDY_POSTS.map((post) => (
+              <FadeIn
+                key={post.slug}
+                href={`/blog/${post.slug}`}
+                className="group flex min-h-[620px] flex-col overflow-hidden rounded-sm border border-[#d8c9aa] bg-white transition-all hover:-translate-y-1 hover:border-[#B89B5E] hover:shadow-2xl hover:shadow-[#6d5b35]/10"
+              >
+                {post.image && (
+                  <div className="relative h-[320px] shrink-0 overflow-hidden bg-[#efe6d6]">
+                    <Image
+                      src={post.cardImage?.src ?? post.image.src}
+                      alt={post.cardImage?.alt ?? post.image.alt}
+                      fill
+                      sizes="(min-width: 768px) 50vw, 100vw"
+                      className="object-cover object-center transition-transform duration-700 group-hover:scale-[1.04]"
+                    />
+                  </div>
+                )}
+                <div className="flex flex-1 flex-col justify-between p-6 md:p-7">
+                  <div>
+                    <div className="mb-5 flex flex-wrap items-center gap-3 text-[10px] font-bold uppercase tracking-[0.18em] text-[#8c733f]">
+                      <span>Case study</span>
+                      <span className="h-1 w-1 rounded-full bg-[#d8c9aa]" />
+                      <span>{post.readingTime}</span>
+                    </div>
+                    <h3 className="font-serif text-3xl font-normal leading-tight tracking-tight text-[#111111]">
+                      {post.title}
+                    </h3>
+                    <p className="mt-4 text-sm leading-7 text-[#5f5b53]">
+                      {post.description}
+                    </p>
+                  </div>
+                  <div className="mt-8 flex items-center justify-between border-t border-[#e4d8c1] pt-5">
+                    <span className="font-serif text-2xl font-normal text-[#00356B]">
+                      {post.image?.result ?? "Student result"}
+                    </span>
+                    <ArrowRight className="h-5 w-5 text-[#00356B] transition-transform group-hover:translate-x-1" />
+                  </div>
+                </div>
+              </FadeIn>
+            ))}
+          </FadeInStagger>
+        </div>
+      </section>
+
       {/* ── Testimonials ── */}
       <section id="testimonials" className="bg-white py-24 md:py-32">
         <div className="mx-auto max-w-6xl px-6">
@@ -849,51 +913,8 @@ export default function Home() {
             id="sat-guides"
             className="mt-20 border-t border-[#e4d8c1] pt-16 md:mt-24 md:pt-20"
           >
-            <FadeInStagger className="grid gap-6 md:grid-cols-2">
-              {CASE_STUDY_POSTS.map((post) => (
-                <FadeIn
-                  key={post.slug}
-                  href={`/blog/${post.slug}`}
-                  className="group flex min-h-[620px] flex-col overflow-hidden rounded-sm border border-[#d8c9aa] bg-[#fbf8f1] transition-all hover:-translate-y-1 hover:border-[#B89B5E] hover:shadow-2xl hover:shadow-[#6d5b35]/10"
-                >
-                  {post.image && (
-                    <div className="relative h-[320px] shrink-0 overflow-hidden bg-[#efe6d6]">
-                      <Image
-                        src={post.cardImage?.src ?? post.image.src}
-                        alt={post.cardImage?.alt ?? post.image.alt}
-                        fill
-                        sizes="(min-width: 768px) 33vw, 100vw"
-                        className="object-cover object-center transition-transform duration-700 group-hover:scale-[1.04]"
-                      />
-                    </div>
-                  )}
-                  <div className="flex flex-1 flex-col justify-between p-6 md:p-7">
-                    <div>
-                      <div className="mb-5 flex flex-wrap items-center gap-3 text-[10px] font-bold uppercase tracking-[0.18em] text-[#8c733f]">
-                        <span>Case study</span>
-                        <span className="h-1 w-1 rounded-full bg-[#d8c9aa]" />
-                        <span>{post.readingTime}</span>
-                      </div>
-                      <h3 className="font-serif text-3xl font-normal leading-tight tracking-tight text-[#111111]">
-                        {post.title}
-                      </h3>
-                      <p className="mt-4 text-sm leading-7 text-[#5f5b53]">
-                        {post.description}
-                      </p>
-                    </div>
-                    <div className="mt-8 flex items-center justify-between border-t border-[#e4d8c1] pt-5">
-                      <span className="font-serif text-2xl font-normal text-[#00356B]">
-                        {post.image?.result ?? "Student result"}
-                      </span>
-                      <ArrowRight className="h-5 w-5 text-[#00356B] transition-transform group-hover:translate-x-1" />
-                    </div>
-                  </div>
-                </FadeIn>
-              ))}
-            </FadeInStagger>
-
             <FadeIn>
-              <div className="mt-16 mb-6 flex flex-col justify-between gap-4 border-b border-[#e4d8c1] pb-5 md:flex-row md:items-end">
+              <div className="mb-6 flex flex-col justify-between gap-4 border-b border-[#e4d8c1] pb-5 md:flex-row md:items-end">
                 <div>
                   <p className="mb-2 text-xs font-bold uppercase tracking-[0.24em] text-[#00356B]">
                     Strategy library
