@@ -17,6 +17,10 @@ export type BlogPost = {
     height: number;
     presentation?: "wide";
   };
+  cardImage?: {
+    src: string;
+    alt: string;
+  };
   keywords: string[];
   intro: string[];
   sections: {
@@ -46,6 +50,10 @@ const WRITTEN_BLOG_POSTS: BlogPost[] = [
       width: 968,
       height: 561,
       presentation: "wide",
+    },
+    cardImage: {
+      src: "/blog/nina-testimonial-card.png",
+      alt: "Nina, who earned a 1520 SAT and 34 ACT after working with Manav Sharma",
     },
     keywords: [
       "ACT tutoring case study",

@@ -859,8 +859,8 @@ export default function Home() {
                   {post.image && (
                     <div className="relative h-[320px] shrink-0 overflow-hidden bg-[#efe6d6]">
                       <Image
-                        src={post.image.src}
-                        alt={post.image.alt}
+                        src={post.cardImage?.src ?? post.image.src}
+                        alt={post.cardImage?.alt ?? post.image.alt}
                         fill
                         sizes="(min-width: 768px) 33vw, 100vw"
                         className="object-cover object-center transition-transform duration-700 group-hover:scale-[1.04]"
