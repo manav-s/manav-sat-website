@@ -30,9 +30,9 @@ export type BlogPost = {
 const WRITTEN_BLOG_POSTS: BlogPost[] = [
   {
     slug: "nina-34-act-score-personalized-test-prep",
-    title: "How Nina Earned a 34 ACT Score With Personalized Test Prep",
+    title: "How Nina Earned a 1520 SAT and 34 ACT",
     description:
-      "How Nina improved her SAT and ACT performance through personalized lessons, targeted practice, and detailed review—culminating in a 34 ACT.",
+      "How Nina earned a 1520 SAT and 34 ACT through personalized lessons, targeted practice, and detailed review.",
     publishedAt: "2026-07-23",
     readingTime: "4 min read",
     videoId: "CZpe_eG51So",
@@ -41,8 +41,8 @@ const WRITTEN_BLOG_POSTS: BlogPost[] = [
       src: "/blog/nina-34-act-case-study.png",
       alt: "Text messages celebrating Nina's 34 ACT score and the impact of her test preparation",
       caption:
-        "After Nina earned a 34 ACT, her family described the tutoring as time and money well spent—and planned to continue working together for her younger siblings.",
-      result: "34 ACT",
+        "Nina earned a 1520 SAT and 34 ACT. Her family described the tutoring as time and money well spent—and planned to continue working together for her younger siblings.",
+      result: "1520 SAT · 34 ACT",
       width: 968,
       height: 561,
       presentation: "wide",
@@ -50,6 +50,7 @@ const WRITTEN_BLOG_POSTS: BlogPost[] = [
     keywords: [
       "ACT tutoring case study",
       "34 ACT score",
+      "1520 SAT score",
       "private ACT tutor results",
       "personalized ACT prep",
       "SAT and ACT tutoring",
@@ -59,7 +60,7 @@ const WRITTEN_BLOG_POSTS: BlogPost[] = [
     intro: [
       "Nina's story started with a short form submission and a five-minute call.",
       "After the first session, her mother, Sheila, said Nina liked the class and asked how to sign up. The first full lesson went well, the homework went out, and the work became a steady process: identify what Nina did not understand, build resources around those gaps, and explain missed questions until she could handle them on the real exam.",
-      "That process ultimately helped Nina earn a 34 composite score on the ACT.",
+      "That process ultimately helped Nina earn two exceptional results: a 1520 on the SAT and a 34 composite score on the ACT.",
     ],
     sections: [
       {
@@ -71,16 +72,17 @@ const WRITTEN_BLOG_POSTS: BlogPost[] = [
         ],
       },
       {
-        heading: "The result: a 34 ACT",
+        heading: "The results: a 1520 SAT and 34 ACT",
         body: [
           "Nina's mother shared the result before Nina had a chance to deliver the news herself: a 34 on the ACT.",
-          "Current ACT national ranks place a 34 composite at the 99th percentile. At that level, the testing portion of a college application is no longer a weakness to explain. It is a clear academic strength.",
+          "That score followed another exceptional result: Nina also earned a 1520 on the SAT. The two results were remarkably consistent—ACT's official concordance pairs a 34 ACT with a 1520 SAT.",
+          "Current ACT national ranks place a 34 composite at the 99th percentile. Together, the 1520 and 34 make standardized testing a clear academic strength in Nina's college application.",
           "The message also captured what made the result meaningful. Her mother was not only grateful for the score; she thanked me for the work behind it and asked me to act surprised when Nina shared the news herself.",
         ],
         bullets: [
+          "Final SAT score: 1520",
           "Final ACT composite: 34",
           "ACT national rank: 99th percentile",
-          "Improved performance across both SAT and ACT preparation",
           "\"Nina got a 34 on her ACT test! ... THANK YOU for all the work you are doing with her!\"",
         ],
       },
@@ -105,14 +107,14 @@ const WRITTEN_BLOG_POSTS: BlogPost[] = [
         heading: "Why this result stands out",
         body: [
           "I am lucky to receive encouraging messages from students and parents on a regular basis, but this one genuinely stood out.",
-          "Nina was hardworking, relentless, and willing to engage with the details. Personalized prep only works when the student meets the plan with consistent effort. She did that, and the 34 reflects both the quality of the process and the work she put into it.",
+          "Nina was hardworking, relentless, and willing to engage with the details. Personalized prep only works when the student meets the plan with consistent effort. She did that, and the 1520 SAT and 34 ACT reflect both the quality of the process and the work she put into it.",
           "The best outcome is not just a high score. It is a student who understands why the score moved and a family that feels the time was well spent.",
         ],
       },
     ],
     closing: [
       "Nina's case is a good example of what individualized test preparation should look like. The tutoring adapted to her needs, the practice was paired with explanation, and the work transferred across both the SAT and ACT.",
-      "A 34 ACT is an exceptional result. More importantly, it came from a process Nina can carry into every demanding academic setting that comes next.",
+      "A 1520 SAT and 34 ACT are exceptional results. More importantly, they came from a process Nina can carry into every demanding academic setting that comes next.",
     ],
   },
   {
