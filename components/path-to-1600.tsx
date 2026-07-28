@@ -21,7 +21,7 @@ const STEPS: Step[] = [
     num: "02",
     icon: Target,
     title: "Plan of Attack",
-    body: "Custom classes, targeted practice exams, and weekly reviews directly with me.",
+    body: "Custom classes, AI-assisted grading, and targeted homework rebuilt around every review.",
   },
   {
     num: "03",

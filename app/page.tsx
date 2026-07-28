@@ -13,6 +13,9 @@ import {
   PlayCircle,
   Terminal,
   User,
+  Sparkles,
+  ClipboardCheck,
+  SlidersHorizontal,
 } from "lucide-react";
 import { FadeIn, FadeInStagger } from "@/components/animations";
 import { PathToSixteenHundred } from "@/components/path-to-1600";
@@ -541,6 +544,193 @@ export default function Home() {
       {/* ── Steps ── */}
       <PathToSixteenHundred />
 
+      {/* ── AI-Assisted Feedback Loop ── */}
+      <section
+        id="ai-guided-practice"
+        className="border-b border-[#e4d8c1] bg-[#f7f1e6] py-24 md:py-32"
+      >
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="grid items-start gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
+            <FadeIn direction="right">
+              <div className="mb-6 inline-flex items-center gap-2 rounded-sm border border-[#d8c9aa] bg-white px-4 py-2 text-[11px] font-bold uppercase tracking-[0.18em] text-[#00356B]">
+                <Sparkles className="h-4 w-4 text-[#B89B5E]" />
+                AI-assisted precision
+              </div>
+              <h2 className="font-serif text-4xl font-normal leading-[1.08] tracking-tight text-[#111111] md:text-5xl">
+                More useful feedback after every assignment.
+              </h2>
+              <p className="mt-6 max-w-xl text-lg leading-relaxed text-[#4b4b4b]">
+                I use custom AI-assisted tools to turn each practice set into a
+                sharper plan: grade the work, surface recurring mistake
+                patterns, and build homework around what the student actually
+                needs next.
+              </p>
+              <p className="mt-4 max-w-xl text-base leading-relaxed text-[#5f5b53]">
+                I review every recommendation myself. AI makes the feedback
+                loop faster and more detailed; the judgment, teaching, and
+                relationship remain fully human.
+              </p>
+
+              <div className="mt-10 space-y-4">
+                {[
+                  {
+                    icon: ClipboardCheck,
+                    title: "Deeper grading",
+                    body: "Work is reviewed for concepts, pacing, and error type — not just marked right or wrong.",
+                  },
+                  {
+                    icon: SlidersHorizontal,
+                    title: "Truly custom homework",
+                    body: "Practice adapts to the student’s missed skills, target score, timeline, and current workload.",
+                  },
+                  {
+                    icon: Sparkles,
+                    title: "Better use of lesson time",
+                    body: "I enter each session already knowing what changed, what is sticking, and what needs attention next.",
+                  },
+                ].map((feature) => {
+                  const Icon = feature.icon;
+
+                  return (
+                    <div
+                      key={feature.title}
+                      className="flex gap-4 border-t border-[#d8c9aa] pt-4 first:border-t-0 first:pt-0"
+                    >
+                      <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-sm bg-[#00356B] text-white">
+                        <Icon className="h-5 w-5" strokeWidth={1.75} />
+                      </div>
+                      <div>
+                        <h3 className="text-base font-bold text-[#111111]">
+                          {feature.title}
+                        </h3>
+                        <p className="mt-1 text-sm leading-6 text-[#5f5b53]">
+                          {feature.body}
+                        </p>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </FadeIn>
+
+            <FadeIn direction="left" delay={0.15}>
+              <div className="overflow-hidden rounded-sm border border-[#d8c9aa] bg-white shadow-2xl shadow-[#6d5b35]/10">
+                <div className="flex items-center justify-between border-b border-[#e4d8c1] px-5 py-4 md:px-7">
+                  <div>
+                    <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#8c733f]">
+                      Practice review 06
+                    </p>
+                    <p className="mt-1 font-serif text-2xl text-[#111111]">
+                      Student feedback
+                    </p>
+                  </div>
+                  <div className="rounded-full bg-[#edf4ef] px-3 py-1.5 text-xs font-semibold text-[#295b38]">
+                    Reviewed
+                  </div>
+                </div>
+
+                <div className="p-5 md:p-7">
+                  <div className="grid gap-3 sm:grid-cols-3">
+                    {[
+                      {
+                        label: "Accuracy",
+                        value: "84%",
+                        note: "+7% this week",
+                      },
+                      {
+                        label: "Avg. pace",
+                        value: "1:42",
+                        note: "On target",
+                      },
+                      {
+                        label: "Patterns found",
+                        value: "3",
+                        note: "2 high priority",
+                      },
+                    ].map((metric) => (
+                      <div
+                        key={metric.label}
+                        className="rounded-sm border border-[#e4d8c1] bg-[#fbf8f1] p-4"
+                      >
+                        <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#8d8577]">
+                          {metric.label}
+                        </p>
+                        <p className="mt-2 font-serif text-3xl text-[#00356B]">
+                          {metric.value}
+                        </p>
+                        <p className="mt-1 text-xs text-[#5f5b53]">
+                          {metric.note}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="mt-6 rounded-sm border border-[#e4d8c1]">
+                    <div className="flex items-center justify-between border-b border-[#e4d8c1] px-4 py-3">
+                      <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#00356B]">
+                        Next custom assignment
+                      </p>
+                      <span className="text-xs font-medium text-[#8d8577]">
+                        30 questions
+                      </span>
+                    </div>
+                    <div className="divide-y divide-[#e4d8c1] px-4">
+                      {[
+                        {
+                          skill: "Transitions & logical flow",
+                          count: "12 questions",
+                          priority: "Priority",
+                        },
+                        {
+                          skill: "Advanced algebra",
+                          count: "10 questions",
+                          priority: "Reinforce",
+                        },
+                        {
+                          skill: "Timed mixed review",
+                          count: "8 questions",
+                          priority: "Maintain",
+                        },
+                      ].map((assignment) => (
+                        <div
+                          key={assignment.skill}
+                          className="flex items-center justify-between gap-4 py-4"
+                        >
+                          <div>
+                            <p className="text-sm font-semibold text-[#111111]">
+                              {assignment.skill}
+                            </p>
+                            <p className="mt-1 text-xs text-[#8d8577]">
+                              {assignment.count}
+                            </p>
+                          </div>
+                          <span className="rounded-sm bg-[#f7f1e6] px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.12em] text-[#8c733f]">
+                            {assignment.priority}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="mt-5 flex items-start gap-3 border-l-2 border-[#B89B5E] bg-[#fbf8f1] px-4 py-3">
+                    <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#00356B] text-[10px] font-bold text-white">
+                      MS
+                    </div>
+                    <p className="text-xs leading-5 text-[#5f5b53]">
+                      <span className="font-bold text-[#111111]">
+                        Reviewed by Manav:
+                      </span>{" "}
+                      The next set prioritizes the two patterns costing the
+                      most points while keeping stronger skills fresh.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
+
       {/* ── Case Studies ── */}
       <section id="case-studies" className="border-b border-[#e4d8c1] bg-[#fbf8f1] py-24 md:py-32">
         <div className="mx-auto max-w-6xl px-6">
@@ -629,6 +819,19 @@ export default function Home() {
                   perfect scorer, National Merit Scholar, and{" "}
                   <span className="font-semibold text-[#111111]">Software Engineer at Microsoft</span> who
                   has helped 250+ students build a more precise SAT plan.
+                </p>
+              </div>
+
+              <div className="mt-8 border-l-2 border-[#B89B5E] bg-white px-5 py-5">
+                <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#00356B]">
+                  Human-led, technology-augmented
+                </p>
+                <p className="mt-3 text-base leading-7 text-[#4b4b4b]">
+                  Every student receives direct private coaching from me,
+                  supported by my own AI-assisted systems for analyzing
+                  mistakes, identifying recurring score patterns, and
+                  personalizing practice between sessions. The technology
+                  sharpens my diagnosis; it never replaces the teaching.
                 </p>
               </div>
               
