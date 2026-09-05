@@ -33,7 +33,7 @@ const STEPS: Step[] = [
 
 export function PathToSixteenHundred() {
   return (
-    <section className="relative overflow-hidden bg-neutral-950 py-24 text-white md:py-32">
+    <section className="relative overflow-hidden bg-[#00356B] py-16 text-white md:py-24">
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 opacity-60"
@@ -60,12 +60,12 @@ export function PathToSixteenHundred() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
-          className="mb-20 text-center md:mb-28"
+          className="mb-12 text-center md:mb-16"
         >
           <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-neutral-300 backdrop-blur">
             The Path
           </div>
-          <h2 className="font-serif text-4xl font-bold tracking-tight md:text-6xl">
+          <h2 className="font-serif text-4xl font-normal tracking-tight md:text-6xl">
             Your path to <span className="italic text-white/90">1600</span>.
           </h2>
         </motion.div>
@@ -136,11 +136,11 @@ export function PathToSixteenHundred() {
                         repeat: Infinity,
                         ease: "easeInOut",
                       }}
-                      className="relative flex h-24 w-24 items-center justify-center rounded-full border border-white/15 bg-neutral-900 text-white/70 transition-all duration-500 group-hover:scale-110 group-hover:border-white group-hover:bg-white group-hover:text-neutral-900"
+                      className="relative flex h-24 w-24 items-center justify-center rounded-full border border-white/15 bg-[#124575] text-white/70 transition-all duration-500 group-hover:scale-110 group-hover:border-white group-hover:bg-white group-hover:text-neutral-900"
                     >
                       <Icon className="h-9 w-9 transition-transform duration-500 group-hover:scale-110" strokeWidth={1.5} />
                     </motion.div>
-                    <div className="absolute -right-2 -top-2 flex h-9 w-9 items-center justify-center rounded-full border border-white/15 bg-neutral-950 font-mono text-xs font-bold text-white shadow-lg">
+                    <div className="absolute -right-2 -top-2 flex h-9 w-9 items-center justify-center rounded-full border border-white/15 bg-[#00356B] font-mono text-xs font-bold text-white shadow-lg">
                       {step.num}
                     </div>
                   </div>
@@ -148,7 +148,7 @@ export function PathToSixteenHundred() {
                   <h3 className="mb-3 font-serif text-2xl font-bold text-white">
                     {step.title}
                   </h3>
-                  <p className="mx-auto max-w-xs text-base leading-relaxed text-neutral-400">
+                  <p className="mx-auto max-w-xs text-base leading-relaxed text-white/70">
                     {step.body}
                   </p>
                 </motion.div>

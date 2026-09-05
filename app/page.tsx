@@ -12,7 +12,6 @@ import {
   Youtube,
   PlayCircle,
   Terminal,
-  User,
   Sparkles,
   ClipboardCheck,
   SlidersHorizontal,
@@ -66,6 +65,28 @@ if (process.env.NEXT_PUBLIC_STUDENTS) {
   }
 }
 
+function StudentScore({ name, before, after }: { name: string; before: string; after: string }) {
+  return (
+    <div className="mt-auto pt-2">
+      <p className="mb-5">
+        <cite className="not-italic text-lg font-bold text-[#111111]">{name}</cite>
+        <span className="ml-2 text-[#5f5b53]">Student</span>
+      </p>
+      <div className="grid grid-cols-[auto_24px_auto] items-end justify-start gap-x-5 border-t border-[#e4d8c1] pt-5">
+        <div>
+          <p className="mb-2 text-[10px] font-bold uppercase tracking-wider text-[#5f5b53]">Before SAT</p>
+          <p className="font-serif text-5xl font-normal leading-none tracking-tight tabular-nums text-[#8d8577]">{before}</p>
+        </div>
+        <ArrowRight className="mb-3 h-5 w-5 text-[#8d8577]" />
+        <div>
+          <p className="mb-2 text-[10px] font-bold uppercase tracking-wider text-[#00356B]">After SAT</p>
+          <p className="font-serif text-5xl font-normal leading-none tracking-tight tabular-nums text-[#00356B]">{after}</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function Home() {
   const cohortMonth = getCurrentCohortMonth();
 
@@ -86,7 +107,7 @@ export default function Home() {
             </Link>
             <a
               href={SMS_LINK}
-              className="flex items-center gap-2 rounded-sm bg-[#00356B] px-5 py-2.5 text-xs font-semibold uppercase tracking-[0.18em] text-white transition-all hover:bg-[#00264d]"
+              className="flex items-center gap-2 rounded-sm bg-[#00356B] px-5 py-2.5 text-xs font-semibold tracking-normal text-white transition-all hover:bg-[#00264d]"
             >
               <Phone className="h-4 w-4" />
               Inquire
@@ -96,10 +117,10 @@ export default function Home() {
       </nav>
 
       {/* ── Hero Section ── */}
-      <section className="relative border-b border-[#e4d8c1] bg-[#fbf8f1] pt-32 pb-20 md:pt-48 md:pb-32">
+      <section className="relative border-b border-[#e4d8c1] bg-[#fbf8f1] pt-28 pb-14 md:pt-36 md:pb-24">
         <div className="mx-auto max-w-6xl px-6">
-          <div className="grid items-center gap-16 md:grid-cols-2 lg:gap-24">
-            <FadeIn direction="right" className="relative z-10 order-2 md:order-1">
+          <div className="grid items-center gap-10 md:grid-cols-[1.15fr_1fr] lg:gap-16">
+            <FadeIn direction="right" className="relative z-10 order-1">
               <FadeIn delay={0.1}>
                 <div className="mb-7 border-l-2 border-[#B89B5E] pl-5 text-xs font-semibold uppercase tracking-[0.24em] text-[#00356B]">
                   1600 SAT · National Merit Scholar
@@ -121,29 +142,30 @@ export default function Home() {
                 <div className="flex flex-col gap-4 sm:flex-row">
                   <a
                     href={SMS_LINK}
-                    className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-sm bg-[#00356B] px-6 py-4 text-sm font-semibold uppercase tracking-[0.16em] text-white transition-all hover:bg-[#00264d]"
+                    className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-sm bg-[#00356B] px-6 py-4 text-sm font-semibold tracking-normal text-white transition-all hover:bg-[#00264d]"
                   >
                     <Phone className="h-5 w-5" />
-                    Private Score Review
+                    Private score review
                   </a>
                   <a
                     href="#vsl"
-                    className="inline-flex items-center justify-center whitespace-nowrap rounded-sm border border-[#00356B]/25 bg-transparent px-6 py-4 text-sm font-semibold uppercase tracking-[0.16em] text-[#00356B] transition-all hover:border-[#00356B] hover:bg-white/50"
+                    className="inline-flex items-center justify-center whitespace-nowrap rounded-sm border border-[#00356B]/25 bg-transparent px-6 py-4 text-sm font-semibold tracking-normal text-[#00356B] transition-all hover:border-[#00356B] hover:bg-white/50"
                   >
-                    Hear the Approach
+                    Hear the approach
                   </a>
                 </div>
               </FadeIn>
             </FadeIn>
-            <FadeIn direction="left" delay={0.2} className="order-1 flex justify-center md:order-2">
+            <FadeIn direction="left" delay={0.2} className="order-2 flex justify-center">
               <div className="relative w-full max-w-[550px]">
                 {/* Main Image - Manav */}
-                <div className="relative z-10 ml-auto aspect-[3/4] w-3/4 overflow-hidden rounded-sm border border-[#d8c9aa] bg-white">
+                <div className="relative z-10 mx-auto aspect-[4/5] w-full max-w-[420px] overflow-hidden rounded-t-[160px] rounded-b-sm bg-[#efe6d6]">
                   <Image
                     src="/headshot.png"
                     alt="Manav Sharma — perfect 1600 SAT scorer and private SAT tutor"
                     fill
-                    className="object-cover object-top scale-150 translate-y-8"
+                    className="object-cover object-top"
+                    sizes="(min-width: 768px) 420px, 90vw"
                     priority
                   />
                 </div>
@@ -159,28 +181,28 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-6">
           <FadeIn>
             <div className="grid grid-cols-2 gap-2 text-center text-[10px] font-semibold uppercase tracking-[0.14em] text-[#00356B]/80 md:flex md:flex-nowrap md:items-center md:justify-center md:gap-x-4 md:text-xs md:tracking-[0.16em] lg:gap-x-5">
-              <span className="inline-flex items-center justify-center border border-[#e4d8c1] bg-[#fbf8f1] px-3 py-2 md:shrink-0 md:border-0 md:bg-transparent md:p-0">
+              <span className="inline-flex items-center justify-center px-3 py-2 md:shrink-0 md:border-0 md:bg-transparent md:p-0">
                 <span>
                   <span className="md:hidden">1600 SAT</span>
                   <span className="hidden md:inline">Perfect <span className="font-bold text-[#00356B]">1600 SAT</span></span>
                 </span>
               </span>
               <span className="hidden h-px w-6 shrink-0 bg-[#d8c9aa] md:block" />
-              <span className="inline-flex items-center justify-center border border-[#e4d8c1] bg-[#fbf8f1] px-3 py-2 md:shrink-0 md:border-0 md:bg-transparent md:p-0">
+              <span className="inline-flex items-center justify-center px-3 py-2 md:shrink-0 md:border-0 md:bg-transparent md:p-0">
                 <span>
                   <span className="md:hidden">National Merit</span>
                   <span className="hidden md:inline">National Merit <span className="font-bold text-[#00356B]">Scholar</span></span>
                 </span>
               </span>
               <span className="hidden h-px w-6 shrink-0 bg-[#d8c9aa] md:block" />
-              <span className="inline-flex items-center justify-center border border-[#e4d8c1] bg-[#fbf8f1] px-3 py-2 md:shrink-0 md:border-0 md:bg-transparent md:p-0">
+              <span className="inline-flex items-center justify-center px-3 py-2 md:shrink-0 md:border-0 md:bg-transparent md:p-0">
                 <span>
                   <span className="md:hidden">Microsoft SWE</span>
                   <span className="hidden md:inline">Software Engineer, <span className="font-bold text-[#00356B]">Microsoft</span></span>
                 </span>
               </span>
               <span className="hidden h-px w-6 shrink-0 bg-[#d8c9aa] md:block" />
-              <span className="inline-flex items-center justify-center border border-[#e4d8c1] bg-[#fbf8f1] px-3 py-2 md:shrink-0 md:border-0 md:bg-transparent md:p-0">
+              <span className="inline-flex items-center justify-center px-3 py-2 md:shrink-0 md:border-0 md:bg-transparent md:p-0">
                 <span>
                   <span className="md:hidden">Ex-JPMorgan</span>
                   <span className="hidden md:inline">Formerly <span className="font-bold text-[#00356B]">JPMorgan Chase</span></span>
@@ -192,7 +214,7 @@ export default function Home() {
       </section>
 
       {/* ── VSL Section ── */}
-      <section id="vsl" className="border-b border-[#e4d8c1] bg-[#f7f1e6] py-20 md:py-28">
+      <section id="vsl" className="border-b border-[#e4d8c1] bg-[#f7f1e6] py-16 md:py-20">
         <div className="mx-auto max-w-5xl px-6">
           <FadeIn>
             <div className="mx-auto mb-10 max-w-2xl text-center">
@@ -227,10 +249,10 @@ export default function Home() {
             <div className="mt-8 flex flex-col items-center justify-center gap-4 text-center sm:flex-row">
               <a
                 href={SMS_LINK}
-                className="inline-flex items-center justify-center gap-2 rounded-sm bg-[#00356B] px-6 py-4 text-sm font-semibold uppercase tracking-[0.16em] text-white transition-all hover:bg-[#00264d]"
+                className="inline-flex items-center justify-center gap-2 rounded-sm bg-[#00356B] px-6 py-4 text-sm font-semibold tracking-normal text-white transition-all hover:bg-[#00264d]"
               >
                 <Phone className="h-5 w-5" />
-                Request a Private Score Review
+                Request a Private score review
               </a>
               <p className="max-w-sm text-sm leading-relaxed text-[#5f5b53]">
                 Send the current score, target score, and test date. I&apos;ll
@@ -241,80 +263,24 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Admissions/Tracker Section ── */}
-      <section className="border-b border-[#e4d8c1] bg-[#fbf8f1] py-12">
-        <div className="mx-auto max-w-4xl px-6">
-            <FadeIn>
-                <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
-                    <div className="text-center md:text-left">
-                        {TOTAL_SPOTS - CURRENT_STUDENTS.length === 0 ? (
-                             <div className="flex items-center justify-center gap-2 md:justify-start">
-                                <div className="h-2 w-2 rounded-full bg-[#B89B5E]"></div>
-                                <span className="text-sm font-bold uppercase tracking-[0.2em] text-[#8c733f]">Waitlist Open</span>
-                            </div>
-                        ) : (
-                            <div className="flex items-center justify-center gap-2 md:justify-start">
-                                <div className="h-2 w-2 rounded-full bg-[#B89B5E] animate-pulse"></div>
-                                <span className="text-sm font-bold uppercase tracking-[0.2em] text-[#00356B]">Private Intake Open</span>
-                            </div>
-                        )}
-                        <h3 className="mt-2 font-serif text-2xl font-normal text-[#111111] md:text-3xl">{cohortMonth} Private Roster</h3>
-                        <p className="mt-2 max-w-sm text-sm leading-relaxed text-[#4b4b4b]">
-                            I work with <span className="font-semibold text-[#111111]">{TOTAL_SPOTS} students at a time</span> so each family receives direct attention, a clear plan, and careful review.
-                        </p>
-                    </div>
-
-                    <div className="w-full max-w-sm rounded-sm border border-[#d8c9aa] bg-white p-5">
-                        <div className="mb-4 flex items-center justify-between">
-                            <div className="text-sm font-bold text-[#111111]">Current Private Roster</div>
-                             <div className="rounded-sm bg-[#f7f1e6] px-2 py-1 text-xs font-semibold text-[#00356B]">
-                                {TOTAL_SPOTS - CURRENT_STUDENTS.length} spots left
-                            </div>
-                        </div>
-                        <div className="grid grid-cols-2 gap-2">
-                            {Array.from({ length: TOTAL_SPOTS }).map((_, i) => {
-                            const student = CURRENT_STUDENTS[i];
-                            return (
-                                <div
-                                key={i}
-                                className={`flex items-center gap-2 rounded-full py-1.5 pl-1.5 pr-3 transition-all ${
-                                    student
-                                    ? 'bg-[#00356B] text-white'
-                                    : 'border border-dashed border-[#d8c9aa] bg-[#fbf8f1] text-[#8d8577]'
-                                }`}
-                                >
-                                {student ? (
-                                    <>
-                                        <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-white/20 text-[10px] font-bold">
-                                            {student[0]}
-                                        </span>
-                                        <span className="text-xs font-medium truncate">
-                                            {student}
-                                        </span>
-                                    </>
-                                ) : (
-                                    <>
-                                        <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-neutral-200/50">
-                                            <User className="h-3 w-3" />
-                                        </div>
-                                        <span className="text-xs font-medium">Private Intake</span>
-                                    </>
-                                )}
-                                </div>
-                            );
-                            })}
-                        </div>
-                        <p className="mt-3 text-right text-xs font-medium text-[#00356B]">Updated {LAST_UPDATED}</p>
-                    </div>
-                </div>
-            </FadeIn>
+      {/* ── Availability ── */}
+      <section className="border-b border-[#e4d8c1] bg-[#fbf8f1] py-8">
+        <div className="mx-auto flex max-w-6xl flex-col justify-between gap-3 px-6 sm:flex-row sm:items-center">
+          <div>
+            <p className="font-serif text-2xl text-[#00356B]">{cohortMonth} private coaching</p>
+            <p className="mt-1 text-sm leading-relaxed text-[#5f5b53]">A small roster of {TOTAL_SPOTS} students. Direct attention for every family.</p>
+          </div>
+          <div className="sm:text-right">
+            <p className="text-sm font-medium text-[#00356B]">{Math.max(0, TOTAL_SPOTS - CURRENT_STUDENTS.length) === 0 ? "Waitlist open" : `${Math.max(0, TOTAL_SPOTS - CURRENT_STUDENTS.length)} spaces available`}</p>
+            <p className="mt-1 text-xs text-[#5f5b53]">Updated {LAST_UPDATED}</p>
+          </div>
         </div>
       </section>
 
       {/* ── Stats Section ── */}
-      <section className="bg-neutral-900 py-20">
+      <section className="bg-[#00356B] py-14 md:py-16">
         <div className="mx-auto max-w-5xl px-6">
-          <FadeInStagger className="grid grid-cols-1 gap-12 sm:grid-cols-3 sm:divide-x sm:divide-neutral-800">
+          <FadeInStagger className="grid grid-cols-1 gap-12 sm:grid-cols-3 sm:divide-x sm:divide-white/15">
             {[
               { label: "Avg. Point Increase", value: "170" },
               { label: "Students", value: "250+" },
@@ -325,7 +291,7 @@ export default function Home() {
                   <div className="font-serif text-4xl font-normal text-white md:text-5xl">
                     {stat.value}
                   </div>
-                  <div className="mt-2 text-sm font-medium uppercase tracking-[0.2em] text-neutral-400">
+                  <div className="mt-2 text-sm font-medium uppercase tracking-[0.2em] text-white/70">
                     {stat.label}
                   </div>
                 </div>
@@ -333,8 +299,8 @@ export default function Home() {
             ))}
           </FadeInStagger>
 
-          <div className="mt-20 border-t border-neutral-800 pt-12">
-            <p className="mb-8 text-center text-sm font-medium uppercase tracking-[0.2em] text-neutral-500">
+          <div className="mt-12 border-t border-white/15 pt-8">
+            <p className="mb-8 text-center text-sm font-medium uppercase tracking-[0.2em] text-white/60">
               Students I&apos;ve Worked With Have Gone On To Attend
             </p>
             <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-12 lg:grid lg:grid-cols-6 lg:gap-8">
@@ -380,9 +346,9 @@ export default function Home() {
       </section>
 
       {/* ── Testimonials ── */}
-      <section id="testimonials" className="bg-white py-24 md:py-32">
+      <section id="testimonials" className="bg-white py-16 md:py-24">
         <div className="mx-auto max-w-6xl px-6">
-          <div className="mb-20 md:mb-32 text-center md:text-left">
+          <div className="mb-10 md:mb-14 text-center md:text-left">
             <FadeIn>
               <p className="mb-3 text-sm font-bold uppercase tracking-[0.22em] text-[#00356B]">
                 Student outcomes
@@ -397,7 +363,7 @@ export default function Home() {
             <div className="grid gap-10 lg:grid-cols-2">
             {/* Case Study 1: Michael */}
             <div className="flex flex-col gap-8 rounded-sm border border-[#e4d8c1] bg-white p-6 md:p-8">
-              <FadeIn direction="right" className="order-2">
+              <FadeIn direction="right" className="order-2 flex flex-1 flex-col">
                 <div className="mb-6 flex gap-1">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="h-5 w-5 fill-[#B89B5E] text-[#B89B5E]" />
@@ -408,34 +374,7 @@ export default function Home() {
                   jumped <strong>140 points</strong> and ended up just one
                   question shy of perfect.&rdquo;
                 </blockquote>
-                <div className="flex flex-wrap items-center gap-6">
-                  <div>
-                    <cite className="not-italic text-lg font-bold text-[#111111]">
-                      Michael
-                    </cite>
-                    <span className="ml-2 text-[#5f5b53]">Student</span>
-                  </div>
-                  <div className="h-8 w-px bg-neutral-200"></div>
-                  <div className="flex items-center gap-4 rounded-sm border border-[#e4d8c1] bg-[#fbf8f1] p-4">
-                    <div className="flex flex-col">
-                      <span className="text-[10px] font-bold uppercase tracking-wider text-neutral-400">
-                        Before
-                      </span>
-                      <span className="font-mono text-xl font-medium text-neutral-400 line-through decoration-red-400/50">
-                        1420
-                      </span>
-                    </div>
-                    <ArrowRight className="h-5 w-5 text-neutral-300" />
-                    <div className="flex flex-col">
-                      <span className="text-[10px] font-bold uppercase tracking-wider text-[#00356B]">
-                        After
-                      </span>
-                      <span className="font-mono text-3xl font-bold text-[#00356B]">
-                        1560 SAT
-                      </span>
-                    </div>
-                  </div>
-                </div>
+                <StudentScore name="Michael" before="1420" after="1560" />
               </FadeIn>
               <FadeIn direction="left" className="order-1 flex justify-center">
                 <div className="relative aspect-[9/16] w-full max-w-[320px] overflow-hidden rounded-sm border border-[#e4d8c1] bg-neutral-900">
@@ -463,7 +402,7 @@ export default function Home() {
                   />
                 </div>
               </FadeIn>
-              <FadeIn direction="left" className="order-2">
+              <FadeIn direction="left" className="order-2 flex flex-1 flex-col">
                 <div className="mb-6 flex gap-1">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="h-5 w-5 fill-[#B89B5E] text-[#B89B5E]" />
@@ -474,34 +413,7 @@ export default function Home() {
                   beneficial. He provides custom resources that were great
                   for my needs as a student.&rdquo;
                 </blockquote>
-                <div className="flex flex-wrap items-center gap-6">
-                  <div>
-                    <cite className="not-italic text-lg font-bold text-[#111111]">
-                      Nina
-                    </cite>
-                    <span className="ml-2 text-[#5f5b53]">Student</span>
-                  </div>
-                  <div className="h-8 w-px bg-neutral-200"></div>
-                  <div className="flex items-center gap-4 rounded-sm border border-[#e4d8c1] bg-[#fbf8f1] p-4">
-                    <div className="flex flex-col">
-                      <span className="text-[10px] font-bold uppercase tracking-wider text-neutral-400">
-                        Before
-                      </span>
-                      <span className="font-mono text-xl font-medium text-neutral-400 line-through decoration-red-400/50">
-                        1300
-                      </span>
-                    </div>
-                    <ArrowRight className="h-5 w-5 text-neutral-300" />
-                    <div className="flex flex-col">
-                      <span className="text-[10px] font-bold uppercase tracking-wider text-[#00356B]">
-                        After
-                      </span>
-                      <span className="font-mono text-3xl font-bold text-[#00356B]">
-                        1520
-                      </span>
-                    </div>
-                  </div>
-                </div>
+                <StudentScore name="Nina" before="1300" after="1520" />
               </FadeIn>
             </div>
             </div>
@@ -547,12 +459,12 @@ export default function Home() {
       {/* ── AI-Assisted Feedback Loop ── */}
       <section
         id="ai-guided-practice"
-        className="border-b border-[#e4d8c1] bg-[#f7f1e6] py-24 md:py-32"
+        className="border-b border-[#e4d8c1] bg-[#f7f1e6] py-16 md:py-24"
       >
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid items-start gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
             <FadeIn direction="right">
-              <div className="mb-6 inline-flex items-center gap-2 rounded-sm border border-[#d8c9aa] bg-white px-4 py-2 text-[11px] font-bold uppercase tracking-[0.18em] text-[#00356B]">
+              <div className="mb-6 inline-flex items-center gap-2 rounded-sm border border-[#d8c9aa] bg-white px-4 py-2 text-[11px] font-bold tracking-normal text-[#00356B]">
                 <Sparkles className="h-4 w-4 text-[#B89B5E]" />
                 AI-assisted precision
               </div>
@@ -732,7 +644,7 @@ export default function Home() {
       </section>
 
       {/* ── Case Studies ── */}
-      <section id="case-studies" className="border-b border-[#e4d8c1] bg-[#fbf8f1] py-24 md:py-32">
+      <section id="case-studies" className="border-b border-[#e4d8c1] bg-[#fbf8f1] py-16 md:py-24">
         <div className="mx-auto max-w-6xl px-6">
           <FadeIn>
             <div className="mb-16 max-w-3xl md:mb-20">
@@ -796,11 +708,11 @@ export default function Home() {
       </section>
 
       {/* ── About / Limited Availability ── */}
-      <section className="overflow-hidden bg-[#fbf8f1] py-24 md:py-32">
+      <section className="overflow-hidden bg-[#fbf8f1] py-16 md:py-24">
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid items-center gap-16 md:grid-cols-2">
-            <FadeIn direction="right" className="order-2 md:order-1">
-              <div className="mb-8 inline-flex items-center gap-2 rounded-sm border border-[#d8c9aa] bg-white px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-[#00356B]">
+            <FadeIn direction="right" className="order-1">
+              <div className="mb-8 inline-flex items-center gap-2 rounded-sm border border-[#d8c9aa] bg-white px-4 py-1.5 text-xs font-semibold tracking-normal text-[#00356B]">
                 <Clock className="h-4 w-4" />
                 Private guidance
               </div>
@@ -859,7 +771,7 @@ export default function Home() {
 
             <FadeIn direction="left" className="order-1 md:order-2">
                <div className="relative rounded-sm border border-[#d8c9aa] bg-white p-2 transition-transform duration-500 hover:-translate-y-1">
-                  <div className="absolute -left-4 -top-4 z-10 rounded-sm bg-[#00356B] px-4 py-2 text-xs font-bold uppercase tracking-[0.16em] text-white">
+                  <div className="absolute -left-4 -top-4 z-10 rounded-sm bg-[#00356B] px-4 py-2 text-xs font-bold tracking-normal text-white">
                     Live Session
                   </div>
                   <div className="relative aspect-video overflow-hidden rounded-sm bg-neutral-100">
@@ -879,7 +791,7 @@ export default function Home() {
       </section>
 
       {/* ── Fit Section ── */}
-      <section className="border-y border-[#e4d8c1] bg-white py-20 md:py-28">
+      <section className="border-y border-[#e4d8c1] bg-white py-16 md:py-20">
         <div className="mx-auto max-w-6xl px-6">
           <FadeIn>
             <div className="mx-auto mb-14 max-w-2xl text-center">
@@ -901,7 +813,7 @@ export default function Home() {
             ].map((item) => (
               <FadeIn
                 key={item}
-                className="rounded-sm border border-[#e4d8c1] bg-[#fbf8f1] p-6"
+                className="border-t border-[#d8c9aa] py-6"
               >
                 <div className="flex gap-4">
                   <CheckCircle className="mt-1 h-5 w-5 shrink-0 text-[#00356B]" />
@@ -916,7 +828,7 @@ export default function Home() {
       </section>
 
       {/* ── CTA ── */}
-      <section className="bg-[#f7f1e6] py-24 md:py-32">
+      <section className="bg-[#f7f1e6] py-16 md:py-24">
         <div className="mx-auto max-w-4xl px-6">
           <FadeIn>
             <h2 className="mb-12 text-center font-serif text-3xl font-normal text-[#111111] md:text-4xl">
@@ -958,49 +870,16 @@ export default function Home() {
               </h3>
               <a
                 href={SMS_LINK}
-                className="inline-flex w-full items-center justify-center gap-2 rounded-sm bg-[#00356B] px-8 py-4 text-sm font-semibold uppercase tracking-[0.16em] text-white transition-all hover:bg-[#00264d]"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-sm bg-[#00356B] px-8 py-4 text-sm font-semibold tracking-normal text-white transition-all hover:bg-[#00264d]"
               >
                 <Phone className="h-5 w-5" />
                 347-722-4114
               </a>
               <div className="flex flex-col items-center gap-4">
-                <div className="flex flex-wrap justify-center gap-2 max-w-sm">
-                  {Array.from({ length: TOTAL_SPOTS }).map((_, i) => {
-                    const student = CURRENT_STUDENTS[i];
-                    return (
-                        <div
-                          key={i}
-                          className={`flex items-center gap-1.5 rounded-full py-1 pl-1 pr-2.5 transition-all ${
-                            student
-                              ? 'bg-[#00356B] text-white'
-                              : 'border border-dashed border-[#d8c9aa] bg-[#fbf8f1] text-[#8d8577]'
-                          }`}
-                        >
-                          {student ? (
-                            <>
-                                <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-white/20 text-[9px] font-bold">
-                                    {student[0]}
-                                </span>
-                                <span className="text-[10px] font-medium">
-                                    {student}
-                                </span>
-                            </>
-                          ) : (
-                            <>
-                                <div className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-neutral-200/50">
-                                    <User className="h-2.5 w-2.5" />
-                                </div>
-                                <span className="text-[10px] font-medium">Open</span>
-                            </>
-                          )}
-                        </div>
-                    );
-                  })}
-                </div>
                 <p className="text-center text-xs text-[#5f5b53]">
                   {TOTAL_SPOTS - CURRENT_STUDENTS.length === 0
                     ? 'Currently fully booked — join the waitlist'
-                    : `Only ${TOTAL_SPOTS - CURRENT_STUDENTS.length} of ${TOTAL_SPOTS} spots remaining.`}
+                    : `${Math.max(0, TOTAL_SPOTS - CURRENT_STUDENTS.length)} spaces available for private coaching.`}
                   <span className="block mt-1 opacity-75">I only work with {TOTAL_SPOTS} students at a time.</span>
                 </p>
               </div>
@@ -1010,10 +889,10 @@ export default function Home() {
       </section>
 
       {/* ── Free Resources Section ── */}
-      <section id="videos" className="border-t border-[#e4d8c1] bg-white py-24 md:py-32">
+      <section id="videos" className="border-t border-[#e4d8c1] bg-white py-16 md:py-24">
         <div className="mx-auto max-w-6xl px-6">
           <FadeIn>
-            <div className="mb-16 md:mb-24 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+            <div className="mb-10 md:mb-14 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
               <div className="max-w-2xl">
                 <h2 className="mb-6 font-serif text-4xl font-normal text-[#111111] md:text-5xl">
                   SAT notes and instruction
@@ -1163,7 +1042,7 @@ export default function Home() {
 
             {MORE_STRATEGY_POSTS.length > 0 && (
               <details className="group mt-6">
-                <summary className="inline-flex cursor-pointer list-none items-center gap-2 rounded-sm border border-[#00356B]/20 px-5 py-3 text-sm font-bold uppercase tracking-[0.16em] text-[#00356B] transition-colors hover:border-[#00356B] hover:bg-[#fbf8f1] [&::-webkit-details-marker]:hidden">
+                <summary className="inline-flex cursor-pointer list-none items-center gap-2 rounded-sm border border-[#00356B]/20 px-5 py-3 text-sm font-bold tracking-normal text-[#00356B] transition-colors hover:border-[#00356B] hover:bg-[#fbf8f1] [&::-webkit-details-marker]:hidden">
                   See more guides
                   <ArrowRight className="h-4 w-4 transition-transform group-open:rotate-90" />
                 </summary>
