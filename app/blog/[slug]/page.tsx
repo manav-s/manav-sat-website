@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { BLOG_POSTS, getPostBySlug } from "../posts";
 import { SITE_URL } from "@/lib/site";
+import { SmsLink } from "@/components/sms-link";
 
 type BlogPostPageProps = {
   params: Promise<{
@@ -258,13 +259,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               I will tell you what is actually holding the score back and
               whether 1:1 coaching makes sense.
             </p>
-            <a
-              href="sms:3477224114"
+            <SmsLink
               className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-bold text-neutral-950 transition-all hover:bg-neutral-200"
             >
               Text Manav
               <ArrowRight className="h-4 w-4" />
-            </a>
+            </SmsLink>
           </div>
 
           <div className="mt-10 flex items-center justify-between border-t border-neutral-200 pt-8">

@@ -53,3 +53,10 @@ recovered. Analytics uses debug mode during local development.
 the site. Keep Speed Insights enabled in the Vercel project dashboard and
 check its Speed Insights tab after deploying and receiving visits. Metrics
 include Core Web Vitals; earlier performance data cannot be recovered.
+
+## Text inquiries
+
+Homepage and blog inquiry buttons use `components/sms-link.tsx` to open a draft
+to the coaching number with "Hi, I'm looking for SAT coaching for my child".
+The link uses the appropriate message-body separator for Apple and Android
+devices. The visitor must still send the message in their messaging app.

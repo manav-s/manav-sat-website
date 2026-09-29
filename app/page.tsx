@@ -16,9 +16,8 @@ import {
 } from "lucide-react";
 import { FadeIn, FadeInStagger } from "@/components/animations";
 import { PathToSixteenHundred } from "@/components/path-to-1600";
+import { SmsLink } from "@/components/sms-link";
 import { BLOG_POSTS } from "@/app/blog/posts";
-
-const SMS_LINK = "sms:3477224114";
 
 export const dynamic = "force-dynamic";
 
@@ -77,13 +76,12 @@ export default function Home() {
             >
               Blog
             </Link>
-            <a
-              href={SMS_LINK}
+            <SmsLink
               className="flex items-center gap-2 rounded-sm bg-[#00356B] px-5 py-2.5 text-xs font-semibold uppercase tracking-[0.18em] text-white transition-all hover:bg-[#00264d]"
             >
               <Phone className="h-4 w-4" />
               Inquire
-            </a>
+            </SmsLink>
           </div>
         </div>
       </nav>
@@ -112,13 +110,12 @@ export default function Home() {
               </FadeIn>
               <FadeIn delay={0.4}>
                 <div className="flex flex-col gap-4 sm:flex-row">
-                  <a
-                    href={SMS_LINK}
+                  <SmsLink
                     className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-sm bg-[#00356B] px-6 py-4 text-sm font-semibold uppercase tracking-[0.16em] text-white transition-all hover:bg-[#00264d]"
                   >
                     <Phone className="h-5 w-5" />
                     Private Score Review
-                  </a>
+                  </SmsLink>
                   <a
                     href="#vsl"
                     className="inline-flex items-center justify-center whitespace-nowrap rounded-sm border border-[#00356B]/25 bg-transparent px-6 py-4 text-sm font-semibold uppercase tracking-[0.16em] text-[#00356B] transition-all hover:border-[#00356B] hover:bg-white/50"
@@ -218,13 +215,12 @@ export default function Home() {
 
           <FadeIn delay={0.25}>
             <div className="mt-8 flex flex-col items-center justify-center gap-4 text-center sm:flex-row">
-              <a
-                href={SMS_LINK}
+              <SmsLink
                 className="inline-flex items-center justify-center gap-2 rounded-sm bg-[#00356B] px-6 py-4 text-sm font-semibold uppercase tracking-[0.16em] text-white transition-all hover:bg-[#00264d]"
               >
                 <Phone className="h-5 w-5" />
                 Request a Private Score Review
-              </a>
+              </SmsLink>
               <p className="max-w-sm text-sm leading-relaxed text-[#5f5b53]">
                 Send the current score, target score, and test date. I&apos;ll
                 tell you what I would fix first.
@@ -823,13 +819,12 @@ export default function Home() {
               <h3 className="text-center font-semibold text-[#111111]">
                 Text me directly for a private score review.
               </h3>
-              <a
-                href={SMS_LINK}
+              <SmsLink
                 className="inline-flex w-full items-center justify-center gap-2 rounded-sm bg-[#00356B] px-4 py-4 text-sm font-semibold uppercase tracking-[0.16em] text-white transition-all hover:bg-[#00264d] sm:px-8"
               >
                 <Phone className="h-5 w-5" />
                 347-722-4114
-              </a>
+              </SmsLink>
               <p className="text-center text-xs leading-relaxed text-[#5f5b53]">
                 {TOTAL_SPOTS - CURRENT_STUDENTS.length === 0
                   ? 'Currently fully booked — join the waitlist'
