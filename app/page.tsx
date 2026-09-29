@@ -203,7 +203,7 @@ export default function Home() {
           <FadeIn delay={0.15}>
             <div className="overflow-hidden rounded-sm border border-[#d8c9aa] bg-black">
               <video
-                src="/vsl-captioned.mp4"
+                src="/vsl-final.mp4"
                 controls
                 playsInline
                 preload="metadata"
