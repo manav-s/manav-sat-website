@@ -305,9 +305,9 @@ export default function Home() {
       </section>
 
       {/* ── Stats Section ── */}
-      <section className="bg-neutral-900 py-20">
+      <section className="bg-neutral-900 py-12 md:py-16">
         <div className="mx-auto max-w-5xl px-6">
-          <FadeInStagger className="grid grid-cols-1 gap-12 sm:grid-cols-3 sm:divide-x sm:divide-neutral-800">
+          <FadeInStagger className="grid grid-cols-1 gap-8 sm:grid-cols-3 sm:divide-x sm:divide-neutral-800 md:gap-12">
             {[
               { label: "Avg. Point Increase", value: "170" },
               { label: "Students", value: "250+" },
@@ -326,11 +326,11 @@ export default function Home() {
             ))}
           </FadeInStagger>
 
-          <div className="mt-20 border-t border-neutral-800 pt-12">
-            <p className="mb-8 text-center text-sm font-medium uppercase tracking-[0.2em] text-neutral-500">
+          <div className="mt-10 border-t border-neutral-800 pt-8 md:mt-12">
+            <p className="mb-6 text-center text-sm font-medium uppercase tracking-[0.2em] text-neutral-500">
               Students I&apos;ve Worked With Have Gone On To Attend
             </p>
-            <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-12 lg:grid lg:grid-cols-6 lg:gap-8">
+            <div className="grid grid-cols-2 items-center gap-6 sm:grid-cols-3 lg:grid-cols-6 lg:gap-8">
               {[
                 {
                   name: "Harvard",
@@ -363,7 +363,7 @@ export default function Home() {
                     alt={`${school.name} logo`}
                     width={240}
                     height={140}
-                    className="h-16 w-auto object-contain"
+                    className="h-12 w-auto max-w-full object-contain md:h-16"
                   />
                 </div>
               ))}
@@ -553,15 +553,9 @@ export default function Home() {
                 More useful feedback after every assignment.
               </h2>
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-[#4b4b4b]">
-                I use custom AI-assisted tools to turn each practice set into a
-                sharper plan: grade the work, surface recurring mistake
-                patterns, and build homework around what the student actually
-                needs next.
-              </p>
-              <p className="mt-4 max-w-xl text-base leading-relaxed text-[#5f5b53]">
-                I review every recommendation myself. AI makes the feedback
-                loop faster and more detailed; the judgment, teaching, and
-                relationship remain fully human.
+                My AI-assisted tools identify recurring mistakes and shape
+                targeted homework after each practice set. I personally review
+                every recommendation and teach every lesson.
               </p>
 
               <div className="mt-10 space-y-4">
@@ -825,58 +819,22 @@ export default function Home() {
               </div>
             </FadeIn>
 
-            <FadeIn className="flex flex-col items-center justify-center space-y-6 rounded-sm border border-[#d8c9aa] bg-white p-8">
+            <FadeIn className="flex flex-col items-center justify-center space-y-6 rounded-sm border border-[#d8c9aa] bg-white p-6 sm:p-8">
               <h3 className="text-center font-semibold text-[#111111]">
                 Text me directly for a private score review.
               </h3>
               <a
                 href={SMS_LINK}
-                className="inline-flex w-full items-center justify-center gap-2 rounded-sm bg-[#00356B] px-8 py-4 text-sm font-semibold uppercase tracking-[0.16em] text-white transition-all hover:bg-[#00264d]"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-sm bg-[#00356B] px-4 py-4 text-sm font-semibold uppercase tracking-[0.16em] text-white transition-all hover:bg-[#00264d] sm:px-8"
               >
                 <Phone className="h-5 w-5" />
                 347-722-4114
               </a>
-              <div className="flex flex-col items-center gap-4">
-                <div className="flex flex-wrap justify-center gap-2 max-w-sm">
-                  {Array.from({ length: TOTAL_SPOTS }).map((_, i) => {
-                    const student = CURRENT_STUDENTS[i];
-                    return (
-                        <div
-                          key={i}
-                          className={`flex items-center gap-1.5 rounded-full py-1 pl-1 pr-2.5 transition-all ${
-                            student
-                              ? 'bg-[#00356B] text-white'
-                              : 'border border-dashed border-[#d8c9aa] bg-[#fbf8f1] text-[#8d8577]'
-                          }`}
-                        >
-                          {student ? (
-                            <>
-                                <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-white/20 text-[9px] font-bold">
-                                    {student[0]}
-                                </span>
-                                <span className="text-[10px] font-medium">
-                                    {student}
-                                </span>
-                            </>
-                          ) : (
-                            <>
-                                <div className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-neutral-200/50">
-                                    <User className="h-2.5 w-2.5" />
-                                </div>
-                                <span className="text-[10px] font-medium">Open</span>
-                            </>
-                          )}
-                        </div>
-                    );
-                  })}
-                </div>
-                <p className="text-center text-xs text-[#5f5b53]">
-                  {TOTAL_SPOTS - CURRENT_STUDENTS.length === 0
-                    ? 'Currently fully booked — join the waitlist'
-                    : `Only ${TOTAL_SPOTS - CURRENT_STUDENTS.length} of ${TOTAL_SPOTS} spots remaining.`}
-                  <span className="block mt-1 opacity-75">I only work with {TOTAL_SPOTS} students at a time.</span>
-                </p>
-              </div>
+              <p className="text-center text-xs leading-relaxed text-[#5f5b53]">
+                {TOTAL_SPOTS - CURRENT_STUDENTS.length === 0
+                  ? 'Currently fully booked — join the waitlist'
+                  : `Only ${TOTAL_SPOTS - CURRENT_STUDENTS.length} of ${TOTAL_SPOTS} spots remaining.`}
+              </p>
             </FadeIn>
           </FadeInStagger>
         </div>
@@ -933,47 +891,7 @@ export default function Home() {
                   src={`https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`}
                   alt={video.title}
                   fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 flex items-center justify-center bg-black/10 transition-colors group-hover:bg-black/20">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white/90 backdrop-blur-sm transition-transform duration-300 group-hover:scale-110">
-                    <PlayCircle className="h-6 w-6 fill-neutral-900 text-neutral-900 ml-1" />
-                  </div>
-                </div>
-              </FadeIn>
-            ))}
-          </FadeInStagger>
-
-          <FadeInStagger className="mt-8 grid gap-8 sm:grid-cols-2 md:grid-cols-4">
-            {[
-              {
-                id: "jTQa0C1einM",
-                title: "What SAT Score Do I Need?",
-              },
-              {
-                id: "xaX7odGkSAI",
-                title: "+100 SAT Points",
-              },
-              {
-                id: "gwPipkJL9BU",
-                title: "How to Get a 1600 — Reading Modules",
-              },
-              {
-                id: "1eI7eJecJ-c",
-                title: "How to Solve SAT Vocab Questions",
-              },
-            ].map((video) => (
-              <FadeIn
-                key={video.id}
-                href={`https://www.youtube.com/watch?v=${video.id}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group relative aspect-video w-full overflow-hidden rounded-sm bg-neutral-100"
-              >
-                <Image
-                  src={`https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`}
-                  alt={video.title}
-                  fill
+                  sizes="(min-width: 1152px) 347px, (min-width: 768px) calc((100vw - 112px) / 3), calc(100vw - 48px)"
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 flex items-center justify-center bg-black/10 transition-colors group-hover:bg-black/20">
