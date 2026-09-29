@@ -5,13 +5,10 @@ import {
   Star,
   CheckCircle,
   ArrowRight,
-  Clock,
-  Trophy,
   Shield,
   Linkedin,
   Youtube,
   PlayCircle,
-  Terminal,
   User,
   Sparkles,
   ClipboardCheck,
@@ -110,7 +107,7 @@ export default function Home() {
                 <p className="mb-8 max-w-lg text-lg leading-relaxed text-[#4b4b4b] md:text-xl">
                   Private coaching for families seeking a careful,
                   individualized path to stronger scores and greater academic
-                  confidence.
+                  confidence. Your student works directly with me.
                 </p>
               </FadeIn>
               <FadeIn delay={0.4}>
@@ -788,89 +785,6 @@ export default function Home() {
               </FadeIn>
             ))}
           </FadeInStagger>
-        </div>
-      </section>
-
-      {/* ── About / Limited Availability ── */}
-      <section className="overflow-hidden bg-[#fbf8f1] py-24 md:py-32">
-        <div className="mx-auto max-w-6xl px-6">
-          <div className="grid items-center gap-16 md:grid-cols-2">
-            <FadeIn direction="right" className="order-2 md:order-1">
-              <div className="mb-8 inline-flex items-center gap-2 rounded-sm border border-[#d8c9aa] bg-white px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-[#00356B]">
-                <Clock className="h-4 w-4" />
-                Private guidance
-              </div>
-              <h2 className="mb-6 font-serif text-4xl font-normal text-[#111111] md:text-5xl">
-                A more careful approach to SAT preparation.
-              </h2>
-              <div className="space-y-6 text-lg leading-relaxed text-[#4b4b4b] md:text-xl">
-                <p>
-                  I do not start by assigning more random practice. I start by
-                  finding where points are actually leaking: comprehension,
-                  timing, careless errors, question recognition, or test strategy.
-                </p>
-                <p>
-                  Then I build the coaching around the few changes most likely
-                  to move the score. Your student works directly with me: a
-                  perfect scorer, National Merit Scholar, and{" "}
-                  <span className="font-semibold text-[#111111]">Software Engineer at Microsoft</span> who
-                  has helped 250+ students build a more precise SAT plan.
-                </p>
-              </div>
-
-              <div className="mt-8 border-l-2 border-[#B89B5E] bg-white px-5 py-5">
-                <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#00356B]">
-                  Human-led, technology-augmented
-                </p>
-                <p className="mt-3 text-base leading-7 text-[#4b4b4b]">
-                  Every student receives direct private coaching from me,
-                  supported by my own AI-assisted systems for analyzing
-                  mistakes, identifying recurring score patterns, and
-                  personalizing practice between sessions. The technology
-                  sharpens my diagnosis; it never replaces the teaching.
-                </p>
-              </div>
-              
-              <div className="mt-8 flex flex-wrap gap-4">
-                  <div className="flex items-center gap-3 rounded-sm border border-[#d8c9aa] bg-white px-5 py-4">
-                     <div className="flex rounded-sm bg-[#f7f1e6] p-2.5">
-                         <Terminal className="h-5 w-5 text-[#00356B]" />
-                     </div>
-                     <div>
-                         <div className="text-[10px] font-bold uppercase tracking-wider text-[#8d8577]">Career</div>
-                         <div className="mt-1 text-sm font-bold leading-none text-[#111111]">Microsoft Engineer</div>
-                     </div>
-                  </div>
-                  <div className="flex items-center gap-3 rounded-sm border border-[#d8c9aa] bg-white px-5 py-4">
-                     <div className="flex rounded-sm bg-[#f7f1e6] p-2.5">
-                         <Trophy className="h-5 w-5 text-[#B89B5E]" />
-                     </div>
-                     <div>
-                         <div className="text-[10px] font-bold uppercase tracking-wider text-[#8d8577]">Score</div>
-                         <div className="mt-1 text-sm font-bold leading-none text-[#111111]">Perfect 1600</div>
-                     </div>
-                  </div>
-               </div>
-            </FadeIn>
-
-            <FadeIn direction="left" className="order-1 md:order-2">
-               <div className="relative rounded-sm border border-[#d8c9aa] bg-white p-2 transition-transform duration-500 hover:-translate-y-1">
-                  <div className="absolute -left-4 -top-4 z-10 rounded-sm bg-[#00356B] px-4 py-2 text-xs font-bold uppercase tracking-[0.16em] text-white">
-                    Live Session
-                  </div>
-                  <div className="relative aspect-video overflow-hidden rounded-sm bg-neutral-100">
-                     <Image 
-                        src="/class-screenshot.png"
-                        alt="Manav teaching a 1:1 SAT prep session over video"
-                        fill
-                        className="object-cover"
-                     />
-                  </div>
-                  {/* Decorative Elements */}
-                   <div className="absolute -bottom-6 -right-6 -z-10 h-full w-full rounded-sm border border-dashed border-[#d8c9aa] bg-[#f7f1e6]"></div>
-               </div>
-            </FadeIn>
-          </div>
         </div>
       </section>
 

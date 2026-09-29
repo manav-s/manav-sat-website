@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Calendar, Target, TrendingUp, type LucideIcon } from "lucide-react";
 
@@ -156,6 +157,23 @@ export function PathToSixteenHundred() {
             })}
           </motion.div>
         </div>
+
+        <figure className="mx-auto mt-16 max-w-2xl md:mt-20">
+          <div className="overflow-hidden rounded-sm border border-white/15 bg-white p-2">
+            <div className="relative aspect-video">
+              <Image
+                src="/class-screenshot.png"
+                alt="Manav teaching SAT math during a live online session"
+                fill
+                sizes="(min-width: 720px) 656px, calc(100vw - 64px)"
+                className="object-contain"
+              />
+            </div>
+          </div>
+          <figcaption className="mt-4 text-center text-sm text-neutral-400">
+            A live SAT lesson with me: working through problems together.
+          </figcaption>
+        </figure>
       </div>
     </section>
   );
