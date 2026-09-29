@@ -203,6 +203,7 @@ export default function Home() {
           <FadeIn delay={0.15}>
             <div className="overflow-hidden rounded-sm border border-[#d8c9aa] bg-black">
               <video
+                poster="/vsl-poster.webp"
                 controls
                 playsInline
                 preload="metadata"
