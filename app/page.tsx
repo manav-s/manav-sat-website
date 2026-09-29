@@ -878,43 +878,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Fit Section ── */}
-      <section className="border-y border-[#e4d8c1] bg-white py-20 md:py-28">
-        <div className="mx-auto max-w-6xl px-6">
-          <FadeIn>
-            <div className="mx-auto mb-14 max-w-2xl text-center">
-              <p className="mb-3 text-sm font-bold uppercase tracking-[0.22em] text-[#00356B]">
-                Private fit
-              </p>
-              <h2 className="font-serif text-4xl font-normal tracking-tight text-[#111111] md:text-5xl">
-                For families seeking private academic guidance.
-              </h2>
-            </div>
-          </FadeIn>
-
-          <FadeInStagger className="grid gap-6 md:grid-cols-2">
-            {[
-              "A student aiming for a top score, not just a small bump.",
-              "A family that wants a SAT Precision Framework review before more practice.",
-              "A student who has tried videos, apps, classes, or tutors and still feels stuck.",
-              "A parent who wants direct 1:1 attention, accountability, and a clear next step.",
-            ].map((item) => (
-              <FadeIn
-                key={item}
-                className="rounded-sm border border-[#e4d8c1] bg-[#fbf8f1] p-6"
-              >
-                <div className="flex gap-4">
-                  <CheckCircle className="mt-1 h-5 w-5 shrink-0 text-[#00356B]" />
-                  <p className="text-lg leading-relaxed text-[#4b4b4b]">
-                    {item}
-                  </p>
-                </div>
-              </FadeIn>
-            ))}
-          </FadeInStagger>
-        </div>
-      </section>
-
       {/* ── CTA ── */}
       <section className="bg-[#f7f1e6] py-24 md:py-32">
         <div className="mx-auto max-w-4xl px-6">
