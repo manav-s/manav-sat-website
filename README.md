@@ -34,3 +34,22 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Web Analytics
+
+Vercel Web Analytics is included in `app/layout.tsx` through
+`@vercel/analytics/next`, so it tracks page views across the site. Keep Web
+Analytics enabled in the Vercel project dashboard, then deploy and visit the
+site to start collecting data.
+
+View visitors, page views, referrers, and other traffic metrics in the project's
+Analytics tab. Tracking starts after installation; earlier visits cannot be
+recovered. Analytics uses debug mode during local development.
+
+## Speed Insights
+
+`app/layout.tsx` also includes `SpeedInsights` from
+`@vercel/speed-insights/next` to collect real-user performance metrics across
+the site. Keep Speed Insights enabled in the Vercel project dashboard and
+check its Speed Insights tab after deploying and receiving visits. Metrics
+include Core Web Vitals; earlier performance data cannot be recovered.

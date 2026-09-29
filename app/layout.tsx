@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Crimson_Pro, Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
 const inter = Inter({
@@ -167,6 +169,8 @@ export default function RootLayout({
         className={`${inter.variable} ${crimsonPro.variable} font-sans antialiased text-neutral-900 bg-white`}
       >
         {children}
+        <Analytics />
+        <SpeedInsights />
         <script
           id="structured-data"
           type="application/ld+json"
