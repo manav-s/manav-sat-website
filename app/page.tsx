@@ -203,13 +203,18 @@ export default function Home() {
           <FadeIn delay={0.15}>
             <div className="overflow-hidden rounded-sm border border-[#d8c9aa] bg-black">
               <video
-                src="/vsl-final.mp4"
                 controls
                 playsInline
                 preload="metadata"
                 className="aspect-video w-full bg-black"
                 aria-label="Video explaining Manav Sharma's SAT tutoring approach"
-              />
+              >
+                <source
+                  src="/vsl-final.mp4"
+                  type='video/mp4; codecs="hvc1"'
+                />
+                <source src="/vsl-final-h264.mp4" type="video/mp4" />
+              </video>
             </div>
           </FadeIn>
 
