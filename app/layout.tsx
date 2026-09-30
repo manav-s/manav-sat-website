@@ -1,11 +1,18 @@
 import type { Metadata } from "next";
-import { Crimson_Pro, Inter } from "next/font/google";
+import { Crimson_Pro, Inter, Roboto } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
 const inter = Inter({
   variable: "--font-inter",
+  subsets: ["latin"],
+});
+
+// College Board's score reports are set in Roboto; used only for the hero score.
+const roboto = Roboto({
+  variable: "--font-roboto",
+  weight: ["700", "900"],
   subsets: ["latin"],
 });
 
@@ -166,7 +173,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${inter.variable} ${crimsonPro.variable} font-sans antialiased text-neutral-900 bg-white`}
+        className={`${inter.variable} ${crimsonPro.variable} ${roboto.variable} font-sans antialiased text-neutral-900 bg-white`}
       >
         {children}
         <Analytics />

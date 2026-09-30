@@ -126,37 +126,37 @@ const WRITTEN_BLOG_POSTS: BlogPost[] = [
     ],
   },
   {
-    slug: "ava-1310-to-1430-sat-superscore",
-    title: "How Ava Went From a 1310 to a 1430 SAT Superscore",
+    slug: "ava-1300-to-1420-sat-superscore",
+    title: "How Ava Went From a 1300 to a 1420 SAT Superscore",
     description:
-      "How Ava raised her SAT superscore from 1310 to 1430 with targeted prep and a cleaner test-day process.",
+      "How Ava raised her SAT superscore from 1300 to 1420 with targeted prep and a cleaner test-day process.",
     publishedAt: "2026-07-21",
     readingTime: "4 min read",
     image: {
       src: "/blog/ava-sat-case-study.png",
-      alt: "Ava, a SAT tutoring student who raised her SAT superscore from 1310 to 1430",
-      caption: "Ava raised her SAT superscore from 1310 to 1430.",
-      result: "1310 to 1430",
+      alt: "Ava, a SAT tutoring student who raised her SAT superscore from 1300 to 1420",
+      caption: "Ava raised her SAT superscore from 1300 to 1420.",
+      result: "1300 to 1420",
       width: 946,
       height: 1478,
     },
     keywords: [
       "SAT tutoring case study",
       "SAT superscore improvement",
-      "1310 to 1430 SAT",
+      "1300 to 1420 SAT",
       "private SAT tutor results",
       "digital SAT tutoring",
     ],
     intro: [
-      "Ava came in as a strong student with a 1310 SAT. She was already capable, but her score did not yet reflect the full level of work she could do.",
+      "Ava came in as a strong student with a 1300 SAT. She was already capable, but her score did not yet reflect the full level of work she could do.",
       "Her family was looking for private SAT prep that would give her a clear plan instead of more generic practice. The goal was not to bury her in random assignments. The goal was to figure out where the points were actually leaking and train those areas directly.",
-      "By the end of the process, Ava raised her SAT superscore to a 1430.",
+      "By the end of the process, Ava raised her SAT superscore to a 1420.",
     ],
     sections: [
       {
         heading: "The starting point",
         body: [
-          "Ava started with a 1310. At that level, a student usually does not need to relearn the entire test from scratch.",
+          "Ava started with a 1300. At that level, a student usually does not need to relearn the entire test from scratch.",
           "The work is more precise. You have to separate content gaps from timing issues, rushed reading, trap answers, and avoidable mistakes. A vague plan like do more practice tests is usually not enough.",
           "For Ava, the main job was to build a cleaner process for Reading and Writing while keeping Math strong.",
         ],
@@ -165,7 +165,7 @@ const WRITTEN_BLOG_POSTS: BlogPost[] = [
         heading: "The first official result",
         body: [
           "After working together, Ava got a 1360 on an official SAT: 630 Reading and Writing and 730 Math.",
-          "That gave her a 1420 superscore. The Math score showed she had a strong section high to protect, and the next opportunity was clear: if Reading and Writing moved, the superscore could move with it.",
+          "The Math score showed she had a strong section high to protect, and the next opportunity was clear: if Reading and Writing moved, the superscore could move with it.",
           "That is one reason superscoring matters. A student does not need every section to peak on the same test date. The goal is to build section highs that hold up across attempts.",
         ],
       },
@@ -173,14 +173,13 @@ const WRITTEN_BLOG_POSTS: BlogPost[] = [
         heading: "The last-minute retake",
         body: [
           "A few weeks later, Ava decided to take the SAT again pretty last minute. She did not do a major final prep push. She took it to see what would happen.",
-          "That test came back as a 1330, but the split mattered more than the total: 700 Reading and Writing and 630 Math.",
-          "Combined with her previous 730 Math, that raised her superscore to a 1430.",
+          "That test came back lower on Math, but the split mattered more than the total: her Reading and Writing score reached a new high.",
+          "Combined with her previous 730 Math, that raised her superscore to a 1420.",
         ],
         bullets: [
-          "Starting SAT: 1310",
+          "Starting SAT: 1300",
           "Best Math section: 730",
-          "Best Reading and Writing section: 700",
-          "Final SAT superscore: 1430",
+          "Final SAT superscore: 1420",
           "Total superscore increase: 120 points",
         ],
       },
@@ -196,7 +195,7 @@ const WRITTEN_BLOG_POSTS: BlogPost[] = [
         heading: "Ava's note",
         body: [
           "After the retake, Ava sent a simple update: she had raised her superscore again and wanted to say thank you.",
-          "That is the kind of result I like seeing. Not a miracle promise. Not a fake overnight transformation. A strong student got a more accurate process, built section highs, and turned a 1310 into a 1430 superscore.",
+          "That is the kind of result I like seeing. Not a miracle promise. Not a fake overnight transformation. A strong student got a more accurate process, built section highs, and turned a 1300 into a 1420 superscore.",
         ],
         bullets: [
           "\"Just wanted to say thank u so much for all ur help again!\"",
@@ -398,16 +397,16 @@ const WRITTEN_BLOG_POSTS: BlogPost[] = [
   {
     slug: "alexis-grace-sat-bright-futures-fsu",
     title:
-      "How Alexis Grace Improved 90 Points, Earned Bright Futures, and Got Into FSU",
+      "How Alexis Grace Improved 220 Points, Earned Bright Futures, and Got Into FSU",
     description:
-      "How Alexis Grace raised her SAT score by 90 points to a 1160, earned 75% Bright Futures, and reached her first-choice school, Florida State University.",
+      "How Alexis Grace raised her SAT score from 1080 to 1300, earned 75% Bright Futures, and reached her first-choice school, Florida State University.",
     publishedAt: "2026-07-22",
     readingTime: "5 min read",
     image: {
       src: "/blog/alexis-grace-case-study.png",
       alt: "Alexis Grace, an SAT and college essay student who earned Bright Futures and attended Florida State University",
       caption:
-        "Alexis Grace improved her SAT score by 90 points, earned 75% Bright Futures, and began college at Florida State University.",
+        "Alexis Grace improved her SAT score by 220 points, earned 75% Bright Futures, and began college at Florida State University.",
       result: "FSU + Bright Futures",
       width: 1224,
       height: 1330,
@@ -419,24 +418,23 @@ const WRITTEN_BLOG_POSTS: BlogPost[] = [
       "SAT prep for dyslexia",
       "college essay tutoring",
       "Florida State University admission",
-      "90 point SAT improvement",
+      "220 point SAT improvement",
     ],
     intro: [
       "Alexis Grace's story was never just about one SAT score.",
       "She was working toward Florida's Bright Futures scholarship while applying to colleges and developing an essay that could explain the persistence behind her academic record. Standardized testing had always been one of her hardest environments, but it did not reflect the effort, leadership, or purpose she brought to school.",
-      "During the process, Alexis Grace raised her SAT score by 90 points to a 1160. She kept going, earned the 75% Bright Futures award, and started classes at her first-choice school, Florida State University.",
+      "During the process, Alexis Grace raised her SAT score from 1080 to 1300. She kept going, earned the 75% Bright Futures award, and started classes at her first-choice school, Florida State University.",
     ],
     sections: [
       {
         heading: "A score that was moving, but not finished",
         body: [
           "Alexis Grace came into the process with meaningful ground to make up. Some of the SAT material was still unfamiliar, and her earlier classes had not fully prepared her for the level or style of questions the test demanded.",
-          "The early progress was real. After one test, she reported a 90-point improvement to a 1160. But she was still 50 points away from the Bright Futures target she was chasing.",
+          "The early progress was real. After one test, her score had jumped, but she was still short of the Bright Futures target she was chasing.",
           "That update captured the challenge clearly: she had proof that the work was helping, but the larger goal still required patience and another push.",
         ],
         bullets: [
-          "SAT improvement: 90 points",
-          "New official score: 1160",
+          "Starting SAT: 1080",
           "Immediate goal: close the remaining Bright Futures gap",
           "Long-term goal: attend Florida State University",
         ],
@@ -484,6 +482,7 @@ const WRITTEN_BLOG_POSTS: BlogPost[] = [
           "That outcome was bigger than a clean before-and-after SAT number. Alexis Grace improved her score, kept working after the first jump, earned meaningful scholarship support, and reached the school she had been writing about from the beginning.",
         ],
         bullets: [
+          "Final SAT: 1300 (+220 points)",
           "\"Today was Alexis Grace's first day of classes at Florida State University. She did get her 75% Bright Futures and she is living her best life. Thank you for your help.\"",
         ],
       },

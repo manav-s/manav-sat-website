@@ -124,19 +124,13 @@ export default function Home() {
               SAT Coaching
             </span>
           </Link>
-          <div className="flex items-center gap-8">
-            <div className="hidden items-center gap-8 text-[14px] font-medium text-ink/65 md:flex">
-              {[
-                ["Approach", "#vsl"],
-                ["Results", "#results"],
-                ["Method", "#method"],
-                ["Guides", "#sat-guides"],
-              ].map(([label, href]) => (
-                <a key={href} href={href} className="transition-colors hover:text-navy">
-                  {label}
-                </a>
-              ))}
-            </div>
+          <div className="flex items-center gap-6 sm:gap-8">
+            <a
+              href="#sat-guides"
+              className="text-[14px] font-medium text-ink/65 transition-colors hover:text-navy"
+            >
+              Guides
+            </a>
             <SmsLink className="inline-flex items-center gap-2 rounded-full bg-navy px-5 py-2.5 text-sm font-medium text-cream transition-colors hover:bg-[#002a55]">
               <Phone className="h-3.5 w-3.5" />
               Text Manav
@@ -237,9 +231,9 @@ export default function Home() {
             </div>
             <div className="absolute -bottom-9 -left-5 rounded-2xl border border-line bg-sheet/95 px-6 py-5 shadow-[0_30px_60px_-24px_rgba(40,30,10,0.4)] backdrop-blur md:-left-16">
               <p className="text-[13px] font-medium text-soft">Official SAT score</p>
-              <p className="nums mt-2 font-serif text-6xl leading-none text-navy">
+              <p className="nums mt-2 font-score text-[3.6rem] leading-none font-black tracking-[-0.02em] text-navy">
                 1600
-                <span className="ml-1 text-2xl text-soft">/1600</span>
+                <span className="ml-1.5 text-2xl font-bold tracking-normal text-soft">/1600</span>
               </p>
             </div>
           </div>

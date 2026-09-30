@@ -12,6 +12,21 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "img.youtube.com" },
     ],
   },
+  async redirects() {
+    // Ava's case study URL changed when its figures were aligned with the VSL.
+    return [
+      {
+        source: "/blog/ava-1310-to-1430-sat-superscore",
+        destination: "/blog/ava-1300-to-1420-sat-superscore",
+        permanent: true,
+      },
+      {
+        source: "/blog/ava-1310-to-1430-sat-superscore.md",
+        destination: "/blog/ava-1300-to-1420-sat-superscore.md",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {
