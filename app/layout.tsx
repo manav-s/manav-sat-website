@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     template: "%s | Perfect Score Manav",
   },
   description:
-    "Private SAT coaching and score reviews with Manav Sharma — perfect 1600 scorer, National Merit Scholar, and Microsoft software engineer.",
+    "Private SAT coaching and score reviews with Manav Sharma — perfect 1600 scorer and National Merit Scholar.",
   keywords: [
     "SAT tutor",
     "perfect score SAT tutor",
@@ -98,7 +98,7 @@ const structuredData = {
       image: `${SITE_URL}/headshot.png`,
       jobTitle: "SAT Tutor",
       description:
-        "Perfect 1600 SAT scorer, National Merit Scholar, and software engineer. 1:1 SAT coach with a 170-point average score increase across 200+ students.",
+        "Perfect 1600 SAT scorer and National Merit Scholar. 1:1 SAT coach with a 150-point average score increase across 250+ students.",
       worksFor: {
         "@id": `${SITE_URL}/#organization`,
       },

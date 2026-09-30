@@ -20,6 +20,7 @@ import { CountUp } from "@/components/count-up";
 import { VslPlayer } from "@/components/vsl-player";
 import { StudentResults } from "@/components/student-results";
 import { FeedbackDemo } from "@/components/feedback-demo";
+import { PrecisionFramework } from "@/components/precision-framework";
 import { BLOG_POSTS } from "@/app/blog/posts";
 
 export const dynamic = "force-dynamic";
@@ -149,26 +150,23 @@ export default function Home() {
         </span>
         <div className="relative mx-auto grid max-w-6xl items-center gap-16 px-6 md:grid-cols-[1.15fr_0.85fr] lg:gap-20">
           <div>
-            <a
-              href="#cohort"
-              className="rise inline-flex items-center gap-2.5 rounded-full border border-line bg-sheet/80 py-1.5 pr-4 pl-1.5 text-[13px] text-muted shadow-[0_6px_20px_-12px_rgba(60,45,15,0.4)] transition-colors hover:border-line-strong"
-            >
-              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-navy/[0.08]">
-                <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-navy" />
+            <a href="#cohort" className="rise group inline-flex items-center gap-3.5">
+              <span aria-hidden className="h-px w-8 bg-gold-soft" />
+              <span className="text-xs font-semibold tracking-[0.18em] text-gold uppercase">
+                {cohortMonth} cohort
               </span>
-              {spotsLeft > 0 ? (
-                <>
-                  {cohortMonth} cohort ·{" "}
-                  <span className="font-semibold text-navy">
-                    {spotsLeft} of {TOTAL_SPOTS} spots open
-                  </span>
-                </>
-              ) : (
-                <>
-                  {cohortMonth} cohort is full ·{" "}
+              <span className="text-sm text-muted transition-colors group-hover:text-navy">
+                {spotsLeft > 0 ? (
+                  <>
+                    <span className="font-semibold text-navy">
+                      {spotsLeft} of {TOTAL_SPOTS}
+                    </span>{" "}
+                    places remaining
+                  </>
+                ) : (
                   <span className="font-semibold text-navy">Join the waitlist</span>
-                </>
-              )}
+                )}
+              </span>
             </a>
 
             <h1
@@ -204,14 +202,6 @@ export default function Home() {
               </a>
             </div>
 
-            <p
-              className="rise mt-10 max-w-xl border-t border-line pt-6 text-sm leading-relaxed text-soft"
-              style={{ animationDelay: "320ms" }}
-            >
-              National Merit Scholar · Software engineer at{" "}
-              <span className="text-ink">Microsoft</span> and{" "}
-              <span className="text-ink">JPMorgan Chase</span>
-            </p>
           </div>
 
           <div
@@ -234,6 +224,9 @@ export default function Home() {
               <p className="nums mt-2 font-score text-[3.6rem] leading-none font-black tracking-[-0.02em] text-navy">
                 1600
                 <span className="ml-1.5 text-2xl font-bold tracking-normal text-soft">/1600</span>
+              </p>
+              <p className="mt-3 border-t border-line pt-3 text-[13px] font-medium text-muted">
+                National Merit Scholar
               </p>
             </div>
           </div>
@@ -322,6 +315,9 @@ export default function Home() {
           </FadeIn>
         </div>
       </section>
+
+      {/* ── SAT Precision Framework ── */}
+      <PrecisionFramework />
 
       {/* ── Student results ── */}
       <section id="results" className="py-24 md:py-32">
@@ -557,7 +553,7 @@ export default function Home() {
                   <p className="mt-1.5 font-serif text-3xl font-medium text-ink">Private roster</p>
                 </div>
                 <span className="rounded-full bg-navy/[0.07] px-3 py-1.5 text-xs font-semibold whitespace-nowrap text-navy">
-                  {spotsLeft > 0 ? `${spotsLeft} of ${TOTAL_SPOTS} open` : "Waitlist open"}
+                  {spotsLeft > 0 ? `${spotsLeft} of ${TOTAL_SPOTS} remaining` : "Waitlist open"}
                 </span>
               </div>
 
@@ -576,7 +572,7 @@ export default function Home() {
                       <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#f1e7d2]">
                         <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-gold" />
                       </span>
-                      <span className="text-xs font-medium">Open seat</span>
+                      <span className="text-xs font-medium">Available</span>
                     </div>
                   );
                 })}

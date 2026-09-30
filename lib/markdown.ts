@@ -66,15 +66,14 @@ export function homepageMarkdown(): string {
 
   return `# ${SITE_NAME} — Private SAT Coaching with Manav Sharma
 
-> Private SAT score reviews and 1:1 coaching with Manav Sharma — perfect 1600 SAT scorer, National Merit Scholar, and Microsoft software engineer.
+> Private SAT score reviews and 1:1 coaching with Manav Sharma — perfect 1600 SAT scorer and National Merit Scholar.
 
 ## About Manav
 
 - Perfect 1600 SAT score
 - National Merit Scholar
-- Software engineer at Microsoft, formerly JPMorgan Chase
-- Five years of SAT teaching experience, 200+ students
-- Average score increase across students: 170 points
+- Five years of SAT teaching experience, 250+ students
+- Average score increase across students: 150 points
 
 ## Services
 
@@ -106,7 +105,7 @@ export function llmsTxt(): string {
 
   return `# ${SITE_NAME}
 
-> Private SAT score reviews and 1:1 digital SAT coaching with Manav Sharma — perfect 1600 SAT scorer, National Merit Scholar, and Microsoft software engineer. 170-point average score increase across 200+ students.
+> Private SAT score reviews and 1:1 digital SAT coaching with Manav Sharma — perfect 1600 SAT scorer and National Merit Scholar. 150-point average score increase across 250+ students.
 
 Manav Sharma teaches the digital SAT using the SAT Precision Framework:
 diagnose the exact reasons a student is losing points, then target those
