@@ -126,12 +126,6 @@ export default function Home() {
             </span>
           </Link>
           <div className="flex items-center gap-6 sm:gap-8">
-            <a
-              href="#sat-guides"
-              className="text-[14px] font-medium text-ink/65 transition-colors hover:text-navy"
-            >
-              Guides
-            </a>
             <SmsLink className="inline-flex items-center gap-2 rounded-full bg-navy px-5 py-2.5 text-sm font-medium text-cream transition-colors hover:bg-[#002a55]">
               <Phone className="h-3.5 w-3.5" />
               Text Manav
