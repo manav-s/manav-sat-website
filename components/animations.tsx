@@ -19,21 +19,22 @@ export function FadeIn({
   ...props
 }: FadeInProps) {
   const directions = {
-    up: { y: 20 },
-    down: { y: -20 },
-    left: { x: 20 },
-    right: { x: -20 },
+    up: { y: 14 },
+    down: { y: -14 },
+    left: { x: 14 },
+    right: { x: -14 },
     none: {},
   };
 
   const Component = props.href ? motion.a : motion.div;
 
+  // Trigger slightly before the element scrolls in so sections are never seen empty.
   return (
     <Component
       initial={{ opacity: 0, ...directions[direction] }}
       whileInView={{ opacity: 1, x: 0, y: 0 }}
-      viewport={{ once: true, margin: "-50px" }}
-      transition={{ duration: 0.5, delay, ease: "easeOut" }}
+      viewport={{ once: true, margin: "0px 0px 120px 0px" }}
+      transition={{ duration: 0.6, delay, ease: [0.16, 1, 0.3, 1] }}
       className={className}
       style={{ width: fullWidth ? "100%" : "auto" }}
       {...props}
@@ -56,8 +57,8 @@ export function FadeInStagger({
     <motion.div
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: "-50px" }}
-      transition={{ staggerChildren: faster ? 0.1 : 0.2 }}
+      viewport={{ once: true, margin: "0px 0px 120px 0px" }}
+      transition={{ staggerChildren: faster ? 0.06 : 0.1 }}
       className={className}
     >
       {children}
