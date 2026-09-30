@@ -137,7 +137,7 @@ const structuredData = {
           author: { "@type": "Person", name: "Michael" },
           reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
           reviewBody:
-            "Manav helped me dial in my accuracy and pacing — I jumped 140 points and ended up just one question shy of perfect.",
+            "Manav helped me dial in my accuracy and pacing. I jumped 140 points and ended up just one question shy of perfect.",
         },
         {
           "@type": "Review",

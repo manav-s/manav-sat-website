@@ -19,6 +19,7 @@ import { SmsLink } from "@/components/sms-link";
 import { CountUp } from "@/components/count-up";
 import { VslPlayer } from "@/components/vsl-player";
 import { StudentResults } from "@/components/student-results";
+import { FeedbackDemo } from "@/components/feedback-demo";
 import { BLOG_POSTS } from "@/app/blog/posts";
 
 export const dynamic = "force-dynamic";
@@ -42,12 +43,13 @@ const CASE_STUDY_HOME_IMAGE: Record<string, string> = {
 
 // Names reflect what each image actually shows (the file names predate a logo swap).
 const SCHOOLS = [
-  { name: "Columbia", logo: "/schools/harvard.png" },
+  { name: "Columbia", logo: "/schools/harvard.png", className: "h-11 brightness-[0.55] md:h-14" },
   { name: "MIT", logo: "/schools/yale.png" },
   { name: "Yale", logo: "/schools/princeton.png" },
   { name: "Cornell", logo: "/schools/cornell.png" },
   { name: "NYU", logo: "/schools/upenn.png" },
   { name: "Stanford", logo: "/schools/stanford.png" },
+  { name: "Florida State", logo: "/schools/fsu.svg" },
 ];
 
 const YOUTUBE_VIDEOS = [
@@ -266,11 +268,11 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <div className="flex flex-col items-center gap-8 border-t border-line py-10 md:flex-row md:justify-between md:gap-12">
-            <p className="text-center font-serif text-lg leading-snug font-medium text-ink/70 italic md:max-w-[14rem] md:text-left">
+          <div className="border-t border-line py-10">
+            <p className="text-center font-serif text-lg leading-snug font-medium text-ink/70 italic">
               Students I’ve worked with have gone on to attend
             </p>
-            <div className="grid grid-cols-3 items-center gap-x-10 gap-y-7 sm:grid-cols-6 md:gap-x-12">
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-x-10 gap-y-7 md:justify-between md:gap-x-8">
               {SCHOOLS.map((school) => (
                 <Image
                   key={school.name}
@@ -278,7 +280,7 @@ export default function Home() {
                   alt={`${school.name} logo`}
                   width={240}
                   height={140}
-                  className="mx-auto h-9 w-auto max-w-[110px] object-contain opacity-55 grayscale transition-all duration-500 hover:opacity-100 hover:grayscale-0 md:h-11"
+                  className={`w-auto object-contain opacity-55 grayscale transition-all duration-500 hover:opacity-100 hover:grayscale-0 ${school.className ?? "h-9 md:h-11"}`}
                 />
               ))}
             </div>
@@ -403,79 +405,7 @@ export default function Home() {
             </FadeIn>
 
             <FadeIn delay={0.1}>
-              <div className="rounded-3xl border border-line bg-paper p-3 shadow-[0_50px_100px_-50px_rgba(60,45,15,0.45)]">
-                <div className="overflow-hidden rounded-[18px] border border-line bg-sheet">
-                  <div className="flex items-center justify-between border-b border-line px-6 py-5 md:px-7">
-                    <div>
-                      <p className="text-[11px] font-semibold tracking-[0.14em] text-gold uppercase">
-                        Practice review 06
-                      </p>
-                      <p className="mt-1 font-serif text-2xl font-medium text-ink">Student feedback</p>
-                    </div>
-                    <div className="flex items-center gap-2 rounded-full bg-[#edf4ef] px-3 py-1.5 text-xs font-semibold text-[#295b38]">
-                      <span className="h-1.5 w-1.5 rounded-full bg-[#3c8a55]" />
-                      Reviewed
-                    </div>
-                  </div>
-
-                  <div className="p-5 md:p-7">
-                    <div className="grid gap-3 sm:grid-cols-3">
-                      {[
-                        { label: "Accuracy", value: "84%", note: "+7% this week" },
-                        { label: "Avg. pace", value: "1:42", note: "On target" },
-                        { label: "Patterns found", value: "3", note: "2 high priority" },
-                      ].map((metric) => (
-                        <div key={metric.label} className="rounded-xl border border-line bg-cream p-4">
-                          <p className="text-[11px] font-semibold tracking-[0.12em] text-soft uppercase">
-                            {metric.label}
-                          </p>
-                          <p className="nums mt-2 font-serif text-4xl leading-none text-navy">
-                            {metric.value}
-                          </p>
-                          <p className="mt-2 text-xs text-muted">{metric.note}</p>
-                        </div>
-                      ))}
-                    </div>
-
-                    <div className="mt-5 rounded-xl border border-line">
-                      <div className="flex items-center justify-between border-b border-line px-4 py-3">
-                        <p className="text-[12px] font-semibold tracking-[0.1em] text-navy uppercase">
-                          Next custom assignment
-                        </p>
-                        <span className="text-xs font-medium text-soft">30 questions</span>
-                      </div>
-                      <div className="divide-y divide-line px-4">
-                        {[
-                          { skill: "Transitions & logical flow", count: "12 questions", priority: "Priority", tone: "bg-navy text-cream" },
-                          { skill: "Advanced algebra", count: "10 questions", priority: "Reinforce", tone: "bg-[#f1e7d2] text-gold" },
-                          { skill: "Timed mixed review", count: "8 questions", priority: "Maintain", tone: "bg-cream text-soft" },
-                        ].map((assignment) => (
-                          <div key={assignment.skill} className="flex items-center justify-between gap-4 py-3.5">
-                            <div>
-                              <p className="text-sm font-semibold text-ink">{assignment.skill}</p>
-                              <p className="mt-0.5 text-xs text-soft">{assignment.count}</p>
-                            </div>
-                            <span className={`rounded-full px-3 py-1 text-[11px] font-semibold tracking-[0.08em] uppercase ${assignment.tone}`}>
-                              {assignment.priority}
-                            </span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-
-                    <div className="mt-5 flex items-start gap-3 rounded-xl border-l-2 border-gold-soft bg-cream px-4 py-3.5">
-                      <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-navy text-[11px] font-bold text-cream">
-                        MS
-                      </div>
-                      <p className="text-xs leading-5 text-muted">
-                        <span className="font-semibold text-ink">Reviewed by Manav:</span>{" "}
-                        The next set prioritizes the two patterns costing the
-                        most points while keeping stronger skills fresh.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <FeedbackDemo />
             </FadeIn>
           </div>
         </div>
@@ -584,13 +514,13 @@ export default function Home() {
       </section>
 
       {/* ── CTA + roster ── */}
-      <section id="cohort" className="grain relative overflow-hidden bg-navy py-24 text-cream md:py-32">
+      <section id="cohort" className="grain relative overflow-hidden bg-[#031a33] py-24 text-cream md:py-32">
         <div
           aria-hidden
           className="pointer-events-none absolute inset-0"
           style={{
             background:
-              "radial-gradient(50% 60% at 85% 20%, rgba(255,255,255,0.08), transparent 70%), radial-gradient(45% 55% at 0% 100%, rgba(4,33,63,0.8), transparent 70%)",
+              "radial-gradient(50% 60% at 85% 15%, rgba(0,83,160,0.28), transparent 70%), radial-gradient(45% 55% at 0% 100%, rgba(1,12,25,0.7), transparent 70%)",
           }}
         />
         <div className="relative mx-auto grid max-w-6xl items-center gap-14 px-6 lg:grid-cols-[1.05fr_0.95fr] lg:gap-20">

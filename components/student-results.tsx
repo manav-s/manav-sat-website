@@ -25,7 +25,7 @@ const FEATURED: Student[] = [
     before: 1420,
     after: 1560,
     quote:
-      "Manav helped me dial in my accuracy and pacing — I jumped 140 points and ended up just one question shy of perfect.",
+      "Manav helped me dial in my accuracy and pacing. I jumped 140 points and ended up just one question shy of perfect.",
   },
   {
     name: "Nina",
