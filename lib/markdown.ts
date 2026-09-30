@@ -73,7 +73,7 @@ export function homepageMarkdown(): string {
 - Perfect 1600 SAT score
 - National Merit Scholar
 - Five years of SAT teaching experience, 250+ students
-- Average score increase across students: 150 points
+- Average score increase across students: 170 points
 
 ## Services
 
@@ -105,7 +105,7 @@ export function llmsTxt(): string {
 
   return `# ${SITE_NAME}
 
-> Private SAT score reviews and 1:1 digital SAT coaching with Manav Sharma — perfect 1600 SAT scorer and National Merit Scholar. 150-point average score increase across 250+ students.
+> Private SAT score reviews and 1:1 digital SAT coaching with Manav Sharma — perfect 1600 SAT scorer and National Merit Scholar. Average score increase of 170 points across 250+ students.
 
 Manav Sharma teaches the digital SAT using the SAT Precision Framework:
 diagnose the exact reasons a student is losing points, then target those

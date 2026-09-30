@@ -181,9 +181,8 @@ export default function Home() {
               className="rise mt-7 max-w-xl text-lg leading-relaxed text-muted md:text-xl"
               style={{ animationDelay: "160ms" }}
             >
-              Private coaching for families seeking a careful, individualized
-              path to stronger scores and greater academic confidence. Your
-              student works directly with me.
+              Personalized SAT coaching with me. Students gain 170 points on
+              average.
             </p>
 
             <div
@@ -240,7 +239,7 @@ export default function Home() {
             {[
               { to: 1600, label: "Perfect SAT score", from: 400 },
               { to: 250, suffix: "+", label: "Students coached" },
-              { to: 150, prefix: "+", label: "Average point increase" },
+              { to: 170, prefix: "+", label: "Average point increase" },
               { to: TOTAL_SPOTS, label: "Students per cohort" },
             ].map((stat) => (
               <div key={stat.label} className="bg-cream px-2 py-10 md:px-8 md:py-12">

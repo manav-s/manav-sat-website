@@ -98,7 +98,7 @@ const structuredData = {
       image: `${SITE_URL}/headshot.png`,
       jobTitle: "SAT Tutor",
       description:
-        "Perfect 1600 SAT scorer and National Merit Scholar. 1:1 SAT coach with a 150-point average score increase across 250+ students.",
+        "Perfect 1600 SAT scorer and National Merit Scholar. 1:1 SAT coach with an average score increase of 170 points across 250+ students.",
       worksFor: {
         "@id": `${SITE_URL}/#organization`,
       },
